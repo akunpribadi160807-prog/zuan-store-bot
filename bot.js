@@ -56,7 +56,7 @@ const OS_VERSIONS_RAW = {
 };
 
 // ===== TEKS - 100% ASLI LU, GA GUA UBAH =====
-const MENU = `╔═════════════════════════════════╗
+const MENU = '╔═════════════════════════════════╗
         ⚡✨ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ✨⚡
      🚀 CEPAT. STABIL. TANPA RIBET.
 ╚═════════════════════════════════╝
@@ -65,9 +65,9 @@ const MENU = `╔═════════════════════
           👑 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 👑
       Mau order apa hari ini? 😎👇
 
-Klik tombol di bawah ya kak 👇`;
+Klik tombol di bawah ya kak 👇';
 
-const VPS_LIST = `╔═════════════════════════════════╗
+const VPS_LIST = '╔═════════════════════════════════╗
      ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 — 𝐕𝐏𝐒 𝐌𝐔𝐑𝐀𝐇 ⚡
       🚀 NVMe Gen4 | KVM | Full Root
        ⚡ Aktif 5 Menit. Tanpa Ribet.
@@ -98,9 +98,9 @@ const VPS_LIST = `╔═══════════════════�
         ├─➤ RAM : 16GB DDR4
         ╰─➤ STORAGE : 200GB NVMe Gen4
 
-Klik paket nya di bawah 👇`;
+Klik paket nya di bawah 👇';
 
-const LOKASI_TXT = `╔═════════════════════════════════╗
+const LOKASI_TXT = '╔═════════════════════════════════╗
       🌍⚡ PILIH LOKASI SERVER ⚡🌍
 ╚═════════════════════════════════╝
 
@@ -117,9 +117,9 @@ const LOKASI_TXT = `╔═══════════════════
         ├─➤ STABIL | Buat Asia
         ╰─➤ Alternatif Paling Aman
 
-Klik lokasi nya 👇`;
+Klik lokasi nya 👇';
 
-const OS_TXT = `╔═════════════════════════════════╗
+const OS_TXT = '╔═════════════════════════════════╗
      🐧 PILIH SISTEM OPERASI 🐧
 ╚═════════════════════════════════╝
 
@@ -135,22 +135,22 @@ const OS_TXT = `╔════════════════════�
   ▸ ROCKY LINUX
     Kuat dan bisa diandalkan.
 
-Klik OS nya di bawah 👇`;
+Klik OS nya di bawah 👇';
 
 function osVersionTxt(fam){
   const judul = fam === 'ubuntu' ? 'UBUNTU' : fam === 'debian' ? 'DEBIAN' : fam === 'alma' ? 'ALMALINUX' : 'ROCKY LINUX';
   const desc = fam === 'ubuntu' ? 'Paling mudah. Cocok buat pemula.' : fam === 'debian' ? 'Paling stabil. Favorit para pro.' : fam === 'alma' ? 'Rasa enterprise. Tetap ringan.' : 'Kuat dan bisa diandalkan.';
-  return `╔═════════════════════════════════╗
+  return '╔═════════════════════════════════╗
      🐧 PILIH VERSI ${judul} 🐧
 ╚═════════════════════════════════╝
 
   ${desc}
 
-Klik versi nya di bawah 👇`;
+Klik versi nya di bawah 👇';
 }
 
 function ringkasanTxt(u){
- return `╔═════════════════════════════════╗
+ return '╔═════════════════════════════════╗
      🧾✨ RINGKASAN ORDER KAMU ✨🧾
 ╚═════════════════════════════════╝
 
@@ -183,10 +183,10 @@ function ringkasanTxt(u){
 ┃      💰 TOTAL : ${rupiah(u.harga)} 💰      ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-Udah bener? Klik YA buat lanjut 👇`;
+Udah bener? Klik YA buat lanjut 👇';
 }
 
-const USERNAME_TXT = `╔═════════════════════════════════╗
+const USERNAME_TXT = '╔═════════════════════════════════╗
      👤 ATUR USERNAME VPS KAMU 👤
 ╚═════════════════════════════════╝
 
@@ -197,10 +197,10 @@ const USERNAME_TXT = `╔══════════════════�
   ╭─► 🔤 Huruf kecil aja
   ╰─► 🚫 Tanpa spasi
 
-⌨️ Ketik username kamu sekarang:`;
+⌨️ Ketik username kamu sekarang:';
 
 function bayarTxt(u){
- return `╔═════════════════════════════════╗
+ return '╔═════════════════════════════════╗
     ✅🔒 ORDER BERHASIL DIKUNCI 🔒✅
 ╚═════════════════════════════════╝
 
@@ -242,11 +242,11 @@ function bayarTxt(u){
         ├─➤ Akun owner sedang gangguan
         ╰─➤ Mohon pakai QRIS / Seabank / Gopay dulu ya
 
-Klik tombol QRIS di bawah 👇`;
+Klik tombol QRIS di bawah 👇';
 }
 
 function qrisTxt(u){
- return `╔═════════════════════════════════╗
+ return '╔═════════════════════════════════╗
       📷 PEMBAYARAN VIA QRIS 📷
 ╚═════════════════════════════════╝
 
@@ -275,10 +275,10 @@ Kami sangat menghargai kepercayaan kakak.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 ⚡ ZUAN STORE - CEPAT. STABIL. TANPA RIBET. ⚡
-━━━━━━━━━━━━━━━━━━━━━━━━━━`;
+━━━━━━━━━━━━━━━━━━━━━━━━━━';
 }
 
-const PANEL_TXT = `╔═════════════════════════════════╗
+const PANEL_TXT = '╔═════════════════════════════════╗
         📱 PANEL PTERODACTYL 📱
           🎮 SERVER GAME & BOT
 ╚═════════════════════════════════╝
@@ -296,9 +296,9 @@ const PANEL_TXT = `╔═══════════════════�
   ╰─► 04 — PANEL UNLIMITED / Rp 30.000 👑
         ╰─➤ UNLI RAM | UNLI Disk | UNLI CPU
 
-Klik paket nya 👇`;
+Klik paket nya 👇';
 
-const DOMAIN_TXT = `╔═════════════════════════════════╗
+const DOMAIN_TXT = '╔═════════════════════════════════╗
           🌐 DOMAIN MURAH 🌐
        🔗 NAMA KEREN BUAT WEB LU
 ╚═════════════════════════════════╝
@@ -314,9 +314,9 @@ const DOMAIN_TXT = `╔═══════════════════
   ├─► [5] .com — Rp 95.000 /tahun
   ╰─► [6] .id — Rp 180.000 /tahun
 
-Klik ekstensi nya 👇`;
+Klik ekstensi nya 👇';
 
-const JASA_TXT = `╔═════════════════════════════════╗
+const JASA_TXT = '╔═════════════════════════════════╗
      🛠️ JASA INSTALL / SETTING 🛠️
         ⚙️ DIBANTU SAMPAI BERES
 ╚═════════════════════════════════╝
@@ -334,9 +334,9 @@ const JASA_TXT = `╔═══════════════════�
   ╰─► [4] 🔧 SETTING VPS — Rp 10.000
         ╰─➤ Optimasi Biar Ngebut
 
-Klik jasa nya 👇`;
+Klik jasa nya 👇';
 
-const ADMIN_TXT = `╔═════════════════════════════════╗
+const ADMIN_TXT = '╔═════════════════════════════════╗
           💬 HUBUNGI ADMIN 💬
 ╚═════════════════════════════════╝
 
@@ -348,11 +348,11 @@ const ADMIN_TXT = `╔═══════════════════�
   ├─► ⚡ RESPON : 1 - 5 Menit
   ╰─► 📱 TELE : Klik tombol di bawah
 
-Klik tombol ADMIN 👇`;
+Klik tombol ADMIN 👇';
 
 // ===== TEKS BARU - VALID / TOLAK / IZIN - PAKE GAYA YANG SAMA =====
 function validTxt(u){
- return `╔═════════════════════════════════╗
+ return '╔═════════════════════════════════╗
     ✅✨ PEMBAYARAN BERHASIL ✨✅
 ╚═════════════════════════════════╝
 
@@ -375,10 +375,10 @@ function validTxt(u){
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 ⚡ ZUAN STORE - CEPAT. STABIL. TANPA RIBET. ⚡
-━━━━━━━━━━━━━━━━━━━━━━━━━━`;
+━━━━━━━━━━━━━━━━━━━━━━━━━━';
 }
 function tolakTxt(u){
- return `╔═════════════════════════════════╗
+ return '╔═════════════════════════════════╗
     🙏 MOHON MAAF YA KAK 🙏
 ╚═════════════════════════════════╝
 
@@ -405,7 +405,7 @@ function tolakTxt(u){
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 ⚡ ZUAN STORE - CEPAT. STABIL. TANPA RIBET. ⚡
-━━━━━━━━━━━━━━━━━━━━━━━━━━`;
+━━━━━━━━━━━━━━━━━━━━━━━━━━';
 }
 
 // ===== KEYBOARDS - SAMA KAYAK ASLI =====

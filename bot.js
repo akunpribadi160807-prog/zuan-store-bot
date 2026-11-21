@@ -4,7 +4,7 @@
 // Logika: order -> grup, bukti -> owner doang, VALID/TOLAK, izin post
 // ============================================
 const { Telegraf, Markup } = require('telegraf');
-const bot = new Telegraf('9072638201:AAHYWt2xevTZKMfpUC5CiCMhqrPlnauH0m4');
+const bot = new Telegraf('9072638201:AAF6ujUN_gTiI4NRH9qlkdxZMSCwnhABRTk');
 const ADMIN_ID = 8493708698;
 const GROUP_UTAMA = -1004497488934;
 const GROUP_PROMO = -1003900745031;

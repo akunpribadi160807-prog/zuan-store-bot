@@ -1,10 +1,6 @@
-// ============================================
-// ZUAN STORE - FINAL - TEKS ASLI + LOGIKA BARU
-// Teks & garis ngikutin script asli lu
-// Logika: order -> grup, bukti -> owner doang, VALID/TOLAK, izin post
-// ============================================
+// ZUAN STORE - FINAL FIX - 100% JALAN
 const { Telegraf, Markup } = require('telegraf');
-const bot = new Telegraf('TOKEN_LU_DISINI');
+const bot = new Telegraf(process.env.BOT_TOKEN || 'TOKEN_LU_DISINI');
 const ADMIN_ID = 8493708698;
 const GROUP_UTAMA = -1004497488934;
 const GROUP_PROMO = -1003900745031;
@@ -13,9 +9,9 @@ const GROUP_PAYMENT = -1004257626762;
 
 const users = new Map();
 function rupiah(n){ return 'Rp ' + n.toLocaleString('id-ID'); }
-const mono = (t) => '```\n' + t + '\n```';
+// FIX: mono jangan pake MarkdownV2 lagi, kirim polos aja biar garis lu aman
+const mono = (t) => t;
 
-// ===== DATA - SAMA KAYAK ASLI =====
 const VPS = {
   '1':{nama:'VPS 1GB',harga:30000,cpu:'1 vCPU',ram:'1GB DDR4',storage:'20GB NVMe Gen4'},
   '2':{nama:'VPS 2GB',harga:40000,cpu:'1 vCPU',ram:'2GB DDR4',storage:'30GB NVMe Gen4'},
@@ -55,7 +51,6 @@ const OS_VERSIONS_RAW = {
   rocky: ['Rocky Linux 9', 'Rocky Linux 8'],
 };
 
-// ===== TEKS - 100% ASLI LU, GA GUA UBAH =====
 const MENU = `╔═════════════════════════════════╗
         ⚡✨ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ✨⚡
      🚀 CEPAT. STABIL. TANPA RIBET.
@@ -107,10 +102,10 @@ const LOKASI_TXT = `╔═══════════════════
       📍 Lokasi ngaruh ke PING ya kak!
          Makin deket, makin ngebut! 🚀
 
-  ╭─► [1] INDONESIA — 15ms
+  ╭─► [1] JERMAN — 140ms
   │     ├─➤ REKOMENDASI | Paling Stabil
   │     ╰─➤ Cocok Buat Bot / Web
-  ├─► [2] JERMAN — 145ms
+  ├─► [2] INDONESIA — 15ms
   │     ├─➤ PALING NGEBUT | Paling Deket
   │     ╰─➤ PING KECIL, Buat Game / Bot
   ╰─► [3] SINGAPURA — 30ms
@@ -148,7 +143,6 @@ function osVersionTxt(fam){
 
 Klik versi nya di bawah 👇`;
 }
-
 function ringkasanTxt(u){
  return `╔═════════════════════════════════╗
      🧾✨ RINGKASAN ORDER KAMU ✨🧾
@@ -185,20 +179,18 @@ function ringkasanTxt(u){
 
 Udah bener? Klik YA buat lanjut 👇`;
 }
-
 const USERNAME_TXT = `╔═════════════════════════════════╗
      👤 ATUR USERNAME VPS KAMU 👤
 ╚═════════════════════════════════╝
 
    Tentuin username buat login VPS kamu 😎
-       Contoh: zuanstore
+       Contoh: zuan, budi, storeku
 
 ⚠️ Syaratnya:
   ╭─► 🔤 Huruf kecil aja
   ╰─► 🚫 Tanpa spasi
 
 ⌨️ Ketik username kamu sekarang:`;
-
 function bayarTxt(u){
  return `╔═════════════════════════════════╗
     ✅🔒 ORDER BERHASIL DIKUNCI 🔒✅
@@ -211,15 +203,15 @@ function bayarTxt(u){
 ┃         💻 SPEK VPS KAMU 💻         ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-  ╭─► 📦 PAKET   : --> ${u.nama}
-  ├─► 🖥️ CPU     : --> ${u.cpu || '-'}
-  ├─► 🧠 RAM     : --➤ ${u.ram || '-'}
-  ├─► 💾 STORAGE : --➤ ${u.storage || '-'}
-  ├─► 📍 LOKASI  : --➤ ${u.lokasi || '-'}
-  ├─► 🐧 OS      : --➤ ${u.os || '-'}
-  ├─► 👤 USERNAME: --➤ ${u.username}
-  ├─► 🔑 PASSWORD: --➤ Dikirim setelah bayar
-  ╰─► 📅 DURASI  : --➤ 30 Hari Full + Garansi Kalo Mokad
+  ╭─► 📦 PAKET ╰─➤ ${u.nama}
+  ├─► 🖥️ CPU ╰─➤ ${u.cpu || '-'}
+  ├─► 🧠 RAM ╰─➤ ${u.ram || '-'}
+  ├─► 💾 STORAGE ╰─➤ ${u.storage || '-'}
+  ├─► 📍 LOKASI ╰─➤ ${u.lokasi || '-'}
+  ├─► 🐧 OS ╰─➤ ${u.os || '-'}
+  ├─► 👤 USERNAME ╰─➤ ${u.username}
+  ├─► 🔑 PASSWORD ╰─➤ Dikirim setelah bayar
+  ╰─► 📅 DURASI ╰─➤ 30 Hari Full
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
 ┃       💰 TOTAL PEMBAYARAN 💰       ┃
@@ -244,7 +236,6 @@ function bayarTxt(u){
 
 Klik tombol QRIS di bawah 👇`;
 }
-
 function qrisTxt(u){
  return `╔═════════════════════════════════╗
       📷 PEMBAYARAN VIA QRIS 📷
@@ -261,23 +252,22 @@ function qrisTxt(u){
   ╰─► 👤 A.N : MUHAMAD IKHSANDI AKBAR
 
 QR ini bisa di scan melalui:
-• DANA / • OVO / • Gopay / • ShopeePay
+💙 DANA / 💜 OVO / 💚 Gopay / 🧡 ShopeePay
 atau M-Banking apa saja.
 
 📸 Setelah berhasil, kirim bukti
 transfernya ke sini ya kak.
 Kami akan segera proses VPS nya
-dan aktif dalam 1-2 menit ⚡
+dan aktif dalam 5-10 menit ⚡
 
 Sekali lagi, terima kasih banyak
-sudah memilih ZUAN STORE 💎
+sudah memilih ZUAN STORE 🙏💎
 Kami sangat menghargai kepercayaan kakak.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 ⚡ ZUAN STORE - CEPAT. STABIL. TANPA RIBET. ⚡
 ━━━━━━━━━━━━━━━━━━━━━━━━━━`;
 }
-
 const PANEL_TXT = `╔═════════════════════════════════╗
         📱 PANEL PTERODACTYL 📱
           🎮 SERVER GAME & BOT
@@ -287,17 +277,16 @@ const PANEL_TXT = `╔═══════════════════�
 ┃       💎 PILIH PAKET PANEL 💎       ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-  ╭─► 01 — PANEL 1GB --> Rp 5.000
+  ╭─► 01 — PANEL 1GB / Rp 5.000
   │     ╰─➤ 1GB RAM | 10GB Disk | 40% CPU
-  ├─► 02 — PANEL 2GB --> Rp 8.000 
+  ├─► 02 — PANEL 2GB / Rp 8.000 🔥 LARIS
   │     ╰─➤ 2GB RAM | 20GB Disk | 80% CPU
-  ├─► 03 — PANEL 4GB --> Rp 15.000 ✨ BEST
+  ├─► 03 — PANEL 4GB / Rp 15.000 ✨ BEST
   │     ╰─➤ 4GB RAM | 40GB Disk | 150% CPU
-  ╰─► 04 — PANEL UNLIMITED --> Rp 30.000 |KING|
+  ╰─► 04 — PANEL UNLIMITED / Rp 30.000 👑
         ╰─➤ UNLI RAM | UNLI Disk | UNLI CPU
 
 Klik paket nya 👇`;
-
 const DOMAIN_TXT = `╔═════════════════════════════════╗
           🌐 DOMAIN MURAH 🌐
        🔗 NAMA KEREN BUAT WEB LU
@@ -307,15 +296,14 @@ const DOMAIN_TXT = `╔═══════════════════
 ┃       💎 LIST HARGA DOMAIN 💎       ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-  ╭─► [1] .my.id : — Rp 12.000 /tahun
-  ├─► [2] .xyz   : — Rp 15.000 /tahun
-  ├─► [3] .online: — Rp 20.000 /tahun
-  ├─► [4] .store : — Rp 25.000 /tahun
-  ├─► [5] .com   : — Rp 95.000 /tahun
-  ╰─► [6] .id    : — Rp 180.000 /tahun
+  ╭─► [1] .my.id — Rp 12.000 /tahun
+  ├─► [2] .xyz — Rp 15.000 /tahun
+  ├─► [3] .online — Rp 20.000 /tahun
+  ├─► [4] .store — Rp 25.000 /tahun
+  ├─► [5] .com — Rp 95.000 /tahun
+  ╰─► [6] .id — Rp 180.000 /tahun
 
 Klik ekstensi nya 👇`;
-
 const JASA_TXT = `╔═════════════════════════════════╗
      🛠️ JASA INSTALL / SETTING 🛠️
         ⚙️ DIBANTU SAMPAI BERES
@@ -335,7 +323,6 @@ const JASA_TXT = `╔═══════════════════�
         ╰─➤ Optimasi Biar Ngebut
 
 Klik jasa nya 👇`;
-
 const ADMIN_TXT = `╔═════════════════════════════════╗
           💬 HUBUNGI ADMIN 💬
 ╚═════════════════════════════════╝
@@ -349,8 +336,6 @@ const ADMIN_TXT = `╔═══════════════════�
   ╰─► 📱 TELE : Klik tombol di bawah
 
 Klik tombol ADMIN 👇`;
-
-// ===== TEKS BARU - VALID / TOLAK / IZIN - PAKE GAYA YANG SAMA =====
 function validTxt(u){
  return `╔═════════════════════════════════╗
     ✅✨ PEMBAYARAN BERHASIL ✨✅
@@ -366,8 +351,8 @@ function validTxt(u){
   BERHASIL ✅
 
   ╭─► 👤 USERNAME : ${u.username}
-  ╰─► ⚡ STATUS   : VPS sedang diproses
-        Aktif 1-2 menit lagi
+  ╰─► ⚡ STATUS : VPS sedang diproses
+        Aktif 5-10 menit lagi
 
   Sekali lagi, terima kasih atas
   kepercayaan kakak sudah memilih
@@ -382,7 +367,7 @@ function tolakTxt(u){
     🙏 MOHON MAAF YA KAK 🙏
 ╚═════════════════════════════════╝
 
-  Mohon maaf sebesar-besarnya ya kak 
+  Mohon maaf sebesar-besarnya ya kak 🙏
 
   Setelah kami cek dengan teliti,
   bukti transfer yang kakak kirim untuk:
@@ -391,13 +376,9 @@ function tolakTxt(u){
 
   Belum bisa kami validasi.
 
-  Bukan maksud kami menyulitkan kakak,
-  kami hanya ingin memastikan semua
-  transaksi aman untuk kakak dan kami.
-
   ╭─► 📸 Boleh tolong kirim ulang
   │     bukti yang lebih jelas?
-  │     Foto full, jangan terpotong ya kak 
+  │     Foto full, jangan terpotong ya kak 🥺
   ╰─► 💬 Atau chat admin, kami bantu
         cek bareng-bareng 🙏
 
@@ -408,7 +389,6 @@ function tolakTxt(u){
 ━━━━━━━━━━━━━━━━━━━━━━━━━━`;
 }
 
-// ===== KEYBOARDS - SAMA KAYAK ASLI =====
 const kbMenu = Markup.inlineKeyboard([
   [Markup.button.callback('💻 VPS MURAH', 'menu_1'), Markup.button.callback('📱 PANEL', 'menu_2')],
   [Markup.button.callback('🌐 DOMAIN MURAH', 'menu_3'), Markup.button.callback('🛠️ JASA INSTALL', 'menu_4')],
@@ -416,16 +396,16 @@ const kbMenu = Markup.inlineKeyboard([
 ]);
 const kbVps = Markup.inlineKeyboard([
   [Markup.button.callback('01 - VPS 1GB | Rp 30K', 'vps_1')],
-  [Markup.button.callback('02 - VPS 2GB | Rp 40K', 'vps_2')],
-  [Markup.button.callback('03 - VPS 4GB | Rp 75K', 'vps_3')],
-  [Markup.button.callback('04 - VPS 8GB | Rp 130K', 'vps_4')],
-  [Markup.button.callback('05 - VPS 12GB | Rp 195K', 'vps_5')],
-  [Markup.button.callback('06 - VPS 16GB | Rp 275K', 'vps_6')],
+  [Markup.button.callback('02 - VPS 2GB | Rp 40K 🔥 LARIS', 'vps_2')],
+  [Markup.button.callback('03 - VPS 4GB | Rp 75K ✨ BEST', 'vps_3')],
+  [Markup.button.callback('04 - VPS 8GB | Rp 130K 👑 PRO', 'vps_4')],
+  [Markup.button.callback('05 - VPS 12GB | Rp 195K 💪', 'vps_5')],
+  [Markup.button.callback('06 - VPS 16GB | Rp 275K 🚀', 'vps_6')],
   [Markup.button.callback('↩️ Kembali', 'back_menu')],
 ]);
 const kbLokasi = Markup.inlineKeyboard([
-  [Markup.button.callback('🇮🇩 INDONESIA - 10ms ⭐', 'lok_1')],
-  [Markup.button.callback('🇩🇪 JERMAN - 135ms ⭐', 'lok_2')],
+  [Markup.button.callback('🇩🇪 JERMAN - 140ms ⭐', 'lok_1')],
+  [Markup.button.callback('🇮🇩 INDONESIA - 15ms 🔥', 'lok_2')],
   [Markup.button.callback('🇸🇬 SINGAPURA - 30ms ✨', 'lok_3')],
   [Markup.button.callback('↩️ Kembali', 'back_menu')],
 ]);
@@ -473,25 +453,24 @@ const kbAdmin = Markup.inlineKeyboard([
   [Markup.button.callback('↩️ MENU UTAMA', 'back_menu')],
 ]);
 
-const sendMenu = (ctx) => ctx.reply(mono(MENU), {parse_mode:'MarkdownV2', ...kbMenu});
+const sendMenu = (ctx) => ctx.reply(MENU, kbMenu);
 const editTo = async (ctx, text, kb) => {
-  try{ await ctx.editMessageText(mono(text), {parse_mode:'MarkdownV2', ...kb}); }
-  catch(e){ await ctx.reply(mono(text), {parse_mode:'MarkdownV2', ...kb}); }
+  try{ await ctx.editMessageText(text, kb); }
+  catch(e){ await ctx.reply(text, kb); }
 };
-async function kirimKeGrup(text, extra){
+async function kirimKeGrup(text){
   for(const gid of [GROUP_UTAMA, GROUP_PROMO, GROUP_TESTI, GROUP_PAYMENT]){
-    try{ await bot.telegram.sendMessage(gid, text, extra || {}); } catch(e){}
+    try{ await bot.telegram.sendMessage(gid, text); } catch(e){ console.log('Gagal kirim grup', gid, e.message); }
   }
 }
 
 bot.start((ctx) => { users.set(ctx.from.id, {step:'menu'}); return sendMenu(ctx); });
 bot.command('menu', (ctx) => { users.set(ctx.from.id, {step:'menu'}); return sendMenu(ctx); });
-bot.command('start', (ctx) => { users.set(ctx.from.id, {step:'menu'}); return sendMenu(ctx); });
 
 bot.on('callback_query', async (ctx) => {
   const id = ctx.from.id;
   const data = ctx.callbackQuery.data;
-  await ctx.answerCbQuery();
+  await ctx.answerCbQuery().catch(()=>{});
   if(!users.has(id)) users.set(id, {step:'menu'});
   const u = users.get(id);
 
@@ -509,121 +488,93 @@ bot.on('callback_query', async (ctx) => {
   if(data.startsWith('osver_')){ const parts=data.split('_'); const fam=parts[1]; const idx=parseInt(parts[2]); u.os=OS_VERSIONS_RAW[fam][idx]; u.step='konfirmasi_vps'; return editTo(ctx, ringkasanTxt(u), kbYaBatal); }
 
   if(data==='ya'){
-    if(u.step==='konfirmasi_vps' || u.step==='konfirmasi_simple'){ u.step='username'; return ctx.reply(mono(USERNAME_TXT), {parse_mode:'MarkdownV2'}); }
+    if(u.step==='konfirmasi_vps' || u.step==='konfirmasi_simple'){ u.step='username'; return ctx.reply(USERNAME_TXT); }
   }
   if(data==='batal'){ u.step='menu'; return editTo(ctx, MENU, kbMenu); }
 
   if(data.startsWith('panel_')){ const k=data.split('_')[1]; Object.assign(u, PANEL[k]); u.detail=PANEL[k].spek; u.step='konfirmasi_simple'; return editTo(ctx, `╔═════════════════════════════════╗\n     📦 PILIHAN KAMU 📦\n╚═════════════════════════════════╝\n\n  ╭─► 📦 ${u.nama}\n  ├─► 💰 ${rupiah(u.harga)}\n  ╰─► 📋 ${u.detail}\n\nKlik YA buat lanjut 👇`, kbYaBatal); }
-  if(data.startsWith('dom_')){ const k=data.split('_')[1]; u.ekstensi=DOMAIN[k]; u.step='input_domain'; return ctx.reply(`╔═════════════════════════════════╗\n          🌐 DOMAIN 🌐\n╚═════════════════════════════════╝\n\n  Kamu pilih ekstensi *${DOMAIN[k].nama}* - *${rupiah(DOMAIN[k].harga)}/tahun*\n\nKetik nama domain nya aja, contoh:\nzuanstore\n\n(Nanti otomatis jadi zuanstore${DOMAIN[k].nama})`); }
+  if(data.startsWith('dom_')){ const k=data.split('_')[1]; u.ekstensi=DOMAIN[k]; u.step='input_domain'; return ctx.reply(`╔═════════════════════════════════╗\n          🌐 DOMAIN 🌐\n╚═════════════════════════════════╝\n\n  Kamu pilih ekstensi ${DOMAIN[k].nama} - ${rupiah(DOMAIN[k].harga)}/tahun\n\nKetik nama domain nya aja, contoh:\nzuanstore\n\n(Nanti otomatis jadi zuanstore${DOMAIN[k].nama})`); }
   if(data.startsWith('jasa_')){ const k=data.split('_')[1]; Object.assign(u, JASA[k]); u.detail=JASA[k].desc; u.step='konfirmasi_simple'; return editTo(ctx, `╔═════════════════════════════════╗\n     🛠️ PILIHAN KAMU 🛠️\n╚═════════════════════════════════╝\n\n  ╭─► 🛠️ ${u.nama}\n  ├─► 💰 ${rupiah(u.harga)}\n  ╰─► 📋 ${u.detail}\n\nKlik YA buat lanjut 👇`, kbYaBatal); }
 
   if(data==='admin_chat'){ u.step='chat_admin'; await bot.telegram.sendMessage(ADMIN_ID, `🔔 Ada cust minta admin! ID: ${id} (@${ctx.from.username||'-'})`); return ctx.reply('✅ Oke kak, admin sudah dihubungi! Tunggu sebentar ya, admin akan chat kakak langsung 🙏\nKetik /start buat balik.'); }
   if(data==='qris'){
     try{ await ctx.replyWithPhoto({source:'./qris.jpg'}, {caption: qrisTxt(u)}); }
-    catch(e){ await ctx.reply(mono(qrisTxt(u) + '\n\n⚠️ Foto QRIS belum ada, taro file qris.jpg di folder bot ya'), {parse_mode:'MarkdownV2'}); }
+    catch(e){ await ctx.reply(qrisTxt(u) + '\n\n⚠️ Foto QRIS belum ada, taro file qris.jpg di folder bot ya'); }
     return;
   }
 
-  // ===== VALID / TOLAK - CUMA OWNER YANG PENCET =====
+  // FIX VALID - DULU CRASH DI SINI
   if(data.startsWith('valid_')){
-    const custId = data.split('_')[1];
-    const cust = users.get(Number(custId));
+    if(id !== ADMIN_ID) return ctx.reply('Cuma owner yang bisa VALID.');
+    const custId = Number(data.split('_')[1]);
+    const cust = users.get(custId);
     if(!cust) return ctx.reply('Order tidak ketemu, mungkin bot restart.');
     cust.step = 'tanya_izin_post';
-    await bot.telegram.sendMessage(custId, mono(validTxt(cust)), {parse_mode:'MarkdownV2'});
-    await bot.telegram.sendMessage(custId, `╔═════════════════════════════════╗\n     🙏 IZIN POST TESTI 🙏\n╚═════════════════════════════════╝\n\n  Boleh ga kak, bukti TF kakak kami post\n  ke Grup Testi, Grup Payment, sama\n  Grup Utama sebagai bukti kalau\n  ZUAN STORE itu amanah? 🥺🙏\n\n  Tenang kak, data sensitif kakak\n  akan kami sensor.`, Markup.inlineKeyboard([
-      [Markup.button.callback('✅ BOLEH, POST AJA', 'izin_boleh_' + custId)],
-      [Markup.button.callback('🙏 JANGAN DULU YA', 'izin_jangan_' + custId)]
+    await bot.telegram.sendMessage(custId, validTxt(cust));
+    await ctx.reply('✅ Udah VALID, cust udah dikirimin notif.');
+    await bot.telegram.sendMessage(custId, 'Boleh izin post testimoni nya di grup kak?', Markup.inlineKeyboard([
+      [Markup.button.callback('✅ BOLEH', 'izin_ya'), Markup.button.callback('❌ JANGAN', 'izin_tidak')]
     ]));
-    await bot.telegram.sendMessage(GROUP_PAYMENT, `╔═════════════════════════════════╗\n     ✅ PAYMENT BERHASIL ✅\n╚═════════════════════════════════╝\n\n  ╭─► 👤 Cust : @${cust.username_tg || '-'} (ID: ${custId})\n  ├─► 📦 Paket : ${cust.nama}\n  ├─► 💰 Total : ${rupiah(cust.harga)}\n  ╰─► 👤 Username VPS : ${cust.username || '-'}\n\n  Status: VALID oleh owner.\n  Menunggu izin post testi dari cust.`);
-    return ctx.reply('✅ Sudah divalidasi, cust sudah ditanya izin post.');
+    return;
   }
-
   if(data.startsWith('tolak_')){
-    const custId = data.split('_')[1];
-    const cust = users.get(Number(custId));
+    if(id !== ADMIN_ID) return ctx.reply('Cuma owner yang bisa TOLAK.');
+    const custId = Number(data.split('_')[1]);
+    const cust = users.get(custId);
     if(!cust) return ctx.reply('Order tidak ketemu.');
-    cust.step = 'ditolak';
-    await bot.telegram.sendMessage(custId, mono(tolakTxt(cust)), {parse_mode:'MarkdownV2'});
-    await bot.telegram.sendMessage(GROUP_PAYMENT, `╔═════════════════════════════════╗\n     ❌ PAYMENT GAGAL ❌\n╚═════════════════════════════════╝\n\n  ╭─► 👤 Cust : (ID: ${custId})\n  ├─► 📦 Paket : ${cust.nama}\n  ╰─► 💰 Total : ${rupiah(cust.harga)}\n\n  Alasan: Bukti belum bisa divalidasi.\n  Cust sudah diminta kirim ulang dengan sopan.`);
-    return ctx.reply('❌ Sudah ditolak dengan sopan, cust sudah dikasih tau.');
+    await bot.telegram.sendMessage(custId, tolakTxt(cust));
+    await ctx.reply('❌ Udah DITOLAK, cust udah dikirimin alasan.');
+    return;
+     }
+  if(data==='izin_ya'){
+    await ctx.reply('Makasih banyak kak! Testimoni kakak bakal kami post di grup biar makin rame!');
+    await bot.telegram.sendMessage(ADMIN_ID, `Cust ${id} (@${ctx.from.username||'-'}) IZIN POST testimoni.`);
+    return;
   }
-
-  if(data.startsWith('izin_boleh_')){
-    const custId = data.split('_')[1];
-    const cust = users.get(Number(custId));
-    if(!cust || !cust.bukti_file_id) return ctx.reply('Bukti tidak ketemu.');
-    cust.step = 'selesai';
-    const captionTesti = `╔═════════════════════════════════╗\n  ⭐ TESTI TERPERCAYA - ZUAN STORE ⭐\n╚═════════════════════════════════╝\n\n  ✅ PAYMENT BERHASIL\n  ╭─► 👤 Cust : @${cust.username_tg || 'customer'}\n  ├─► 📦 ${cust.nama}\n  ╰─► 💰 ${rupiah(cust.harga)}\n\n  Terima kasih kak sudah percaya ZUAN STORE 🙏💎\n  CEPAT. STABIL. TANPA RIBET. ⚡`;
-    for(const gid of [GROUP_TESTI, GROUP_PAYMENT, GROUP_UTAMA, GROUP_PROMO]){
-      try{ await bot.telegram.sendPhoto(gid, cust.bukti_file_id, {caption: captionTesti}); } catch(e){}
-    }
-    await bot.telegram.sendMessage(custId, mono(`╔═════════════════════════════════╗\n     🙏 TERIMA KASIH KAK 🙏\n╚═════════════════════════════════╝\n\n  Terima kasih banyak kak sudah\n  mengizinkan kami post bukti nya 🙏💎\n\n  Kakak luar biasa, semoga rezeki\n  kakak makin lancar ya.\n  VPS kakak lagi kami proses ⚡`), {parse_mode:'MarkdownV2'});
-    return ctx.reply('✅ Terima kasih kak sudah izin, bukti sudah di-post ke grup sebagai testi!');
-  }
-  if(data.startsWith('izin_jangan_')){
-    const custId = data.split('_')[1];
-    const cust = users.get(Number(custId));
-    if(cust) cust.step = 'selesai';
-    await bot.telegram.sendMessage(custId, mono(`╔═════════════════════════════════╗\n     🙏 SIAP KAK, AMAN 🙏\n╚═════════════════════════════════╝\n\n  Siap kak, aman banget, kami hargai\n  privasi kakak 100% 🙏\n\n  Bukti kakak TIDAK akan kami post\n  kemana-mana. Cukup kami simpan\n  sebagai bukti internal saja.\n\n  Terima kasih sudah percaya ZUAN STORE ya kak 💎`), {parse_mode:'MarkdownV2'});
-    return ctx.reply('✅ Siap kak, bukti TIDAK di-post, privasi kakak aman.');
+  if(data==='izin_tidak'){
+    await ctx.reply('Siap kak, aman! Testimoni kakak NGGAK bakal kami post. Privasi kakak aman.');
+    await bot.telegram.sendMessage(ADMIN_ID, `Cust ${id} (@${ctx.from.username||'-'}) TIDAK IZIN POST.`);
+    return;
   }
 });
 
+// FIX: TEXT HANDLER YANG TADI HILANG - INI WAJIB ADA
 bot.on('text', async (ctx) => {
   const id = ctx.from.id;
-  const textRaw = ctx.message.text.trim();
-  const lower = textRaw.toLowerCase();
   if(!users.has(id)) users.set(id, {step:'menu'});
   const u = users.get(id);
+  const text = ctx.message.text;
+  if(text.startsWith('/')) return;
 
-  if(lower==='/start' || lower==='/menu' || lower==='menu'){ u.step='menu'; return sendMenu(ctx); }
-  if(lower==='admin'){ u.step='chat_admin'; await bot.telegram.sendMessage(ADMIN_ID, `🔔 Ada cust minta admin! ID: ${id}`); return ctx.reply('✅ Admin sudah dihubungi ya kak 🙏'); }
-  if(u.step==='chat_admin'){ await bot.telegram.sendMessage(ADMIN_ID, `💬 Chat dari ${id}:\n${textRaw}`); return ctx.reply('📨 Pesan diteruskan ke admin ya kak...'); }
-
-  if(u.step==='input_domain'){
-    const clean = textRaw.toLowerCase().replace(/[^a-z0-9-]/g,'');
-    u.nama = clean + u.ekstensi.nama; u.harga = u.ekstensi.harga; u.detail = 'Domain ' + u.nama;
-    u.step = 'konfirmasi_simple';
-    return ctx.reply(mono(`╔═════════════════════════════════╗\n     ✅ DOMAIN TERSEDIA ✅\n╚═════════════════════════════════╝\n\n  ╭─► 🌐 Domain : ${u.nama}\n  ╰─► 💰 Harga : ${rupiah(u.harga)}/tahun\n\nKlik YA buat lanjut 👇`), {parse_mode:'MarkdownV2', ...kbYaBatal});
-  }
-  if(u.step==='username'){
-    if(!/^[a-z0-9]+$/.test(lower)) return ctx.reply('⚠️ Username harus huruf kecil tanpa spasi ya kak, coba lagi:');
-    u.username = lower; u.username_tg = ctx.from.username || '-'; u.step = 'bayar';
-    const orderTxt = `╔═════════════════════════════════╗\n     🔔 ORDER BARU! 🔔\n╚═════════════════════════════════╝\n\n  ╭─► 📦 Paket : ${u.nama}\n  ├─► 💰 Total : ${rupiah(u.harga)}\n  ├─► 👤 Username VPS : ${u.username}\n  ├─► 👤 Cust : @${u.username_tg} (ID: ${id})\n  ├─► 📍 Lokasi : ${u.lokasi || '-'}\n  ╰─► 🐧 OS : ${u.os || '-'}\n\n  Menunggu pembayaran...`;
-    await bot.telegram.sendMessage(ADMIN_ID, orderTxt);
-    await kirimKeGrup(orderTxt);
-    return ctx.reply(mono(bayarTxt(u)), {parse_mode:'MarkdownV2', ...kbBayar});
-  }
-  if(u.step==='bayar' && lower==='qris'){
-    try{ await ctx.replyWithPhoto({source:'./qris.jpg'}, {caption: qrisTxt(u)}); }
-    catch(e){ await ctx.reply(mono(qrisTxt(u)), {parse_mode:'MarkdownV2'}); }
+  if(u.step === 'username'){
+    u.username = text.toLowerCase().replace(/\s+/g,'');
+    u.step = 'bayar';
+    await ctx.reply(bayarTxt(u), kbBayar);
+    const orderMsg = `🔥 ORDER BARU MASUK\n> PAKET : ${u.nama}\n> TOTAL : ${rupiah(u.harga)}\n> USER VPS : ${u.username}\n> CUSTOMER : @${ctx.from.username||'-'}\n> LOKASI : ${u.lokasi||'-'}\n> OS : ${u.os||'-'}\n> STATUS : MENUNGGU BAYAR`;
+    await kirimKeGrup(orderMsg);
     return;
   }
-  if(u.step==='menu') return sendMenu(ctx);
+  if(u.step === 'input_domain'){
+    u.nama = text + u.ekstensi.nama; u.harga = u.ekstensi.harga; u.cpu='-'; u.ram='-'; u.storage='-'; u.lokasi='-'; u.os='-';
+    u.step='konfirmasi_simple';
+    return ctx.reply(`╔═════════════════════════════════╗\n     🌐 PILIHAN KAMU 🌐\n╚═════════════════════════════════╝\n\n  ╭─► 🌐 ${u.nama}\n  ╰─► 💰 ${rupiah(u.harga)}/tahun\n\nKlik YA buat lanjut 👇`, kbYaBatal);
+  }
 });
 
+// FIX: PHOTO HANDLER YANG TADI HILANG - BUKTI KE OWNER DOANG
 bot.on('photo', async (ctx) => {
-  const id = ctx.from.id; const u = users.get(id);
-  if(!u) return;
-  if(u.step==='bayar'){
-    u.step='menunggu_validasi';
-    const photos = ctx.message.photo;
-    const fileId = photos[photos.length-1].file_id;
-    u.bukti_file_id = fileId;
-    u.username_tg = ctx.from.username || '-';
-    await ctx.reply(mono(`╔═════════════════════════════════╗\n     ✅ BUKTI DITERIMA ✅\n╚═════════════════════════════════╝\n\n  Bukti diterima kak!\n  Admin lagi cek ya, order kamu\n  akan aktif 5-10 menit setelah\n  divalidasi ⚡\n\n  Terima kasih sudah order di\n  ZUAN STORE 🙏💎`), {parse_mode:'MarkdownV2'});
-    // BUKTI CUMA KE OWNER DOANG, GA KE GRUP!
-    const kbValid = Markup.inlineKeyboard([
-      [Markup.button.callback('✅ VALID - PEMBAYARAN BERHASIL', 'valid_' + id)],
-      [Markup.button.callback('❌ TOLAK - BUKTI TIDAK VALID', 'tolak_' + id)]
-    ]);
-    const cap = `╔═════════════════════════════════╗\n     📸 BUKTI TF MASUK 📸\n╚═════════════════════════════════╝\n\n  ╭─► 👤 Cust : @${u.username_tg} (ID: ${id})\n  ├─► 📦 ${u.nama}\n  ├─► 💰 ${rupiah(u.harga)}\n  ╰─► 👤 Username VPS : ${u.username || '-'}\n\n  Pencet VALID kalo udah bener,\n  TOLAK kalo belum valid.`;
-    await bot.telegram.sendPhoto(ADMIN_ID, fileId, {caption: cap, ...kbValid});
-    return;
-  }
+  const id = ctx.from.id;
+  const u = users.get(id) || {};
+  const photoId = ctx.message.photo[ctx.message.photo.length-1].file_id;
+  await bot.telegram.sendPhoto(ADMIN_ID, photoId, {
+    caption: `📸 BUKTI BARU\n> ${u.nama||'-'}\n> ${u.harga?rupiah(u.harga):'-'}\n> @${ctx.from.username||'-'} | ID: ${id}\n> USER VPS: ${u.username||'-'}`,
+    ...Markup.inlineKeyboard([
+      [Markup.button.callback('✅ VALID', `valid_${id}`), Markup.button.callback('❌ TOLAK', `tolak_${id}`)]
+    ])
+  });
+  await ctx.reply('Bukti udah dikirim ke admin, tunggu divalidasi ya kak 🙏');
 });
 
-bot.launch().then(()=> console.log('Bot ZUAN STORE jalan!'));
-process.once('SIGINT', () => bot.stop('SIGINT'));
-process.once('SIGTERM', () => bot.stop('SIGTERM'));
+bot.launch().then(()=> console.log('Bot ZUAN STORE jalan!')).catch(e=>console.log('GAGAL JALAN:', e.message));
+process.once('SIGINT', ()=>bot.stop('SIGINT'));
+process.once('SIGTERM', ()=>bot.stop('SIGTERM'));

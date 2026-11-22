@@ -3,7 +3,7 @@
 // FLOW: MENU -> VPS -> LOKASI -> OS -> VERSI -> RINGKASAN -> USERNAME -> BAYAR -> QRIS -> BUKTI -> VALID/TOLAK -> IZIN
 // ============================================
 const { Telegraf, Markup } = require('telegraf');
-const bot = new Telegraf(process.env.BOT_TOKEN || 'ISI_TOKEN_LU_DISINI');
+const bot = new Telegraf(process.env.BOT_TOKEN || '9072638201:AAF6ujUN_gTiI4NRH9qlkdxZMSCwnhABRTk');
 const ADMIN_ID = 8493708698;
 const GROUP_UTAMA = -1004497488934;
 const GROUP_PROMO = -1003900745031;

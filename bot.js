@@ -51,83 +51,105 @@ const OS_VERSIONS_RAW = {
   rocky: ['Rocky Linux 9', 'Rocky Linux 8'],
 };
 
-const MENU = `╔═════════════════════════════════╗
-        ⚡✨ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ✨⚡
-     🚀 CEPAT. STABIL. TANPA RIBET.
-╚═════════════════════════════════╝
+const MENU = `✦ ━━━━━━━━━━━━━━━━━ ✦
+    ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ⚡
+  CEPAT. STABIL. TANPA RIBET.
+✦ ━━━━━━━━━━━━━━━━━ ✦
 
-      👋 Halo kak, Selamat Datang di
-          👑 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 👑
-      Mau order apa hari ini? 😎👇
+👋 HALO KAK, SELAMAT DATANG
+di 👑 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 👑
 
-Klik tombol di bawah ya kak 👇`;
+Udah cape cari VPS yang lelet?
+Tenang kak, disini tempatnya. 😎
 
-const VPS_LIST = `╔═════════════════════════════════╗
-     ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 — 𝐕𝐏𝐒 𝐌𝐔𝐑𝐀𝐇 ⚡
-      🚀 NVMe Gen4 | KVM | Full Root
-       ⚡ Aktif 5 Menit. Tanpa Ribet.
-╚═════════════════════════════════╝
+Disini kita jual VPS yang beneran
+ngegas, bukan yang cuma janji manis.
 
-  ╭─► 01 — VPS 1GB / Rp 30.000
-  │     ├─➤ CPU : 1 vCPU
-  │     ├─➤ RAM : 1GB DDR4
+▸ ⚡ SPEED NGEBUT - NVMe + 1Gbps
+▸ 🛡️ ANTI DOWN    - Uptime 99.9%
+▸ 🕹️ FULL KONTROL - Root Access Penuh
+▸ 👨‍💻 ADMIN FAST RESPON - Nggak Ditidurin
+▸ 💎 GARANSI      - Kalo Down, Kita Ganti!
+
+━━━━━━━━━━━━━━━━━━━
+🔥 PROMO HARI INI 🔥
+Beli VPS 2GB ke atas,
+> GRATIS Setup VPS sampe Selesai !
+> GRATIS Panel Pterodactyl !
+━━━━━━━━━━━━━━━━━━━
+
+Mau order yang mana nih kak?
+Langsung klik aja di bawah, jangan
+sampe kehabisan slotnya 👇
+
+✨ GAS ORDER SEKARANG ✨`;
+
+const VPS_LIST = `✦ ━━━━━━━━━━━━━━━━━ ✦
+  ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 - 𝐕𝐏𝐒 𝐌𝐔𝐑𝐀𝐇 ⚡
+  🚀 NVMe Gen4 | KVM | Full Root
+  ⚡ Aktif 1-2 Menit. Tanpa Ribet.
+✦ ━━━━━━━━━━━━━━━━━ ✦
+
+  ╭─► 01 — VPS 1GB --> Rp 30.000
+  │     ├─➤ CPU     : 1 vCPU
+  │     ├─➤ RAM     : 1GB DDR4
   │     ╰─➤ STORAGE : 20GB NVMe Gen4
-  ├─► 02 — VPS 2GB / Rp 40.000  🔥 PALING LARIS
-  │     ├─➤ CPU : 1 vCPU
-  │     ├─➤ RAM : 2GB DDR4
+  ├─► 02 — VPS 2GB --> Rp 40.000
+  │     ├─➤ CPU     : 1 vCPU
+  │     ├─➤ RAM     : 2GB DDR4
   │     ╰─➤ STORAGE : 30GB NVMe Gen4
-  ├─► 03 — VPS 4GB / Rp 75.000  ✨ BEST VALUE
-  │     ├─➤ CPU : 2 vCPU
-  │     ├─➤ RAM : 4GB DDR4
+  ├─► 03 — VPS 4GB --> Rp 75.000
+  │     ├─➤ CPU     : 2 vCPU
+  │     ├─➤ RAM     : 4GB DDR4
   │     ╰─➤ STORAGE : 60GB NVMe Gen4
-  ├─► 04 — VPS 8GB / Rp 130.000  👑 PRO
-  │     ├─➤ CPU : 4 vCPU
-  │     ├─➤ RAM : 8GB DDR4
+  ├─► 04 — VPS 8GB --> Rp 130.000
+  │     ├─➤ CPU     : 4 vCPU
+  │     ├─➤ RAM     : 8GB DDR4
   │     ╰─➤ STORAGE : 100GB NVMe Gen4
-  ├─► 05 — VPS 12GB / Rp 195.000  💪 BEAST
-  │     ├─➤ CPU : 6 vCPU
-  │     ├─➤ RAM : 12GB DDR4
+  ├─► 05 — VPS 12GB --> Rp 195.000
+  │     ├─➤ CPU     : 6 vCPU
+  │     ├─➤ RAM     : 12GB DDR4
   │     ╰─➤ STORAGE : 160GB NVMe Gen4
-  ╰─► 06 — VPS 16GB / Rp 275.000  🚀 MONSTER
-        ├─➤ CPU : 8 vCPU
-        ├─➤ RAM : 16GB DDR4
+  ╰─► 06 — VPS 16GB --> Rp 275.000
+        ├─➤ CPU     : 8 vCPU
+        ├─➤ RAM     : 16GB DDR4
         ╰─➤ STORAGE : 200GB NVMe Gen4
 
 Klik paket nya di bawah 👇`;
 
-const LOKASI_TXT = `╔═════════════════════════════════╗
-      🌍⚡ PILIH LOKASI SERVER ⚡🌍
-╚═════════════════════════════════╝
+const LOKASI_TXT = `✦ ━━━━━━━━━━━━━ ✦
+  🌍 𝐋𝐎𝐊𝐀𝐒𝐈 𝐒𝐄𝐑𝐕𝐄𝐑 🌍
+✦ ━━━━━━━━━━━━━ ✦
 
-      📍 Lokasi ngaruh ke PING ya kak!
-         Makin deket, makin ngebut! 🚀
+      📍 Lokasi ngaruh ke PING !
+         Makin deket, makin ngebut!
 
-  ╭─► [1] JERMAN — 140ms
+  ╭─► [1] 𝐈𝐍𝐃𝐎𝐍𝐄𝐒𝐈𝐀  — 140 ms
   │     ├─➤ REKOMENDASI | Paling Stabil
   │     ╰─➤ Cocok Buat Bot / Web
-  ├─► [2] INDONESIA — 15ms
-  │     ├─➤ PALING NGEBUT | Paling Deket
-  │     ╰─➤ PING KECIL, Buat Game / Bot
-  ╰─► [3] SINGAPURA — 30ms
+  ├─► [2] 𝐉𝐄𝐑𝐌𝐀𝐍    — 114 ms
+  │     ├─➤ REKOMENDASI | Paling Enak
+  │     ╰─➤ PING SEDANG, Buat Game / Bot
+  ╰─► [3] 𝐒𝐈𝐍𝐆𝐀𝐏𝐔𝐑𝐀 — 30 ms
         ├─➤ STABIL | Buat Asia
         ╰─➤ Alternatif Paling Aman
 
 Klik lokasi nya 👇`;
 
-const OS_TXT = `╔═════════════════════════════════╗
-     🐧 PILIH SISTEM OPERASI 🐧
-╚═════════════════════════════════╝
+const OS_TXT = `✦ ━━━━━━━━━━━━━ ✦
+  🖥️ 𝐒𝐈𝐒𝐓𝐄𝐌 𝐎𝐏𝐄𝐑𝐀𝐒𝐈 🖥️
+✦ ━━━━━━━━━━━━━ ✦
 
-  ▸ UBUNTU
+  ▸ 𝐔𝐁𝐔𝐍𝐓𝐔
     Paling mudah. Cocok buat pemula.
 
-  ▸ DEBIAN
+  ▸ 𝐃𝐄𝐁𝐈𝐀𝐍
     Paling stabil. Favorit para pro.
 
-  ▸ ALMALINUX
+  ▸ 𝐀𝐋𝐌𝐀𝐋𝐈𝐍𝐔𝐗
     Rasa enterprise. Tetap ringan.
 
-  ▸ ROCKY LINUX
+  ▸ 𝐑𝐎𝐂𝐊𝐘𝐋𝐈𝐍𝐔𝐗
     Kuat dan bisa diandalkan.
 
 Klik OS nya di bawah 👇`;
@@ -135,43 +157,43 @@ Klik OS nya di bawah 👇`;
 function osVersionTxt(fam){
   const judul = fam === 'ubuntu' ? 'UBUNTU' : fam === 'debian' ? 'DEBIAN' : fam === 'alma' ? 'ALMALINUX' : 'ROCKY LINUX';
   const desc = fam === 'ubuntu' ? 'Paling mudah. Cocok buat pemula.' : fam === 'debian' ? 'Paling stabil. Favorit para pro.' : fam === 'alma' ? 'Rasa enterprise. Tetap ringan.' : 'Kuat dan bisa diandalkan.';
-  return `╔═════════════════════════════════╗
-     🐧 PILIH VERSI ${judul} 🐧
-╚═════════════════════════════════╝
+    return `✦ ━━━━━━━━━━━━━ ✦
+  ⚙️ 𝐏𝐈𝐋𝐈𝐇 𝐕𝐄𝐑𝐒𝐈 ${judul} ⚙️
+✦ ━━━━━━━━━━━━━ ✦
 
   ${desc}
 
 Klik versi nya di bawah 👇`;
 }
 function ringkasanTxt(u){
- return `╔═════════════════════════════════╗
-     🧾✨ RINGKASAN ORDER KAMU ✨🧾
-╚═════════════════════════════════╝
+   return `✦ ━━━━━━━━━━━━━━━━━ ✦
+  ✨ 𝐑𝐈𝐍𝐆𝐊𝐀𝐒𝐀𝐍 𝐎𝐑𝐃𝐄𝐑 𝐊𝐀𝐌𝐔 ✨
+✦ ━━━━━━━━━━━━━━━━━ ✦
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
-┃      📦 DETAIL PESANAN KAMU      ┃
+    | 𝐃𝐄𝐓𝐀𝐈𝐋 𝐏𝐄𝐒𝐀𝐍𝐀𝐍 𝐊𝐀𝐌𝐔 |
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-  ╭─► 📦 PAKET
+  ╭─► 📦 𝕻𝕬𝕶𝕰𝕿
   │     ╰─➤ ${u.nama}
   │
-  ├─► 🖥️ CPU
+  ├─► 🖥️ 𝕮𝕻𝖀
   │     ╰─➤ ${u.cpu} ⚡
   │
-  ├─► 🧠 RAM
+  ├─► 🧠 𝕽𝕬𝕸
   │     ╰─➤ ${u.ram} 💪
   │
-  ├─► 💾 STORAGE
+  ├─► 💾 𝕾𝕿𝕺𝕽𝕬𝕲𝕰
   │     ╰─➤ ${u.storage} 🚀
   │
-  ├─► 📍 LOKASI
+  ├─► 📍 𝕷𝕺𝕶𝕬𝕾𝕴
   │     ╰─➤ ${u.lokasi} 🔥
   │
-  ├─► 🐧 OPERATING SYSTEM
+  ├─► 🐧 𝕺𝕻𝕰𝕽𝕬𝕿𝕴𝕹𝕲 𝕾𝖄𝕾𝕿𝕰𝕸
   │     ╰─➤ ${u.os}
   │
-  ╰─► 📅 DURASI
-        ╰─➤ 30 Hari Full 📆
+  ╰─► 📅 𝕯𝖀𝕽𝕬𝕾𝕴
+        ╰─➤ 30 Hari Full + Garansi Kalo Mokad
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
 ┃      💰 TOTAL : ${rupiah(u.harga)} 💰      ┃
@@ -179,12 +201,12 @@ function ringkasanTxt(u){
 
 Udah bener? Klik YA buat lanjut 👇`;
 }
-const USERNAME_TXT = `╔═════════════════════════════════╗
-     👤 ATUR USERNAME VPS KAMU 👤
-╚═════════════════════════════════╝
+const USERNAME_TXT = `✦ ━━━━━━━━━━━━━━━━━ ✦
+  👤 𝐀𝐓𝐔𝐑 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 𝐊𝐀𝐌𝐔 👤
+✦ ━━━━━━━━━━━━━━━━━ ✦
 
    Tentuin username buat login VPS kamu 😎
-       Contoh: zuan, budi, storeku
+       Contoh: zuanstore
 
 ⚠️ Syaratnya:
   ╭─► 🔤 Huruf kecil aja
@@ -192,26 +214,26 @@ const USERNAME_TXT = `╔══════════════════�
 
 ⌨️ Ketik username kamu sekarang:`;
 function bayarTxt(u){
- return `╔═════════════════════════════════╗
-    ✅🔒 ORDER BERHASIL DIKUNCI 🔒✅
-╚═════════════════════════════════╝
+   return `✦ ━━━━━━━━━━━━━━━━━ ✦
+  🔒 𝐎𝐑𝐃𝐄𝐑 𝐁𝐄𝐑𝐇𝐀𝐒𝐈𝐋 𝐃𝐈𝐋𝐎𝐂𝐊 🔒
+✦ ━━━━━━━━━━━━━━━━━ ✦
 
      Terima kasih sudah order di
          👑⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ⚡👑
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
-┃         💻 SPEK VPS KAMU 💻         ┃
+   ┃ 💻 𝐃𝐄𝐓𝐀𝐈𝐋 𝐕𝐏𝐒 𝐊𝐀𝐌𝐔 💻  ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-  ╭─► 📦 PAKET ╰─➤ ${u.nama}
-  ├─► 🖥️ CPU ╰─➤ ${u.cpu || '-'}
-  ├─► 🧠 RAM ╰─➤ ${u.ram || '-'}
-  ├─► 💾 STORAGE ╰─➤ ${u.storage || '-'}
-  ├─► 📍 LOKASI ╰─➤ ${u.lokasi || '-'}
-  ├─► 🐧 OS ╰─➤ ${u.os || '-'}
-  ├─► 👤 USERNAME ╰─➤ ${u.username}
-  ├─► 🔑 PASSWORD ╰─➤ Dikirim setelah bayar
-  ╰─► 📅 DURASI ╰─➤ 30 Hari Full
+  ╭─► 📦 PAKET   :--➤ ${u.nama}
+  ├─► 🖥️ CPU     :--➤ ${u.cpu || '-'}
+  ├─► 🧠 RAM     :--➤ ${u.ram || '-'}
+  ├─► 💾 STORAGE :--➤ ${u.storage || '-'}
+  ├─► 📍 LOKASI  :--➤ ${u.lokasi || '-'}
+  ├─► 📀 OS      :--➤ ${u.os || '-'}
+  ├─► 👤 USERNAME:--➤ ${u.username}
+  ├─► 🔑 PASSWORD:--➤ Dikirim setelah Payment
+  ╰─► 📅 DURASI  :--➤ 30 Hari Full + Garansi Kalo Mokad
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
 ┃       💰 TOTAL PEMBAYARAN 💰       ┃
@@ -219,30 +241,30 @@ function bayarTxt(u){
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
-┃       💳 METODE : TRANSFER 💳       ┃
+   ┃ 💳 METODE : TRANSFER 💳 ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
   ╭─► 🏦 SEABANK
   │     ├─➤ No. Rek : 9012-4214-5662
-  │     ╰─➤ A.N : MUHAMAD IKHSANDI AKBAR
+  │     ╰─➤ A.N     : MUHAMAD IKHSANDI AKBAR
   │
   ├─► 📱 GOPAY
   │     ├─➤ No. HP : 0858-7225-7850
-  │     ╰─➤ A.N : MUHAMAD IKHSANDI AKBAR
+  │     ╰─➤ A.N    : MUHAMAD IKHSANDI AKBAR
   │
   ╰─► ⚠️ DANA — SEDANG ADA KENDALA ⚠️
         ├─➤ Akun owner sedang gangguan
-        ╰─➤ Mohon pakai QRIS / Seabank / Gopay dulu ya
+        ╰─➤ Mohon pakai : QRIS / Seabank / Gopay dulu ya
 
 Klik tombol QRIS di bawah 👇`;
 }
 function qrisTxt(u){
- return `╔═════════════════════════════════╗
-      📷 PEMBAYARAN VIA QRIS 📷
-╚═════════════════════════════════╝
+   return `✦ ━━━━━━━━━━━━━━━━━ ✦
+  📸 𝐏𝐄𝐌𝐁𝐀𝐘𝐀𝐑𝐀𝐍 𝐕𝐈𝐀 𝐐𝐑𝐈𝐒 📸
+✦ ━━━━━━━━━━━━━━━━━ ✦
 
   Halo kak, terima kasih banyak sudah
-  percaya order di 👑 ZUAN STORE 👑
+  percaya order di Store Kami 
 
   Ini QRIS nya sudah kami kirimkan ya ✨
   Silakan scan QR di atas untuk
@@ -252,16 +274,19 @@ function qrisTxt(u){
   ╰─► 👤 A.N : MUHAMAD IKHSANDI AKBAR
 
 QR ini bisa di scan melalui:
-💙 DANA / 💜 OVO / 💚 Gopay / 🧡 ShopeePay
-atau M-Banking apa saja.
+• DANA
+• OVO
+• Gopay
+• ShopeePay
+• atau M-Banking apa saja.
 
-📸 Setelah berhasil, kirim bukti
+Setelah berhasil, kirim bukti
 transfernya ke sini ya kak.
 Kami akan segera proses VPS nya
-dan aktif dalam 5-10 menit ⚡
+dan aktif dalam 1-2 menit ⚡
 
 Sekali lagi, terima kasih banyak
-sudah memilih ZUAN STORE 🙏💎
+sudah memilih ZUAN STORE 💎
 Kami sangat menghargai kepercayaan kakak.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -274,16 +299,16 @@ const PANEL_TXT = `╔═══════════════════�
 ╚═════════════════════════════════╝
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
-┃       💎 PILIH PAKET PANEL 💎       ┃
+  ┃ 💎 PILIH PAKET PANEL 💎  ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
   ╭─► 01 — PANEL 1GB / Rp 5.000
   │     ╰─➤ 1GB RAM | 10GB Disk | 40% CPU
-  ├─► 02 — PANEL 2GB / Rp 8.000 🔥 LARIS
+  ├─► 02 — PANEL 2GB / Rp 8.000
   │     ╰─➤ 2GB RAM | 20GB Disk | 80% CPU
-  ├─► 03 — PANEL 4GB / Rp 15.000 ✨ BEST
+  ├─► 03 — PANEL 4GB / Rp 15.000
   │     ╰─➤ 4GB RAM | 40GB Disk | 150% CPU
-  ╰─► 04 — PANEL UNLIMITED / Rp 30.000 👑
+  ╰─► 04 — PANEL UNLIMITED / Rp 30.000 
         ╰─➤ UNLI RAM | UNLI Disk | UNLI CPU
 
 Klik paket nya 👇`;
@@ -296,21 +321,21 @@ const DOMAIN_TXT = `╔═══════════════════
 ┃       💎 LIST HARGA DOMAIN 💎       ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-  ╭─► [1] .my.id — Rp 12.000 /tahun
-  ├─► [2] .xyz — Rp 15.000 /tahun
+  ╭─► [1] .my.id  — Rp 12.000 /tahun
+  ├─► [2] .xyz    — Rp 15.000 /tahun
   ├─► [3] .online — Rp 20.000 /tahun
-  ├─► [4] .store — Rp 25.000 /tahun
-  ├─► [5] .com — Rp 95.000 /tahun
-  ╰─► [6] .id — Rp 180.000 /tahun
+  ├─► [4] .store  — Rp 25.000 /tahun
+  ├─► [5] .com    — Rp 95.000 /tahun
+  ╰─► [6] .id     — Rp 180.000 /tahun
 
-Klik ekstensi nya 👇`;
+Klik eksistensi nya 👇`;
 const JASA_TXT = `╔═════════════════════════════════╗
      🛠️ JASA INSTALL / SETTING 🛠️
         ⚙️ DIBANTU SAMPAI BERES
 ╚═════════════════════════════════╝
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
-┃        💎 PILIH JASA KAMU 💎        ┃
+ ┃    💎 PILIH JASA KAMU 💎   ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
   ╭─► [1] 🤖 INSTALL BOT WA — Rp 15.000
@@ -330,18 +355,18 @@ const ADMIN_TXT = `╔═══════════════════�
      Butuh bantuan? Santai, admin kita
            fast respon kok! 😎👇
 
-  ╭─► 👨‍💻 ADMIN : Zuan
+  ╭─► 👨‍💻 ADMIN  : ShanXPLD
   ├─► ⏰ ONLINE : 24 Jam
   ├─► ⚡ RESPON : 1 - 5 Menit
-  ╰─► 📱 TELE : Klik tombol di bawah
+  ╰─► 📱 TELE   : Klik tombol di bawah
 
 Klik tombol ADMIN 👇`;
 function validTxt(u){
- return `╔═════════════════════════════════╗
-    ✅✨ PEMBAYARAN BERHASIL ✨✅
-╚═════════════════════════════════╝
+   return `✦ ━━━━━━━━━━━━━━━━━ ✦
+  ✅ PEMBAYARAN BERHASIL ✅
+✦ ━━━━━━━━━━━━━━━━━ ✦
 
-  Terima kasih banyak kak 🙏💎
+  Terima kasih banyak kak 
 
   Pembayaran kakak untuk:
   ╭─► 📦 ${u.nama}
@@ -351,8 +376,8 @@ function validTxt(u){
   BERHASIL ✅
 
   ╭─► 👤 USERNAME : ${u.username}
-  ╰─► ⚡ STATUS : VPS sedang diproses
-        Aktif 5-10 menit lagi
+  ╰─► ⚡ STATUS   : VPS sedang diproses
+        Aktif 1-2 menit lagi
 
   Sekali lagi, terima kasih atas
   kepercayaan kakak sudah memilih
@@ -363,9 +388,9 @@ function validTxt(u){
 ━━━━━━━━━━━━━━━━━━━━━━━━━━`;
 }
 function tolakTxt(u){
- return `╔═════════════════════════════════╗
-    🙏 MOHON MAAF YA KAK 🙏
-╚═════════════════════════════════╝
+   return `✦ ━━━━━━━━━━━━━━━━━ ✦
+  🙏 MOHON MAAF YA KAK 🙏
+✦ ━━━━━━━━━━━━━━━━━ ✦
 
   Mohon maaf sebesar-besarnya ya kak 🙏
 
@@ -378,11 +403,11 @@ function tolakTxt(u){
 
   ╭─► 📸 Boleh tolong kirim ulang
   │     bukti yang lebih jelas?
-  │     Foto full, jangan terpotong ya kak 🥺
+  │     Foto full, jangan terpotong ya kak
   ╰─► 💬 Atau chat admin, kami bantu
-        cek bareng-bareng 🙏
+        cek bareng-bareng 
 
-  Terima kasih atas pengertiannya kak 💎
+  Terima kasih atas pengertiannya kak 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 ⚡ ZUAN STORE - CEPAT. STABIL. TANPA RIBET. ⚡
@@ -395,30 +420,30 @@ const kbMenu = Markup.inlineKeyboard([
   [Markup.button.callback('💬 HUBUNGI ADMIN', 'menu_5')],
 ]);
 const kbVps = Markup.inlineKeyboard([
-  [Markup.button.callback('01 - VPS 1GB | Rp 30K', 'vps_1')],
-  [Markup.button.callback('02 - VPS 2GB | Rp 40K 🔥 LARIS', 'vps_2')],
-  [Markup.button.callback('03 - VPS 4GB | Rp 75K ✨ BEST', 'vps_3')],
-  [Markup.button.callback('04 - VPS 8GB | Rp 130K 👑 PRO', 'vps_4')],
-  [Markup.button.callback('05 - VPS 12GB | Rp 195K 💪', 'vps_5')],
-  [Markup.button.callback('06 - VPS 16GB | Rp 275K 🚀', 'vps_6')],
-  [Markup.button.callback('↩️ Kembali', 'back_menu')],
+  [Markup.button.callback('VPS 1GB | Rp 30K', 'vps_1')],
+  [Markup.button.callback('VPS 2GB | Rp 40K', 'vps_2')],
+  [Markup.button.callback('VPS 4GB | Rp 75K', 'vps_3')],
+  [Markup.button.callback('VPS 8GB | Rp 130K', 'vps_4')],
+  [Markup.button.callback('VPS 12GB | Rp 195K', 'vps_5')],
+  [Markup.button.callback('VPS 16GB | Rp 275K', 'vps_6')],
+  [Markup.button.callback('⏪ Kembali', 'back_menu')],
 ]);
 const kbLokasi = Markup.inlineKeyboard([
-  [Markup.button.callback('🇩🇪 JERMAN - 140ms ⭐', 'lok_1')],
-  [Markup.button.callback('🇮🇩 INDONESIA - 15ms 🔥', 'lok_2')],
-  [Markup.button.callback('🇸🇬 SINGAPURA - 30ms ✨', 'lok_3')],
-  [Markup.button.callback('↩️ Kembali', 'back_menu')],
+  [Markup.button.callback('🇮🇩 INDONESI - 15ms', 'lok_1')],
+  [Markup.button.callback('🇩🇪 JERMAN - 114ms', 'lok_2')],
+  [Markup.button.callback('🇸🇬 SINGAPURA - 30ms', 'lok_3')],
+  [Markup.button.callback('⏪ Kembali', 'back_menu')],
 ]);
 const kbOsFamily = Markup.inlineKeyboard([
-  [Markup.button.callback('🐧 UBUNTU - Paling Mudah', 'osfam_ubuntu')],
-  [Markup.button.callback('🌀 DEBIAN - Paling Stabil', 'osfam_debian')],
-  [Markup.button.callback('💼 ALMALINUX - Enterprise', 'osfam_alma')],
-  [Markup.button.callback('🪨 ROCKY LINUX - Kuat', 'osfam_rocky')],
-  [Markup.button.callback('↩️ Kembali', 'back_menu')],
+  [Markup.button.callback('UBUNTU', 'osfam_ubuntu')],
+  [Markup.button.callback('DEBIAN', 'osfam_debian')],
+  [Markup.button.callback('ALMALINUX', 'osfam_alma')],
+  [Markup.button.callback('ROCKY LINUX', 'osfam_rocky')],
+  [Markup.button.callback('⏪ Kembali', 'back_menu')],
 ]);
 function kbOsVersion(fam){
   const btns = OS_VERSIONS_LABEL[fam].map((label, i) => [Markup.button.callback('✅ ' + label, `osver_${fam}_${i}`)]);
-  btns.push([Markup.button.callback('↩️ Kembali ke OS', 'back_os')]);
+  btns.push([Markup.button.callback('⏪ Kembali ke OS', 'back_os')]);
   return Markup.inlineKeyboard(btns);
 }
 const kbYaBatal = Markup.inlineKeyboard([
@@ -426,31 +451,31 @@ const kbYaBatal = Markup.inlineKeyboard([
 ]);
 const kbBayar = Markup.inlineKeyboard([
   [Markup.button.callback('📷 LIAT QRIS', 'qris')],
-  [Markup.button.callback('↩️ MENU UTAMA', 'back_menu')],
+  [Markup.button.callback('⏪ MENU UTAMA', 'back_menu')],
 ]);
 const kbPanel = Markup.inlineKeyboard([
-  [Markup.button.callback('PANEL 1GB | Rp 5K', 'panel_1')],
-  [Markup.button.callback('PANEL 2GB | Rp 8K 🔥', 'panel_2')],
-  [Markup.button.callback('PANEL 4GB | Rp 15K ✨', 'panel_3')],
-  [Markup.button.callback('PANEL UNLIMITED | Rp 30K 👑', 'panel_4')],
-  [Markup.button.callback('↩️ Kembali', 'back_menu')],
+  [Markup.button.callback('PANEL 1GB | Rp 3K', 'panel_1')],
+  [Markup.button.callback('PANEL 2GB | Rp 6K', 'panel_2')],
+  [Markup.button.callback('PANEL 4GB | Rp 9K', 'panel_3')],
+  [Markup.button.callback('PANEL UNLIMITED | Rp 25K', 'panel_4')],
+  [Markup.button.callback('⏪ Kembali', 'back_menu')],
 ]);
 const kbDomain = Markup.inlineKeyboard([
   [Markup.button.callback('.my.id - Rp 12K', 'dom_1'), Markup.button.callback('.xyz - Rp 15K', 'dom_2')],
   [Markup.button.callback('.online - Rp 20K', 'dom_3'), Markup.button.callback('.store - Rp 25K', 'dom_4')],
   [Markup.button.callback('.com - Rp 95K', 'dom_5'), Markup.button.callback('.id - Rp 180K', 'dom_6')],
-  [Markup.button.callback('↩️ Kembali', 'back_menu')],
+  [Markup.button.callback('⏪ Kembali', 'back_menu')],
 ]);
 const kbJasa = Markup.inlineKeyboard([
   [Markup.button.callback('🤖 INSTALL BOT WA - Rp 15K', 'jasa_1')],
   [Markup.button.callback('🎮 INSTALL PANEL - Rp 20K', 'jasa_2')],
   [Markup.button.callback('🌐 INSTALL WEB - Rp 25K', 'jasa_3')],
   [Markup.button.callback('🔧 SETTING VPS - Rp 10K', 'jasa_4')],
-  [Markup.button.callback('↩️ Kembali', 'back_menu')],
+  [Markup.button.callback('⏪ Kembali', 'back_menu')],
 ]);
 const kbAdmin = Markup.inlineKeyboard([
   [Markup.button.callback('💬 CHAT ADMIN SEKARANG', 'admin_chat')],
-  [Markup.button.callback('↩️ MENU UTAMA', 'back_menu')],
+  [Markup.button.callback('⏪ MENU UTAMA', 'back_menu')],
 ]);
 
 const sendMenu = (ctx) => ctx.reply(MENU, kbMenu);

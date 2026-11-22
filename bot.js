@@ -107,10 +107,10 @@ const LOKASI_TXT = `╔═══════════════════
       📍 Lokasi ngaruh ke PING ya kak!
          Makin deket, makin ngebut! 🚀
 
-  ╭─► [1] JERMAN — 140ms
+  ╭─► [1] INDONESIA — 15ms
   │     ├─➤ REKOMENDASI | Paling Stabil
   │     ╰─➤ Cocok Buat Bot / Web
-  ├─► [2] INDONESIA — 15ms
+  ├─► [2] JERMAN — 145ms
   │     ├─➤ PALING NGEBUT | Paling Deket
   │     ╰─➤ PING KECIL, Buat Game / Bot
   ╰─► [3] SINGAPURA — 30ms
@@ -191,7 +191,7 @@ const USERNAME_TXT = `╔══════════════════�
 ╚═════════════════════════════════╝
 
    Tentuin username buat login VPS kamu 😎
-       Contoh: zuan, budi, storeku
+       Contoh: zuanstore
 
 ⚠️ Syaratnya:
   ╭─► 🔤 Huruf kecil aja
@@ -211,15 +211,15 @@ function bayarTxt(u){
 ┃         💻 SPEK VPS KAMU 💻         ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-  ╭─► 📦 PAKET ╰─➤ ${u.nama}
-  ├─► 🖥️ CPU ╰─➤ ${u.cpu || '-'}
-  ├─► 🧠 RAM ╰─➤ ${u.ram || '-'}
-  ├─► 💾 STORAGE ╰─➤ ${u.storage || '-'}
-  ├─► 📍 LOKASI ╰─➤ ${u.lokasi || '-'}
-  ├─► 🐧 OS ╰─➤ ${u.os || '-'}
-  ├─► 👤 USERNAME ╰─➤ ${u.username}
-  ├─► 🔑 PASSWORD ╰─➤ Dikirim setelah bayar
-  ╰─► 📅 DURASI ╰─➤ 30 Hari Full
+  ╭─► 📦 PAKET   : --> ${u.nama}
+  ├─► 🖥️ CPU     : --> ${u.cpu || '-'}
+  ├─► 🧠 RAM     : --➤ ${u.ram || '-'}
+  ├─► 💾 STORAGE : --➤ ${u.storage || '-'}
+  ├─► 📍 LOKASI  : --➤ ${u.lokasi || '-'}
+  ├─► 🐧 OS      : --➤ ${u.os || '-'}
+  ├─► 👤 USERNAME: --➤ ${u.username}
+  ├─► 🔑 PASSWORD: --➤ Dikirim setelah bayar
+  ╰─► 📅 DURASI  : --➤ 30 Hari Full + Garansi Kalo Mokad
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
 ┃       💰 TOTAL PEMBAYARAN 💰       ┃
@@ -261,16 +261,16 @@ function qrisTxt(u){
   ╰─► 👤 A.N : MUHAMAD IKHSANDI AKBAR
 
 QR ini bisa di scan melalui:
-💙 DANA / 💜 OVO / 💚 Gopay / 🧡 ShopeePay
+• DANA / • OVO / • Gopay / • ShopeePay
 atau M-Banking apa saja.
 
 📸 Setelah berhasil, kirim bukti
 transfernya ke sini ya kak.
 Kami akan segera proses VPS nya
-dan aktif dalam 5-10 menit ⚡
+dan aktif dalam 1-2 menit ⚡
 
 Sekali lagi, terima kasih banyak
-sudah memilih ZUAN STORE 🙏💎
+sudah memilih ZUAN STORE 💎
 Kami sangat menghargai kepercayaan kakak.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -287,13 +287,13 @@ const PANEL_TXT = `╔═══════════════════�
 ┃       💎 PILIH PAKET PANEL 💎       ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-  ╭─► 01 — PANEL 1GB / Rp 5.000
+  ╭─► 01 — PANEL 1GB --> Rp 5.000
   │     ╰─➤ 1GB RAM | 10GB Disk | 40% CPU
-  ├─► 02 — PANEL 2GB / Rp 8.000 🔥 LARIS
+  ├─► 02 — PANEL 2GB --> Rp 8.000 
   │     ╰─➤ 2GB RAM | 20GB Disk | 80% CPU
-  ├─► 03 — PANEL 4GB / Rp 15.000 ✨ BEST
+  ├─► 03 — PANEL 4GB --> Rp 15.000 ✨ BEST
   │     ╰─➤ 4GB RAM | 40GB Disk | 150% CPU
-  ╰─► 04 — PANEL UNLIMITED / Rp 30.000 👑
+  ╰─► 04 — PANEL UNLIMITED --> Rp 30.000 |KING|
         ╰─➤ UNLI RAM | UNLI Disk | UNLI CPU
 
 Klik paket nya 👇`;
@@ -307,12 +307,12 @@ const DOMAIN_TXT = `╔═══════════════════
 ┃       💎 LIST HARGA DOMAIN 💎       ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-  ╭─► [1] .my.id — Rp 12.000 /tahun
-  ├─► [2] .xyz — Rp 15.000 /tahun
-  ├─► [3] .online — Rp 20.000 /tahun
-  ├─► [4] .store — Rp 25.000 /tahun
-  ├─► [5] .com — Rp 95.000 /tahun
-  ╰─► [6] .id — Rp 180.000 /tahun
+  ╭─► [1] .my.id : — Rp 12.000 /tahun
+  ├─► [2] .xyz   : — Rp 15.000 /tahun
+  ├─► [3] .online: — Rp 20.000 /tahun
+  ├─► [4] .store : — Rp 25.000 /tahun
+  ├─► [5] .com   : — Rp 95.000 /tahun
+  ╰─► [6] .id    : — Rp 180.000 /tahun
 
 Klik ekstensi nya 👇`;
 
@@ -366,8 +366,8 @@ function validTxt(u){
   BERHASIL ✅
 
   ╭─► 👤 USERNAME : ${u.username}
-  ╰─► ⚡ STATUS : VPS sedang diproses
-        Aktif 5-10 menit lagi
+  ╰─► ⚡ STATUS   : VPS sedang diproses
+        Aktif 1-2 menit lagi
 
   Sekali lagi, terima kasih atas
   kepercayaan kakak sudah memilih
@@ -382,7 +382,7 @@ function tolakTxt(u){
     🙏 MOHON MAAF YA KAK 🙏
 ╚═════════════════════════════════╝
 
-  Mohon maaf sebesar-besarnya ya kak 🙏
+  Mohon maaf sebesar-besarnya ya kak 
 
   Setelah kami cek dengan teliti,
   bukti transfer yang kakak kirim untuk:
@@ -397,7 +397,7 @@ function tolakTxt(u){
 
   ╭─► 📸 Boleh tolong kirim ulang
   │     bukti yang lebih jelas?
-  │     Foto full, jangan terpotong ya kak 🥺
+  │     Foto full, jangan terpotong ya kak 
   ╰─► 💬 Atau chat admin, kami bantu
         cek bareng-bareng 🙏
 
@@ -416,16 +416,16 @@ const kbMenu = Markup.inlineKeyboard([
 ]);
 const kbVps = Markup.inlineKeyboard([
   [Markup.button.callback('01 - VPS 1GB | Rp 30K', 'vps_1')],
-  [Markup.button.callback('02 - VPS 2GB | Rp 40K 🔥 LARIS', 'vps_2')],
-  [Markup.button.callback('03 - VPS 4GB | Rp 75K ✨ BEST', 'vps_3')],
-  [Markup.button.callback('04 - VPS 8GB | Rp 130K 👑 PRO', 'vps_4')],
-  [Markup.button.callback('05 - VPS 12GB | Rp 195K 💪', 'vps_5')],
-  [Markup.button.callback('06 - VPS 16GB | Rp 275K 🚀', 'vps_6')],
+  [Markup.button.callback('02 - VPS 2GB | Rp 40K', 'vps_2')],
+  [Markup.button.callback('03 - VPS 4GB | Rp 75K', 'vps_3')],
+  [Markup.button.callback('04 - VPS 8GB | Rp 130K', 'vps_4')],
+  [Markup.button.callback('05 - VPS 12GB | Rp 195K', 'vps_5')],
+  [Markup.button.callback('06 - VPS 16GB | Rp 275K', 'vps_6')],
   [Markup.button.callback('↩️ Kembali', 'back_menu')],
 ]);
 const kbLokasi = Markup.inlineKeyboard([
-  [Markup.button.callback('🇩🇪 JERMAN - 140ms ⭐', 'lok_1')],
-  [Markup.button.callback('🇮🇩 INDONESIA - 15ms 🔥', 'lok_2')],
+  [Markup.button.callback('🇮🇩 INDONESIA - 10ms ⭐', 'lok_1')],
+  [Markup.button.callback('🇩🇪 JERMAN - 135ms ⭐', 'lok_2')],
   [Markup.button.callback('🇸🇬 SINGAPURA - 30ms ✨', 'lok_3')],
   [Markup.button.callback('↩️ Kembali', 'back_menu')],
 ]);

@@ -56,20 +56,39 @@ const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━�
   ㅤㅤㅤㅤ𝐂𝐄𝐏𝐀𝐓. 𝐒𝐓𝐀𝐁𝐈𝐋. 𝐓𝐀𝐍𝐏𝐀 𝐑𝐈𝐁𝐄𝐓.
 ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
 
-ㅤㅤㅤㅤㅤㅤ👋 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎
+ㅤㅤㅤㅤㅤㅤ ㅤ𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎
  ㅤㅤㅤㅤㅤ✦「 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 」✦ 
 
-𝚄𝚍𝚊𝚑 𝚌𝚊𝚙𝚎 𝚌𝚊𝚛𝚒 𝚅𝙿𝚂 𝚢𝚊𝚗𝚐 𝚕𝚎𝚕𝚎𝚝?
-𝚃𝚎𝚗𝚊𝚗𝚐 𝚋𝚊𝚗𝚐, 𝚍𝚒𝚜𝚒𝚗𝚒 𝚝𝚎𝚖𝚙𝚊𝚝𝚗𝚢𝚊. 😎
-
-𝙳𝚒𝚜𝚒𝚗𝚒 𝚔𝚒𝚝𝚊 𝚓𝚞𝚊𝚕 𝚅𝙿𝚂 𝚢𝚊𝚗𝚐 𝚋𝚎𝚗𝚎𝚛𝚊𝚗
-𝚗𝚐𝚎𝚐𝚊𝚜, 𝚋𝚞𝚔𝚊𝚗 𝚢𝚊𝚗𝚐 𝚌𝚞𝚖𝚊 𝚓𝚊𝚗𝚓𝚒 𝚖𝚊𝚗𝚒𝚜.
+ㅤㅤㅤㅤㅤTerima kasih banyak
+udah mampir dan percaya sama kami 
+Di sini kakak nggak cuma beli produk, 
+tapi kakak juga dapet 
+ㅤㅤㅤㅤKENYAMANAN dan KEAMANAN.
 ✦━━━━━━━━━━━━━━━━━━━━━━━━━━✦
-▸ ⚡ SPEED NGEBUTㅤㅤ- NVMe + 1Gbps
-▸ 🛡️ ANTI DOWNㅤㅤㅤㅤ- Uptime 99.9%
-▸ 🕹️ FULL KONTROLㅤㅤ- Access Penuh
-▸ 👨‍💻 OWN FAST RESPON- Nggak Ditidurin
-▸ 💎 FULL GARANSIㅤㅤ- Down? Kita Ganti!
+ㅤㅤㅤ𝐊𝐄𝐔𝐍𝐆𝐆𝐔𝐋𝐀𝐍 𝐁𝐄𝐋𝐈 𝐃𝐈 𝐊𝐀𝐌𝐈
+1.ㅤㅤㅤㅤㅤ⚡ SPEED NGEBUT
+Server kami Memakai NVMe Gen4 + 1Gbps.
+Dijamin ngebut, anti lemot, 
+anti ngelag buat bot, web, atau game
+
+2.ㅤㅤ🛡️ ANTI DOWN - UPTIME 99.9%
+Server kami dipantau 24 jam nonstop.
+Kakak bisa tidur tenang, 
+server tetap jalan stabil.
+
+3.ㅤㅤㅤㅤㅤ🕹️ FULL KONTROL
+Kakak bebas install apa aja, 
+bebas atur sesuka hati.
+Ini server anda yang punya kendali penuh.
+
+4.ㅤ👨‍💼 ADMIN FAST RESPON 24 JAM
+Nggak ada cerita kakak ditidurin admin.
+Chat dibalas 1-5 menit, 
+dibantu sampai BERES.
+
+5.ㅤㅤㅤㅤ💎 FULL GARANSI
+Kalau server down tanpa sebab, kami ganti!
+Kakak nggak akan rugi sepeserpun.
 
 ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
 ㅤㅤㅤㅤ🔥 PROMO HARI INI 🔥
@@ -81,7 +100,7 @@ const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━�
 | Mau order yang mana nih ?
 | Langsung klik aja di bawah, 
 | jangan sampe kehabisan slotnya👇
-
+「ㅤSalam sukses dari ZUAN STOREㅤ」
 ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
 ㅤㅤㅤㅤ✨ 𝐆𝐀𝐒 𝐎𝐑𝐃𝐄𝐑 𝐒𝐄𝐊𝐀𝐑𝐀𝐍𝐆 ✨`;
 

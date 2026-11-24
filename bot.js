@@ -56,32 +56,32 @@ const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━�
   ㅤㅤㅤㅤCEPAT. STABIL. TANPA RIBET.
 ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
 
-ㅤㅤ👋 HALO KAK, SELAMAT DATANG DI
- ㅤㅤㅤㅤㅤ✦━ㅤ𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄ㅤ━✦ 
+ㅤㅤㅤㅤㅤ👋 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎
+ ㅤㅤㅤㅤㅤ✦ㅤ━𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄━ㅤ✦ 
 
-Udah cape cari VPS yang lelet?
-Tenang bang, disini tempatnya. 😎
+𝚄𝚍𝚊𝚑 𝚌𝚊𝚙𝚎 𝚌𝚊𝚛𝚒 𝚅𝙿𝚂 𝚢𝚊𝚗𝚐 𝚕𝚎𝚕𝚎𝚝?
+𝚃𝚎𝚗𝚊𝚗𝚐 𝚋𝚊𝚗𝚐, 𝚍𝚒𝚜𝚒𝚗𝚒 𝚝𝚎𝚖𝚙𝚊𝚝𝚗𝚢𝚊. 😎
 
-Disini kita jual VPS yang beneran
-ngegas, bukan yang cuma janji manis.
-
+𝙳𝚒𝚜𝚒𝚗𝚒 𝚔𝚒𝚝𝚊 𝚓𝚞𝚊𝚕 𝚅𝙿𝚂 𝚢𝚊𝚗𝚐 𝚋𝚎𝚗𝚎𝚛𝚊𝚗
+𝚗𝚐𝚎𝚐𝚊𝚜, 𝚋𝚞𝚔𝚊𝚗 𝚢𝚊𝚗𝚐 𝚌𝚞𝚖𝚊 𝚓𝚊𝚗𝚓𝚒 𝚖𝚊𝚗𝚒𝚜.
+✦━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━✦
 ▸ ⚡ SPEED NGEBUT ㅤㅤ- NVMe + 1Gbps
 ▸ 🛡️ ANTI DOWN    ㅤㅤ- Uptime 99.9%
 ▸ 🕹️ FULL KONTROL ㅤㅤ- Root Access Penuh
 ▸ 👨‍💻 OWN FAST RESPON - Nggak Ditidurin
-▸ 💎 GARANSI      ㅤㅤ- Kalo Down, Kita Ganti!
+▸ 💎 FULL GARANSI    - Kalo Down, Kita Ganti!
 
-ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━━━━ㅤ✦
+ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
 ㅤㅤㅤㅤ🔥 PROMO HARI INI 🔥
-Beli VPS 2GB ke atas,
-> GRATIS Setup VPS sampe Selesai !
-> GRATIS Panel Pterodactyl !
-ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━━━━ㅤ✦
+Beli VPS 2 GB ke atas,
+➤ㅤGRATIS Setup VPS sampe Selesai !
+➤ㅤGRATIS Panel Pterodactyl !
+ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
 
-Mau order yang mana nih ?
-Langsung klik aja di bawah, jangan
-sampe kehabisan slotnya 👇
-
+|ㅤMau order yang mana nih ?
+|ㅤLangsung klik aja di bawah, jangan
+|ㅤsampe kehabisan slotnya 👇
+✦ㅤ━━━━━━━━━━━━━━━━━━ㅤ✦
 ㅤㅤㅤㅤ✨ GAS ORDER SEKARANG ✨`;
 
 const VPS_LIST = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦

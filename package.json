@@ -1,0 +1,13 @@
+{
+  "name": "zuan-store-bot",
+  "version": "1.0.0",
+  "description": "Bot ZUAN STORE",
+  "main": "bot.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "telegraf": "^4.16.3"
+  }
+}

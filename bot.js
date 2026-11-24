@@ -52,37 +52,37 @@ const OS_VERSIONS_RAW = {
 };
 
 const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
-    ㅤㅤㅤㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ⚡
-  ㅤㅤㅤCEPAT. STABIL. TANPA RIBET.
+    ㅤㅤㅤㅤㅤㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ⚡
+  ㅤㅤㅤㅤCEPAT. STABIL. TANPA RIBET.
 ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
 
-ㅤ👋 HALO KAK, SELAMAT DATANG DI
- ㅤㅤㅤㅤ👑 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 👑
+ㅤㅤ👋 HALO KAK, SELAMAT DATANG DI
+ ㅤㅤㅤㅤㅤ✦━ㅤ𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄ㅤ━✦ 
 
 Udah cape cari VPS yang lelet?
-Tenang kak, disini tempatnya. 😎
+Tenang bang, disini tempatnya. 😎
 
 Disini kita jual VPS yang beneran
 ngegas, bukan yang cuma janji manis.
 
-▸ ⚡ SPEED NGEBUT - NVMe + 1Gbps
-▸ 🛡️ ANTI DOWN    - Uptime 99.9%
-▸ 🕹️ FULL KONTROL - Root Access Penuh
-▸ 👨‍💻 ADMIN FAST RESPON - Nggak Ditidurin
-▸ 💎 GARANSI      - Kalo Down, Kita Ganti!
+▸ ⚡ SPEED NGEBUT ㅤㅤ- NVMe + 1Gbps
+▸ 🛡️ ANTI DOWN    ㅤㅤ- Uptime 99.9%
+▸ 🕹️ FULL KONTROL ㅤㅤ- Root Access Penuh
+▸ 👨‍💻 OWN FAST RESPON - Nggak Ditidurin
+▸ 💎 GARANSI      ㅤㅤ- Kalo Down, Kita Ganti!
 
-ㅤㅤㅤ━━━━━━━━━━━━━━━━━━━
+ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━━━━ㅤ✦
 ㅤㅤㅤㅤ🔥 PROMO HARI INI 🔥
-ㅤㅤBeli VPS 2GB ke atas,
-ㅤㅤ> GRATIS Setup VPS sampe Selesai !
-ㅤㅤ> GRATIS Panel Pterodactyl !
-ㅤㅤㅤ━━━━━━━━━━━━━━━━━━━
+Beli VPS 2GB ke atas,
+> GRATIS Setup VPS sampe Selesai !
+> GRATIS Panel Pterodactyl !
+ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━━━━ㅤ✦
 
-Mau order yang mana nih kak?
+Mau order yang mana nih ?
 Langsung klik aja di bawah, jangan
 sampe kehabisan slotnya 👇
 
-ㅤㅤㅤ✨ GAS ORDER SEKARANG ✨`;
+ㅤㅤㅤㅤ✨ GAS ORDER SEKARANG ✨`;
 
 const VPS_LIST = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
   ㅤㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 - 𝐕𝐏𝐒 𝐌𝐔𝐑𝐀𝐇 ⚡
@@ -91,34 +91,34 @@ const VPS_LIST = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━�
 ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
 
   ╭─► 01 — VPS 1GB --> Rp 30.000
-  │     ├─➤ CPU     : 1 vCPU
-  │     ├─➤ RAM     : 1GB DDR4
-  │     ╰─➤ STORAGE : 20GB NVMe Gen4
+  │     ├─➤ CPUㅤㅤㅤ: 1 vCPU
+  │     ├─➤ RAMㅤㅤㅤ: 1GB DDR4
+  │     ╰─➤ STORAGEㅤ: 20GB NVMe Gen4
   ├─► 02 — VPS 2GB --> Rp 40.000
-  │     ├─➤ CPU     : 1 vCPU
-  │     ├─➤ RAM     : 2GB DDR4
+  │     ├─➤ CPUㅤㅤㅤ: 1 vCPU
+  │     ├─➤ RAMㅤㅤㅤ: 2GB DDR4
   │     ╰─➤ STORAGE : 30GB NVMe Gen4
   ├─► 03 — VPS 4GB --> Rp 75.000
-  │     ├─➤ CPU     : 2 vCPU
-  │     ├─➤ RAM     : 4GB DDR4
-  │     ╰─➤ STORAGE : 60GB NVMe Gen4
+  │     ├─➤ CPUㅤㅤㅤ: 2 vCPU
+  │     ├─➤ RAMㅤㅤㅤ: 4GB DDR4
+  │     ╰─➤ STORAGEㅤ: 60GB NVMe Gen4
   ├─► 04 — VPS 8GB --> Rp 130.000
-  │     ├─➤ CPU     : 4 vCPU
-  │     ├─➤ RAM     : 8GB DDR4
-  │     ╰─➤ STORAGE : 100GB NVMe Gen4
+  │     ├─➤ CPUㅤㅤㅤ: 4 vCPU
+  │     ├─➤ RAMㅤㅤㅤ: 8GB DDR4
+  │     ╰─➤ STORAGEㅤ: 100GB NVMe Gen4
   ├─► 05 — VPS 12GB --> Rp 195.000
-  │     ├─➤ CPU     : 6 vCPU
-  │     ├─➤ RAM     : 12GB DDR4
-  │     ╰─➤ STORAGE : 160GB NVMe Gen4
+  │     ├─➤ CPUㅤㅤㅤ: 6 vCPU
+  │     ├─➤ RAMㅤㅤㅤ: 12GB DDR4
+  │     ╰─➤ STORAGEㅤ: 160GB NVMe Gen4
   ╰─► 06 — VPS 16GB --> Rp 275.000
-        ├─➤ CPU     : 8 vCPU
-        ├─➤ RAM     : 16GB DDR4
-        ╰─➤ STORAGE : 200GB NVMe Gen4
+        ├─➤ CPUㅤㅤㅤ: 8 vCPU
+        ├─➤ RAMㅤㅤㅤ: 16GB DDR4
+        ╰─➤ STORAGEㅤ: 200GB NVMe Gen4
 
 ㅤㅤㅤㅤKlik paket nya di bawah 👇`;
 
 const LOKASI_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
-  ㅤㅤㅤ🌍 𝐋𝐎𝐊𝐀𝐒𝐈 𝐒𝐄𝐑𝐕𝐄𝐑 🌍
+  ㅤㅤ🌍 𝐋𝐎𝐊𝐀𝐒𝐈 𝐒𝐄𝐑𝐕𝐄𝐑 🌍
 ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
 
       📍 Lokasi ngaruh ke PING !
@@ -137,7 +137,7 @@ const LOKASI_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━ �
 ㅤㅤKlik lokasi nya 👇`;
 
 const OS_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
-  ㅤㅤㅤㅤㅤ🖥️ 𝐒𝐈𝐒𝐓𝐄𝐌 𝐎𝐏𝐄𝐑𝐀𝐒𝐈 🖥️
+  ㅤㅤㅤ🖥️ 𝐒𝐈𝐒𝐓𝐄𝐌 𝐎𝐏𝐄𝐑𝐀𝐒𝐈 🖥️
 ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
 
   ▸ 𝐔𝐁𝐔𝐍𝐓𝐔
@@ -158,7 +158,7 @@ function osVersionTxt(fam){
   const judul = fam === 'ubuntu' ? 'UBUNTU' : fam === 'debian' ? 'DEBIAN' : fam === 'alma' ? 'ALMALINUX' : 'ROCKY LINUX';
   const desc = fam === 'ubuntu' ? 'Paling mudah. Cocok buat pemula.' : fam === 'debian' ? 'Paling stabil. Favorit para pro.' : fam === 'alma' ? 'Rasa enterprise. Tetap ringan.' : 'Kuat dan bisa diandalkan.';
     return `ㅤㅤ✦ ━━━━━━━━━━━━━━━ ✦
-  ㅤㅤㅤㅤ⚙️ 𝐏𝐈𝐋𝐈𝐇 𝐕𝐄𝐑𝐒𝐈 ${judul} ⚙️
+  ㅤㅤ⚙️ 𝐏𝐈𝐋𝐈𝐇 𝐕𝐄𝐑𝐒𝐈 ${judul} ⚙️
 ㅤㅤ✦ ━━━━━━━━━━━━━━━ ✦
 
   ${desc}
@@ -178,16 +178,16 @@ function ringkasanTxt(u){
   │     ╰─➤ ${u.nama}
   │
   ├─► 🖥️ 𝕮𝕻𝖀
-  │     ╰─➤ ${u.cpu} ⚡
+  │     ╰─➤ ${u.cpu} 
   │
   ├─► 🧠 𝕽𝕬𝕸
-  │     ╰─➤ ${u.ram} 💪
+  │     ╰─➤ ${u.ram} 
   │
   ├─► 💾 𝕾𝕿𝕺𝕽𝕬𝕲𝕰
-  │     ╰─➤ ${u.storage} 🚀
+  │     ╰─➤ ${u.storage} 
   │
   ├─► 📍 𝕷𝕺𝕶𝕬𝕾𝕴
-  │     ╰─➤ ${u.lokasi} 🔥
+  │     ╰─➤ ${u.lokasi} 
   │
   ├─► 🐧 𝕺𝕻𝕰𝕽𝕬𝕿𝕴𝕹𝕲 𝕾𝖄𝕾𝕿𝕰𝕸
   │     ╰─➤ ${u.os}
@@ -225,15 +225,15 @@ function bayarTxt(u){
    ┃ 💻 𝐃𝐄𝐓𝐀𝐈𝐋 𝐕𝐏𝐒 𝐊𝐀𝐌𝐔 💻  ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-  ╭─► 📦 PAKET   :--➤ ${u.nama}
-  ├─► 🖥️ CPU     :--➤ ${u.cpu || '-'}
-  ├─► 🧠 RAM     :--➤ ${u.ram || '-'}
+  ╭─► 📦 PAKETㅤ:--➤ ${u.nama}
+  ├─► 🖥️ CPUㅤㅤ:--➤ ${u.cpu || '-'}
+  ├─► 🧠 RAMㅤㅤ:--➤ ${u.ram || '-'}
   ├─► 💾 STORAGE :--➤ ${u.storage || '-'}
-  ├─► 📍 LOKASI  :--➤ ${u.lokasi || '-'}
-  ├─► 📀 OS      :--➤ ${u.os || '-'}
+  ├─► 📍 LOKASIㅤ:--➤ ${u.lokasi || '-'}
+  ├─► 📀 OSㅤㅤㅤㅤ:--➤ ${u.os || '-'}
   ├─► 👤 USERNAME:--➤ ${u.username}
   ├─► 🔑 PASSWORD:--➤ Dikirim setelah Payment
-  ╰─► 📅 DURASI  :--➤ 30 Hari Full + Garansi Kalo Mokad
+  ╰─► 📅 DURASIㅤ:--➤ 30 Hari Full + Garansi Kalo Mokad
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
 ┃       💰 TOTAL PEMBAYARAN 💰       ┃
@@ -246,11 +246,11 @@ function bayarTxt(u){
 
   ╭─► 🏦 SEABANK
   │     ├─➤ No. Rek : 9012-4214-5662
-  │     ╰─➤ A.N     : MUHAMAD IKHSANDI AKBAR
+  │     ╰─➤ A.Nㅤㅤ: MUHAMAD IKHSANDI AKBAR
   │
   ├─► 📱 GOPAY
   │     ├─➤ No. HP : 0858-7225-7850
-  │     ╰─➤ A.N    : MUHAMAD IKHSANDI AKBAR
+  │     ╰─➤ A.Nㅤㅤ: MUHAMAD IKHSANDI AKBAR
   │
   ╰─► ⚠️ DANA — SEDANG ADA KENDALA ⚠️
         ├─➤ Akun owner sedang gangguan

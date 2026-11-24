@@ -146,18 +146,18 @@ const VPS_LIST = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━�
         ├─► CPU     -> 8 vCPU
         ├─► RAM     -> 16GB DDR4
         └─► STORAGE -> 200GB NVMeGen4
-✦━━━━━━━━━━━━━━━━━━━━━━━━━━━✦      
+✦━━━━━━━━━━━━━━━━━━━━━━━━━━✦      
 🚨 𝐍𝐎𝐓𝐄 : 𝙷𝚊𝚛𝚐𝚊 𝚈𝚊𝚗𝚐 𝚂𝚞𝚍𝚊𝚑 𝚃𝚎𝚛𝚝𝚎𝚛𝚊 
 𝚍𝚒𝚊𝚝𝚊𝚜 𝙸𝚝𝚞 𝚂𝚞𝚍𝚊𝚑 𝚃𝚎𝚛𝚖𝚊𝚜𝚞𝚔 1 𝙰𝚔𝚞𝚗 𝚅𝙿𝚂 
 𝙿𝚛𝚒𝚋𝚊𝚍𝚒, 𝙱𝚞𝚔𝚊𝚗 𝚂𝚎𝚛𝚟𝚎𝚛 𝚅𝙿𝚂 𝚂𝚊𝚓𝚊 
 𝙷𝚊𝚛𝚊𝚙 𝙳𝚒𝚋𝚊𝚌𝚊 𝚃𝚎𝚛𝚕𝚎𝚋𝚒𝚑 𝙳𝚊𝚑𝚞𝚕𝚞 
 𝚂𝚎𝚋𝚎𝚕𝚞𝚖 𝙼𝚎𝚖𝚋𝚎𝚕𝚒
-✦━━━━━━━━━━━━━━━━━━━━━━━━━━━✦
+✦━━━━━━━━━━━━━━━━━━━━━━━━━━✦
 ㅤㅤㅤㅤ𝐊𝐥𝐢𝐤 𝐩𝐚𝐤𝐞𝐭 𝐧𝐲𝐚 𝐝𝐢 𝐛𝐚𝐰𝐚𝐡 👇`;
 
-const LOKASI_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
-  ㅤㅤ🌍 𝐋𝐎𝐊𝐀𝐒𝐈 𝐒𝐄𝐑𝐕𝐄𝐑 🌍
-ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
+const LOKASI_TXT = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
+  ㅤㅤㅤㅤㅤ🌍 𝐋𝐎𝐊𝐀𝐒𝐈 𝐒𝐄𝐑𝐕𝐄𝐑 🌍
+✦━━━━━━━━━━━━━━━━━━━━━━━━━━✦
 
       📍 Lokasi ngaruh ke PING !
          Makin deket, makin ngebut!
@@ -174,11 +174,11 @@ const LOKASI_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━ �
         ├─➤ STABIL | Buat Asia
         ╰─➤ Alternatif Paling Aman
 
-ㅤㅤKlik lokasi nya 👇`;
+ㅤㅤㅤㅤㅤKlik lokasi nya 👇`;
 
 const OS_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
   ㅤㅤㅤ🖥️ 𝐒𝐈𝐒𝐓𝐄𝐌 𝐎𝐏𝐄𝐑𝐀𝐒𝐈 🖥️
-ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
+✦━━━━━━━━━━━━━━━━━━━━━━━━━✦
 
   ▸ 𝐔𝐁𝐔𝐍𝐓𝐔
     Paling mudah. Cocok buat pemula.
@@ -192,54 +192,54 @@ const OS_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
   ▸ 𝐑𝐎𝐂𝐊𝐘𝐋𝐈𝐍𝐔𝐗
     Kuat dan bisa diandalkan.
 
-ㅤㅤKlik OS nya di bawah 👇`;
+ㅤㅤㅤㅤㅤKlik OS nya di bawah 👇`;
 
 function osVersionTxt(fam){
-  const judul = fam === 'ubuntu' ? 'UBUNTU' : fam === 'debian' ? 'DEBIAN' : fam === 'alma' ? 'ALMALINUX' : 'ROCKY LINUX';
-  const desc = fam === 'ubuntu' ? 'Paling mudah. Cocok buat pemula.' : fam === 'debian' ? 'Paling stabil. Favorit para pro.' : fam === 'alma' ? 'Rasa enterprise. Tetap ringan.' : 'Kuat dan bisa diandalkan.';
-    return `ㅤㅤ✦ ━━━━━━━━━━━━━━━ ✦
+  const judul = fam === 'ubuntu' ? '𝐔𝐁𝐔𝐍𝐓𝐔' : fam === 'debian' ? '𝐃𝐄𝐁𝐈𝐀𝐍' : fam === 'alma' ? '𝐀𝐋𝐌𝐀𝐋𝐈𝐍𝐔𝐗' : '𝐑𝐎𝐂𝐊𝐘 𝐋𝐈𝐍𝐔𝐗';
+  const desc = fam === 'ubuntu' ? '𝐏𝐚𝐥𝐢𝐧𝐠 𝐦𝐮𝐝𝐚𝐡. 𝐂𝐨𝐜𝐨𝐤 𝐛𝐮𝐚𝐭 𝐩𝐞𝐦𝐮𝐥𝐚.' : fam === 'debian' ? '𝐏𝐚𝐥𝐢𝐧𝐠 𝐬𝐭𝐚𝐛𝐢𝐥. 𝐅𝐚𝐯𝐨𝐫𝐢𝐭 𝐩𝐚𝐫𝐚 𝐩𝐫𝐨.' : fam === 'alma' ? '𝐑𝐚𝐬𝐚 𝐞𝐧𝐭𝐞𝐫𝐩𝐫𝐢𝐬𝐞. 𝐓𝐞𝐭𝐚𝐩 𝐫𝐢𝐧𝐠𝐚𝐧.' : '𝐊𝐮𝐚𝐭 𝐝𝐚𝐧 𝐛𝐢𝐬𝐚 𝐝𝐢𝐚𝐧𝐝𝐚𝐥𝐤𝐚𝐧.';
+    return `ㅤㅤ✦━━━━━━━━━━━━━━━━━━✦
   ㅤㅤ⚙️ 𝐏𝐈𝐋𝐈𝐇 𝐕𝐄𝐑𝐒𝐈 ${judul} ⚙️
-ㅤㅤ✦ ━━━━━━━━━━━━━━━ ✦
+✦━━━━━━━━━━━━━━━━━━━━━━━━✦
 
   ${desc}
 
-ㅤㅤKlik versi nya di bawah 👇`;
+ㅤㅤ𝙺𝚕𝚒𝚔 𝚟𝚎𝚛𝚜𝚒 𝚗𝚢𝚊 𝚍𝚒 𝚋𝚊𝚠𝚊𝚑 👇`;
 }
 function ringkasanTxt(u){
-   return `ㅤ✦ ━━━━━━━━━━━━━━━━━━ ✦
-  ㅤㅤ✨ 𝐑𝐈𝐍𝐆𝐊𝐀𝐒𝐀𝐍 𝐎𝐑𝐃𝐄𝐑 𝐊𝐀𝐌𝐔 ✨
-ㅤ✦ ━━━━━━━━━━━━━━━━━━ ✦
+   return `✦━━━━━━━━━━━━━━━━━━━━━━━━✦
+  ㅤ✨ 𝐑𝐈𝐍𝐆𝐊𝐀𝐒𝐀𝐍 𝐎𝐑𝐃𝐄𝐑 𝐊𝐀𝐌𝐔 ✨
+✦━━━━━━━━━━━━━━━━━━━━━━━━✦
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
-    | 𝐃𝐄𝐓𝐀𝐈𝐋 𝐏𝐄𝐒𝐀𝐍𝐀𝐍 𝐊𝐀𝐌𝐔 |
+    ㅤㅤㅤ| 𝐃𝐄𝐓𝐀𝐈𝐋 𝐏𝐄𝐒𝐀𝐍𝐀𝐍 𝐊𝐀𝐌𝐔 |
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-  ╭─► 📦 𝕻𝕬𝕶𝕰𝕿
+  ╭─► 📦 𝐏𝐀𝐊𝐄𝐓
   │     ╰─➤ ${u.nama}
   │
-  ├─► 🖥️ 𝕮𝕻𝖀
+  ├─► 🖥️ 𝐂𝐏𝐔
   │     ╰─➤ ${u.cpu} 
   │
-  ├─► 🧠 𝕽𝕬𝕸
+  ├─► 🧠 𝐑𝐀𝐌
   │     ╰─➤ ${u.ram} 
   │
-  ├─► 💾 𝕾𝕿𝕺𝕽𝕬𝕲𝕰
+  ├─► 💾 𝐒𝐓𝐎𝐑𝐀𝐆𝐄
   │     ╰─➤ ${u.storage} 
   │
-  ├─► 📍 𝕷𝕺𝕶𝕬𝕾𝕴
+  ├─► 📍 𝐋𝐎𝐊𝐀𝐒𝐈
   │     ╰─➤ ${u.lokasi} 
   │
-  ├─► 🐧 𝕺𝕻𝕰𝕽𝕬𝕿𝕴𝕹𝕲 𝕾𝖄𝕾𝕿𝕰𝕸
+  ├─► 🐧 𝐎𝐏𝐄𝐑𝐀𝐓𝐈𝐍𝐆 𝐒𝐘𝐒𝐓𝐄𝐌
   │     ╰─➤ ${u.os}
   │
-  ╰─► 📅 𝕯𝖀𝕽𝕬𝕾𝕴
+  ╰─► 📅 𝐃𝐔𝐑𝐀𝐒𝐈
         ╰─➤ 30 Hari Full + Garansi Kalo Mokad
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
-┃      💰 TOTAL : ${rupiah(u.harga)} 💰      ┃
+ㅤㅤ┃      💰 TOTAL : ${rupiah(u.harga)} 💰      ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-ㅤUdah bener? Klik YA buat lanjut 👇`;
+ㅤ𝚄𝚍𝚊𝚑 𝚋𝚎𝚗𝚎𝚛? 𝙺𝚕𝚒𝚔 𝚈𝙰 𝚋𝚞𝚊𝚝 𝚕𝚊𝚗𝚓𝚞𝚝 👇`;
 }
 const USERNAME_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━━━ ✦
   ㅤ👤 𝐀𝐓𝐔𝐑 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 𝐊𝐀𝐌𝐔 👤

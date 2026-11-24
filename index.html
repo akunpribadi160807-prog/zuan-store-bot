@@ -157,7 +157,13 @@ function kirimOrder(){
     "Username: " + data.username + "\n" +
     "Total: " + data.harga;
 
-  tg.openTelegramLink("https://t.me/" + BOT + "?text=" + encodeURIComponent(pesan));
+  let link = "https://t.me/Auto_orderpanelbaru_bot?text=" + encodeURIComponent(pesan);
+
+  // Tutup dulu WebApp nya, baru buka link - ini kuncinya!
+  try { tg.close(); } catch(e){}
+  setTimeout(() => {
+    window.open(link, "_blank");
+  }, 300);
 }
 </script>
 </body>

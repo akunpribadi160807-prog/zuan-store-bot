@@ -59,48 +59,53 @@ const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━�
 ㅤㅤㅤㅤㅤㅤ ㅤ𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎
  ㅤㅤㅤㅤㅤ✦「 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 」✦ 
 
-ㅤㅤㅤㅤㅤTerima kasih banyak
-udah mampir dan percaya sama kami 
-Di sini kakak nggak cuma beli produk, 
-tapi kakak juga dapet 
-ㅤㅤㅤㅤKENYAMANAN dan KEAMANAN.
+ㅤㅤㅤㅤㅤ「 𝚃𝚎𝚛𝚒𝚖𝚊 𝚔𝚊𝚜𝚒𝚑 𝚋𝚊𝚗𝚢𝚊𝚔 」 
+│𝚞𝚍𝚊𝚑 𝚖𝚊𝚖𝚙𝚒𝚛 𝚍𝚊𝚗 𝚙𝚎𝚛𝚌𝚊𝚢𝚊 𝚜𝚊𝚖𝚊 𝚔𝚊𝚖𝚒  
+│𝙳𝚒 𝚜𝚒𝚗𝚒 𝚔𝚊𝚔𝚊𝚔 𝚗𝚐𝚐𝚊𝚔 𝚌𝚞𝚖𝚊 𝚋𝚎𝚕𝚒 𝚙𝚛𝚘𝚍𝚞𝚔, 
+│𝚝𝚊𝚙𝚒 𝚔𝚊𝚔𝚊𝚔 𝚓𝚞𝚐𝚊 𝚍𝚊𝚙𝚎𝚝  ㅤ
+│𝙺𝙴𝙽𝚈𝙰𝙼𝙰𝙽𝙰𝙽 𝚍𝚊𝚗 𝙺𝙴𝙰𝙼𝙰𝙽𝙰𝙽.
+
 ✦━━━━━━━━━━━━━━━━━━━━━━━━━━✦
 ㅤㅤㅤ𝐊𝐄𝐔𝐍𝐆𝐆𝐔𝐋𝐀𝐍 𝐁𝐄𝐋𝐈 𝐃𝐈 𝐊𝐀𝐌𝐈
-1.ㅤㅤㅤㅤㅤ⚡ SPEED NGEBUT
-Server kami Memakai NVMe Gen4 + 1Gbps.
-Dijamin ngebut, anti lemot, 
-anti ngelag buat bot, web, atau game
 
-2.ㅤㅤ🛡️ ANTI DOWN - UPTIME 99.9%
-Server kami dipantau 24 jam nonstop.
-Kakak bisa tidur tenang, 
-server tetap jalan stabil.
+1.ㅤㅤㅤㅤㅤ⚡ 𝐒𝐏𝐄𝐄𝐃 𝐍𝐆𝐄𝐁𝐔𝐓
+ꜱᴇʀᴠᴇʀ ᴋᴀᴍɪ ᴍᴇᴍᴀᴋᴀɪ ɴᴠᴍᴇ ɢᴇɴ4 + 1ɢʙᴘꜱ.
+ᴅɪᴊᴀᴍɪɴ ɴɢᴇʙᴜᴛ, ᴀɴᴛɪ ʟᴇᴍᴏᴛ, 
+ᴀɴᴛɪ ɴɢᴇʟᴀɢ ʙᴜᴀᴛ ʙᴏᴛ, ᴡᴇʙ, ᴀᴛᴀᴜ ɢᴀᴍᴇ
 
-3.ㅤㅤㅤㅤㅤ🕹️ FULL KONTROL
-Kakak bebas install apa aja, 
-bebas atur sesuka hati.
-Ini server anda yang punya kendali penuh.
+2.ㅤㅤ🛡️ 𝐀𝐍𝐓𝐈 𝐃𝐎𝐖𝐍 - 𝐔𝐏𝐓𝐈𝐌𝐄 𝟗𝟗.𝟗%
+ꜱᴇʀᴠᴇʀ ᴋᴀᴍɪ ᴅɪᴘᴀɴᴛᴀᴜ 24 ᴊᴀᴍ ɴᴏɴꜱᴛᴏᴘ.
+ᴋᴀᴋᴀᴋ ʙɪꜱᴀ ᴛɪᴅᴜʀ ᴛᴇɴᴀɴɢ, 
+ꜱᴇʀᴠᴇʀ ᴛᴇᴛᴀᴘ ᴊᴀʟᴀɴ ꜱᴛᴀʙɪʟ.
 
-4.ㅤ👨‍💼 ADMIN FAST RESPON 24 JAM
-Nggak ada cerita kakak ditidurin admin.
-Chat dibalas 1-5 menit, 
-dibantu sampai BERES.
+3.ㅤㅤㅤㅤㅤ🕹️ 𝐅𝐔𝐋𝐋 𝐊𝐎𝐍𝐓𝐑𝐎𝐋
+ᴋᴀᴋᴀᴋ ʙᴇʙᴀꜱ ɪɴꜱᴛᴀʟʟ ᴀᴘᴀ ᴀᴊᴀ, 
+ʙᴇʙᴀꜱ ᴀᴛᴜʀ ꜱᴇꜱᴜᴋᴀ ʜᴀᴛɪ.
+ɪɴɪ ꜱᴇʀᴠᴇʀ ᴀɴᴅᴀ ʏᴀɴɢ ᴘᴜɴʏᴀ ᴋᴇɴᴅᴀʟɪ ᴘᴇɴᴜʜ.
 
-5.ㅤㅤㅤㅤ💎 FULL GARANSI
-Kalau server down tanpa sebab, kami ganti!
-Kakak nggak akan rugi sepeserpun.
+4.ㅤ👨‍💼 𝐀𝐃𝐌𝐈𝐍 𝐅𝐀𝐒𝐓 𝐑𝐄𝐒𝐏𝐎𝐍 𝟐𝟒 𝐉𝐀𝐌
+ɴɢɢᴀᴋ ᴀᴅᴀ ᴄᴇʀɪᴛᴀ ᴋᴀᴋᴀᴋ ᴅɪᴛɪᴅᴜʀɪɴ ᴀᴅᴍɪɴ.
+ᴄʜᴀᴛ ᴅɪʙᴀʟᴀꜱ 1-5 ᴍᴇɴɪᴛ, 
+ᴅɪʙᴀɴᴛᴜ ꜱᴀᴍᴘᴀɪ ʙᴇʀᴇꜱ.
+
+5.ㅤㅤㅤㅤ💎 𝐅𝐔𝐋𝐋 𝐆𝐀𝐑𝐀𝐍𝐒𝐈
+ᴋᴀʟᴀᴜ ꜱᴇʀᴠᴇʀ ᴅᴏᴡɴ ᴛᴀɴᴘᴀ ꜱᴇʙᴀʙ, ᴋᴀᴍɪ ɢᴀɴᴛɪ!
+ᴋᴀᴋᴀᴋ ɴɢɢᴀᴋ ᴀᴋᴀɴ ʀᴜɢɪ ꜱᴇᴘᴇꜱᴇʀᴘᴜɴ.
 
 ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
-ㅤㅤㅤㅤ🔥 PROMO HARI INI 🔥
-ㅤㅤBeli VPS 2 GB ke atas :
-➤ㅤGRATIS Setup VPS sampe Selesai!
-➤ㅤGRATIS Panel Pterodactyl!
+ㅤㅤㅤㅤ🔥 𝙿𝚁𝙾𝙼𝙾 𝙷𝙰𝚁𝙸 𝙸𝙽𝙸 🔥
+ㅤㅤ𝙱𝚎𝚕𝚒 𝚅𝙿𝚂 𝟸 𝙶𝙱 𝚔𝚎 𝚊𝚝𝚊𝚜 :
+➤ㅤ𝙶𝚁𝙰𝚃𝙸𝚂 𝚂𝚎𝚝𝚞𝚙 𝚅𝙿𝚂 𝚜𝚊𝚖𝚙𝚎 𝚂𝚎𝚕𝚎𝚜𝚊𝚒!
+➤ㅤ𝙶𝚁𝙰𝚃𝙸𝚂 𝙿𝚊𝚗𝚎𝚕 𝙿𝚝𝚎𝚛𝚘𝚍𝚊𝚌𝚝𝚢𝚕!
+
 ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
 
 | Mau order yang mana nih ?
 | Langsung klik aja di bawah, 
-| jangan sampe kehabisan slotnya👇
-「ㅤSalam sukses dari ZUAN STOREㅤ」
+| jangan sampe kehabisan slotnya
+
+「ㅤ𝐒𝐚𝐥𝐚𝐦 𝐬𝐮𝐤𝐬𝐞𝐬 𝐝𝐚𝐫𝐢 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄ㅤ」
+ㅤ╰━━━━━━━━━━━━━━━━━━━╯
 ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
 ㅤㅤㅤㅤ✨ 𝐆𝐀𝐒 𝐎𝐑𝐃𝐄𝐑 𝐒𝐄𝐊𝐀𝐑𝐀𝐍𝐆 ✨`;
 

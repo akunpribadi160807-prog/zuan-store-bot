@@ -52,12 +52,12 @@ const OS_VERSIONS_RAW = {
 };
 
 const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
-    ㅤㅤㅤㅤㅤㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ⚡
+    ㅤㅤㅤㅤ⚡ 「 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 」 ⚡
   ㅤㅤㅤㅤ𝐂𝐄𝐏𝐀𝐓. 𝐒𝐓𝐀𝐁𝐈𝐋. 𝐓𝐀𝐍𝐏𝐀 𝐑𝐈𝐁𝐄𝐓.
 ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
 
-ㅤㅤㅤㅤㅤㅤㅤ👋 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎
- ㅤㅤㅤㅤㅤ✦ㅤ━𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄━ㅤ✦ 
+ㅤㅤㅤㅤㅤㅤ👋 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎
+ ㅤㅤㅤㅤㅤ✦「 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 」✦ 
 
 𝚄𝚍𝚊𝚑 𝚌𝚊𝚙𝚎 𝚌𝚊𝚛𝚒 𝚅𝙿𝚂 𝚢𝚊𝚗𝚐 𝚕𝚎𝚕𝚎𝚝?
 𝚃𝚎𝚗𝚊𝚗𝚐 𝚋𝚊𝚗𝚐, 𝚍𝚒𝚜𝚒𝚗𝚒 𝚝𝚎𝚖𝚙𝚊𝚝𝚗𝚢𝚊. 😎
@@ -65,11 +65,11 @@ const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━�
 𝙳𝚒𝚜𝚒𝚗𝚒 𝚔𝚒𝚝𝚊 𝚓𝚞𝚊𝚕 𝚅𝙿𝚂 𝚢𝚊𝚗𝚐 𝚋𝚎𝚗𝚎𝚛𝚊𝚗
 𝚗𝚐𝚎𝚐𝚊𝚜, 𝚋𝚞𝚔𝚊𝚗 𝚢𝚊𝚗𝚐 𝚌𝚞𝚖𝚊 𝚓𝚊𝚗𝚓𝚒 𝚖𝚊𝚗𝚒𝚜.
 ✦━━━━━━━━━━━━━━━━━━━━━━━━━━✦
-▸ ⚡ SPEED NGEBUTㅤㅤㅤ- NVMe + 1Gbps
-▸ 🛡️ ANTI DOWNㅤㅤㅤㅤㅤ- Uptime 99.9%
-▸ 🕹️ FULL KONTROLㅤㅤㅤ- Root Access Penuh
-▸ 👨‍💻 OWN FAST RESPONㅤ- Nggak Ditidurin
-▸ 💎 FULL GARANSIㅤㅤㅤ- Kalo Down, Kita Ganti!
+▸ ⚡ SPEED NGEBUTㅤㅤ- NVMe + 1Gbps
+▸ 🛡️ ANTI DOWNㅤㅤㅤㅤ- Uptime 99.9%
+▸ 🕹️ FULL KONTROLㅤㅤ- Root Access Penuh
+▸ 👨‍💻 OWN FAST RESPON- Nggak Ditidurin
+▸ 💎 FULL GARANSIㅤㅤ- Kalo Down, Kita Ganti!
 
 ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
 ㅤㅤㅤㅤ🔥 PROMO HARI INI 🔥

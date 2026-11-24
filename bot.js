@@ -67,20 +67,21 @@ const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━�
 ✦━━━━━━━━━━━━━━━━━━━━━━━━━━✦
 ▸ ⚡ SPEED NGEBUTㅤㅤ- NVMe + 1Gbps
 ▸ 🛡️ ANTI DOWNㅤㅤㅤㅤ- Uptime 99.9%
-▸ 🕹️ FULL KONTROLㅤㅤ- Root Access Penuh
+▸ 🕹️ FULL KONTROLㅤㅤ- Access Penuh
 ▸ 👨‍💻 OWN FAST RESPON- Nggak Ditidurin
-▸ 💎 FULL GARANSIㅤㅤ- Kalo Down, Kita Ganti!
+▸ 💎 FULL GARANSIㅤㅤ- Down? Kita Ganti!
 
 ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
 ㅤㅤㅤㅤ🔥 PROMO HARI INI 🔥
 ㅤㅤBeli VPS 2 GB ke atas :
-➤ㅤGRATIS Setup VPS sampe Selesai !
-➤ㅤGRATIS Panel Pterodactyl !
+➤ㅤGRATIS Setup VPS sampe Selesai!
+➤ㅤGRATIS Panel Pterodactyl!
 ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
 
-|ㅤMau order yang mana nih ?
-|ㅤLangsung klik aja di bawah, jangan
-|ㅤsampe kehabisan slotnya 👇
+| Mau order yang mana nih ?
+| Langsung klik aja di bawah, 
+| jangan sampe kehabisan slotnya👇
+
 ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
 ㅤㅤㅤㅤ✨ 𝐆𝐀𝐒 𝐎𝐑𝐃𝐄𝐑 𝐒𝐄𝐊𝐀𝐑𝐀𝐍𝐆 ✨`;
 
@@ -93,32 +94,32 @@ const VPS_LIST = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━�
   ╭─► 1 — VPS 1vGB ─➤ Rp 30.000/Bln
   │     ├─➤ CPUㅤㅤ─➤ㅤ1 vCPU
   │     ├─➤ RAMㅤㅤ─➤ㅤ1GB DDR4
-  │     ╰─➤ STORAGE─➤ 20GB NVMe Gen4
+  │     ╰─➤ STORAGE─➤20GB NVMe Gen4
   │
   ├─► 2 — VPS 2 GB ─➤ Rp 40.000/Bln
   │     ├─➤ CPUㅤㅤ─➤ㅤ1 vCPU
   │     ├─➤ RAMㅤㅤ─➤ㅤ2GB DDR4
-  │     ╰─➤ STORAGE─➤ 30GB NVMe Gen4
+  │     ╰─➤ STORAGE─➤30GB NVMe Gen4
   │
   ├─► 3 — VPS 4 GB ─➤ Rp 75.000/Bln
   │     ├─➤ CPUㅤㅤ─➤ㅤ2 vCPU
   │     ├─➤ RAMㅤㅤ─➤ㅤ4GB DDR4
-  │     ╰─➤ STORAGE─➤ 60GB NVMe Gen4
+  │     ╰─➤ STORAGE─➤60GB NVMe Gen4
   │
   ├─► 4 — VPS 8 GB ─➤ Rp 130.000/Bln
   │     ├─➤ CPUㅤㅤ─➤ㅤ4 vCPU
   │     ├─➤ RAMㅤㅤ─➤ㅤ8GB DDR4
-  │     ╰─➤ STORAGE─➤ㅤ100GB NVMe Gen4
+  │     ╰─➤ STORAGE─➤100GB NVMe Gen4
   │
   ├─► 5 — VPS 12 GB ─➤ Rp 195.000/Bln
   │     ├─➤ CPUㅤㅤ─➤ㅤ6 vCPU
   │     ├─➤ RAMㅤㅤ─➤ㅤ12GB DDR4
-  │     ╰─➤ STORAGE─➤ㅤ160GB NVMe Gen4
+  │     ╰─➤ STORAGE─➤160GB NVMe Gen4
   │
   ╰─► 6 — VPS 16 GB ─➤ Rp 275.000/Bln
         ├─➤ CPUㅤㅤ─➤ㅤ8 vCPU
         ├─➤ RAMㅤㅤ─➤ㅤ16GB DDR4
-        ╰─➤ STORAGE─➤ㅤ200GB NVMe Gen4
+        ╰─➤ STORAGE─➤200GB NVMe Gen4
 
 ㅤㅤㅤㅤ𝐊𝐥𝐢𝐤 𝐩𝐚𝐤𝐞𝐭 𝐧𝐲𝐚 𝐝𝐢 𝐛𝐚𝐰𝐚𝐡 👇`;
 

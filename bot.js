@@ -51,10 +51,10 @@ const OS_VERSIONS_RAW = {
   rocky: ['Rocky Linux 9', 'Rocky Linux 8'],
 };
 
-const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
     ㅤㅤㅤㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ⚡
   ㅤㅤㅤCEPAT. STABIL. TANPA RIBET.
-ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
 
 ㅤ👋 HALO KAK, SELAMAT DATANG DI
  ㅤㅤㅤㅤ👑 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 👑
@@ -71,24 +71,24 @@ ngegas, bukan yang cuma janji manis.
 ▸ 👨‍💻 ADMIN FAST RESPON - Nggak Ditidurin
 ▸ 💎 GARANSI      - Kalo Down, Kita Ganti!
 
-━━━━━━━━━━━━━━━━━━━
-ㅤㅤ🔥 PROMO HARI INI 🔥
-Beli VPS 2GB ke atas,
-> GRATIS Setup VPS sampe Selesai !
-> GRATIS Panel Pterodactyl !
-━━━━━━━━━━━━━━━━━━━
+ㅤㅤㅤ━━━━━━━━━━━━━━━━━━━
+ㅤㅤㅤㅤ🔥 PROMO HARI INI 🔥
+ㅤㅤBeli VPS 2GB ke atas,
+ㅤㅤ> GRATIS Setup VPS sampe Selesai !
+ㅤㅤ> GRATIS Panel Pterodactyl !
+ㅤㅤㅤ━━━━━━━━━━━━━━━━━━━
 
 Mau order yang mana nih kak?
 Langsung klik aja di bawah, jangan
 sampe kehabisan slotnya 👇
 
-ㅤㅤ✨ GAS ORDER SEKARANG ✨`;
+ㅤㅤㅤ✨ GAS ORDER SEKARANG ✨`;
 
-const VPS_LIST = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+const VPS_LIST = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
   ㅤㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 - 𝐕𝐏𝐒 𝐌𝐔𝐑𝐀𝐇 ⚡
   ㅤㅤ🚀 NVMe Gen4 | KVM | Full Root
   ㅤㅤ⚡ Aktif 1-2 Menit. Tanpa Ribet.
-ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
 
   ╭─► 01 — VPS 1GB --> Rp 30.000
   │     ├─➤ CPU     : 1 vCPU
@@ -115,11 +115,11 @@ const VPS_LIST = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━�
         ├─➤ RAM     : 16GB DDR4
         ╰─➤ STORAGE : 200GB NVMe Gen4
 
-ㅤㅤKlik paket nya di bawah 👇`;
+ㅤㅤㅤㅤKlik paket nya di bawah 👇`;
 
-const LOKASI_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━ ✦
-  ㅤㅤ🌍 𝐋𝐎𝐊𝐀𝐒𝐈 𝐒𝐄𝐑𝐕𝐄𝐑 🌍
-ㅤㅤ✦ ━━━━━━━━━━━━━ ✦
+const LOKASI_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
+  ㅤㅤㅤ🌍 𝐋𝐎𝐊𝐀𝐒𝐈 𝐒𝐄𝐑𝐕𝐄𝐑 🌍
+ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
 
       📍 Lokasi ngaruh ke PING !
          Makin deket, makin ngebut!
@@ -136,9 +136,9 @@ const LOKASI_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━ ✦
 
 ㅤㅤKlik lokasi nya 👇`;
 
-const OS_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━ ✦
-  ㅤㅤ🖥️ 𝐒𝐈𝐒𝐓𝐄𝐌 𝐎𝐏𝐄𝐑𝐀𝐒𝐈 🖥️
-ㅤㅤ✦ ━━━━━━━━━━━━━ ✦
+const OS_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
+  ㅤㅤㅤㅤㅤ🖥️ 𝐒𝐈𝐒𝐓𝐄𝐌 𝐎𝐏𝐄𝐑𝐀𝐒𝐈 🖥️
+ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
 
   ▸ 𝐔𝐁𝐔𝐍𝐓𝐔
     Paling mudah. Cocok buat pemula.
@@ -157,18 +157,18 @@ const OS_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━ ✦
 function osVersionTxt(fam){
   const judul = fam === 'ubuntu' ? 'UBUNTU' : fam === 'debian' ? 'DEBIAN' : fam === 'alma' ? 'ALMALINUX' : 'ROCKY LINUX';
   const desc = fam === 'ubuntu' ? 'Paling mudah. Cocok buat pemula.' : fam === 'debian' ? 'Paling stabil. Favorit para pro.' : fam === 'alma' ? 'Rasa enterprise. Tetap ringan.' : 'Kuat dan bisa diandalkan.';
-    return `ㅤㅤ✦ ━━━━━━━━━━━━━ ✦
-  ㅤㅤ⚙️ 𝐏𝐈𝐋𝐈𝐇 𝐕𝐄𝐑𝐒𝐈 ${judul} ⚙️
-ㅤㅤ✦ ━━━━━━━━━━━━━ ✦
+    return `ㅤㅤ✦ ━━━━━━━━━━━━━━━ ✦
+  ㅤㅤㅤㅤ⚙️ 𝐏𝐈𝐋𝐈𝐇 𝐕𝐄𝐑𝐒𝐈 ${judul} ⚙️
+ㅤㅤ✦ ━━━━━━━━━━━━━━━ ✦
 
   ${desc}
 
 ㅤㅤKlik versi nya di bawah 👇`;
 }
 function ringkasanTxt(u){
-   return `ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
-  ㅤ✨ 𝐑𝐈𝐍𝐆𝐊𝐀𝐒𝐀𝐍 𝐎𝐑𝐃𝐄𝐑 𝐊𝐀𝐌𝐔 ✨
-ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+   return `ㅤ✦ ━━━━━━━━━━━━━━━━━━ ✦
+  ㅤㅤ✨ 𝐑𝐈𝐍𝐆𝐊𝐀𝐒𝐀𝐍 𝐎𝐑𝐃𝐄𝐑 𝐊𝐀𝐌𝐔 ✨
+ㅤ✦ ━━━━━━━━━━━━━━━━━━ ✦
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
     | 𝐃𝐄𝐓𝐀𝐈𝐋 𝐏𝐄𝐒𝐀𝐍𝐀𝐍 𝐊𝐀𝐌𝐔 |
@@ -201,9 +201,9 @@ function ringkasanTxt(u){
 
 ㅤUdah bener? Klik YA buat lanjut 👇`;
 }
-const USERNAME_TXT = `ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+const USERNAME_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━━━ ✦
   ㅤ👤 𝐀𝐓𝐔𝐑 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 𝐊𝐀𝐌𝐔 👤
-ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+ㅤㅤ✦ ━━━━━━━━━━━━━━━━━━ ✦
 
    Tentuin username buat login VPS kamu 😎
        Contoh: zuanstore

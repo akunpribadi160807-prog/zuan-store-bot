@@ -39,10 +39,10 @@ const JASA = {
   '4':{nama:'SETTING VPS',harga:10000,desc:'Optimasi Biar Ngebut'}
 };
 const OS_VERSIONS_LABEL = {
-  ubuntu: ['Ubuntu 24.04 LTS ⭐ REKOMENDASI', 'Ubuntu 22.04 LTS', 'Ubuntu 20.04 LTS'],
-  debian: ['Debian 12 ⭐ REKOMENDASI', 'Debian 11', 'Debian 10'],
-  alma: ['AlmaLinux 9 ⭐ REKOMENDASI', 'AlmaLinux 8'],
-  rocky: ['Rocky Linux 9 ⭐ REKOMENDASI', 'Rocky Linux 8'],
+  ubuntu: ['Ubuntu 24.04 LTS', 'Ubuntu 22.04 LTS', 'Ubuntu 20.04 LTS'],
+  debian: ['Debian 12', 'Debian 11', 'Debian 10'],
+  alma: ['AlmaLinux', 'AlmaLinux 8'],
+  rocky: ['Rocky Linux 9', 'Rocky Linux 8'],
 };
 const OS_VERSIONS_RAW = {
   ubuntu: ['Ubuntu 24.04 LTS', 'Ubuntu 22.04 LTS', 'Ubuntu 20.04 LTS'],
@@ -64,7 +64,7 @@ const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━�
 
 𝙳𝚒𝚜𝚒𝚗𝚒 𝚔𝚒𝚝𝚊 𝚓𝚞𝚊𝚕 𝚅𝙿𝚂 𝚢𝚊𝚗𝚐 𝚋𝚎𝚗𝚎𝚛𝚊𝚗
 𝚗𝚐𝚎𝚐𝚊𝚜, 𝚋𝚞𝚔𝚊𝚗 𝚢𝚊𝚗𝚐 𝚌𝚞𝚖𝚊 𝚓𝚊𝚗𝚓𝚒 𝚖𝚊𝚗𝚒𝚜.
-✦━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━✦
+✦━━━━━━━━━━━━━━━━━━━━━━━━━━✦
 ▸ ⚡ SPEED NGEBUT ㅤㅤ- NVMe + 1Gbps
 ▸ 🛡️ ANTI DOWN    ㅤㅤ- Uptime 99.9%
 ▸ 🕹️ FULL KONTROL ㅤㅤ- Root Access Penuh
@@ -73,7 +73,7 @@ const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━�
 
 ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
 ㅤㅤㅤㅤ🔥 PROMO HARI INI 🔥
-Beli VPS 2 GB ke atas,
+ㅤㅤㅤㅤBeli VPS 2 GB ke atas,
 ➤ㅤGRATIS Setup VPS sampe Selesai !
 ➤ㅤGRATIS Panel Pterodactyl !
 ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
@@ -81,39 +81,39 @@ Beli VPS 2 GB ke atas,
 |ㅤMau order yang mana nih ?
 |ㅤLangsung klik aja di bawah, jangan
 |ㅤsampe kehabisan slotnya 👇
-✦ㅤ━━━━━━━━━━━━━━━━━━ㅤ✦
+ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
 ㅤㅤㅤㅤ✨ GAS ORDER SEKARANG ✨`;
 
 const VPS_LIST = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
   ㅤㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 - 𝐕𝐏𝐒 𝐌𝐔𝐑𝐀𝐇 ⚡
-  ㅤㅤ🚀 NVMe Gen4 | KVM | Full Root
-  ㅤㅤ⚡ Aktif 1-2 Menit. Tanpa Ribet.
+  ㅤㅤ  NVMe Gen4 | KVM | Full Root
+  ㅤㅤ  Aktif 1-2 Menit. Tanpa Ribet.
 ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
 
-  ╭─► 01 — VPS 1GB --> Rp 30.000
-  │     ├─➤ CPUㅤㅤㅤ: 1 vCPU
-  │     ├─➤ RAMㅤㅤㅤ: 1GB DDR4
-  │     ╰─➤ STORAGEㅤ: 20GB NVMe Gen4
-  ├─► 02 — VPS 2GB --> Rp 40.000
-  │     ├─➤ CPUㅤㅤㅤ: 1 vCPU
-  │     ├─➤ RAMㅤㅤㅤ: 2GB DDR4
-  │     ╰─➤ STORAGE : 30GB NVMe Gen4
-  ├─► 03 — VPS 4GB --> Rp 75.000
-  │     ├─➤ CPUㅤㅤㅤ: 2 vCPU
-  │     ├─➤ RAMㅤㅤㅤ: 4GB DDR4
-  │     ╰─➤ STORAGEㅤ: 60GB NVMe Gen4
-  ├─► 04 — VPS 8GB --> Rp 130.000
-  │     ├─➤ CPUㅤㅤㅤ: 4 vCPU
-  │     ├─➤ RAMㅤㅤㅤ: 8GB DDR4
-  │     ╰─➤ STORAGEㅤ: 100GB NVMe Gen4
-  ├─► 05 — VPS 12GB --> Rp 195.000
-  │     ├─➤ CPUㅤㅤㅤ: 6 vCPU
-  │     ├─➤ RAMㅤㅤㅤ: 12GB DDR4
-  │     ╰─➤ STORAGEㅤ: 160GB NVMe Gen4
-  ╰─► 06 — VPS 16GB --> Rp 275.000
-        ├─➤ CPUㅤㅤㅤ: 8 vCPU
-        ├─➤ RAMㅤㅤㅤ: 16GB DDR4
-        ╰─➤ STORAGEㅤ: 200GB NVMe Gen4
+  ╭─► 01 — VPS 1GB ─➤ Rp 30.000/Bln
+  │     ├─➤ CPUㅤㅤ─➤ㅤ1 vCPU
+  │     ├─➤ RAMㅤㅤ─➤ㅤ1GB DDR4
+  │     ╰─➤ STORAGEㅤ─➤ 20GB NVMe Gen4
+  ├─► 02 — VPS 2GB ─➤ Rp 40.000/Bln
+  │     ├─➤ CPUㅤㅤ─➤ㅤ1 vCPU
+  │     ├─➤ RAMㅤㅤ─➤ㅤ2GB DDR4
+  │     ╰─➤ STORAGE ─➤ 30GB NVMe Gen4
+  ├─► 03 — VPS 4GB ─➤ Rp 75.000/Bln
+  │     ├─➤ CPUㅤㅤ─➤ㅤ2 vCPU
+  │     ├─➤ RAMㅤㅤ─➤ㅤ4GB DDR4
+  │     ╰─➤ STORAGEㅤ─➤ 60GB NVMe Gen4
+  ├─► 04 — VPS 8GB ─➤ Rp 130.000/Bln
+  │     ├─➤ CPUㅤㅤ─➤ㅤ4 vCPU
+  │     ├─➤ RAMㅤㅤ─➤ㅤ8GB DDR4
+  │     ╰─➤ STORAGEㅤ─➤ㅤ100GB NVMe Gen4
+  ├─► 05 — VPS 12GB ─➤ Rp 195.000/Bln
+  │     ├─➤ CPUㅤㅤ─➤ㅤ6 vCPU
+  │     ├─➤ RAMㅤㅤ─➤ㅤ12GB DDR4
+  │     ╰─➤ STORAGE─➤ㅤ160GB NVMe Gen4
+  ╰─► 06 — VPS 16GB ─➤ Rp 275.000/Bln
+        ├─➤ CPUㅤㅤ─➤ㅤ8 vCPU
+        ├─➤ RAMㅤㅤ─➤ㅤ16GB DDR4
+        ╰─➤ STORAGEㅤ─➤ㅤ200GB NVMe Gen4
 
 ㅤㅤㅤㅤKlik paket nya di bawah 👇`;
 
@@ -429,7 +429,7 @@ const kbVps = Markup.inlineKeyboard([
   [Markup.button.callback('⏪ Kembali', 'back_menu')],
 ]);
 const kbLokasi = Markup.inlineKeyboard([
-  [Markup.button.callback('🇮🇩 INDONESI - 15ms', 'lok_1')],
+  [Markup.button.callback('🇮🇩 INDONESIA - 15ms', 'lok_1')],
   [Markup.button.callback('🇩🇪 JERMAN - 114ms', 'lok_2')],
   [Markup.button.callback('🇸🇬 SINGAPURA - 30ms', 'lok_3')],
   [Markup.button.callback('⏪ Kembali', 'back_menu')],

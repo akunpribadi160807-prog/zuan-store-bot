@@ -53,10 +53,10 @@ const OS_VERSIONS_RAW = {
 
 const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
     ㅤㅤㅤㅤㅤㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ⚡
-  ㅤㅤㅤㅤCEPAT. STABIL. TANPA RIBET.
+  ㅤㅤㅤㅤ𝐂𝐄𝐏𝐀𝐓. 𝐒𝐓𝐀𝐁𝐈𝐋. 𝐓𝐀𝐍𝐏𝐀 𝐑𝐈𝐁𝐄𝐓.
 ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
 
-ㅤㅤㅤㅤㅤ👋 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎
+ㅤㅤㅤㅤㅤㅤㅤ👋 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎
  ㅤㅤㅤㅤㅤ✦ㅤ━𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄━ㅤ✦ 
 
 𝚄𝚍𝚊𝚑 𝚌𝚊𝚙𝚎 𝚌𝚊𝚛𝚒 𝚅𝙿𝚂 𝚢𝚊𝚗𝚐 𝚕𝚎𝚕𝚎𝚝?
@@ -65,15 +65,15 @@ const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━�
 𝙳𝚒𝚜𝚒𝚗𝚒 𝚔𝚒𝚝𝚊 𝚓𝚞𝚊𝚕 𝚅𝙿𝚂 𝚢𝚊𝚗𝚐 𝚋𝚎𝚗𝚎𝚛𝚊𝚗
 𝚗𝚐𝚎𝚐𝚊𝚜, 𝚋𝚞𝚔𝚊𝚗 𝚢𝚊𝚗𝚐 𝚌𝚞𝚖𝚊 𝚓𝚊𝚗𝚓𝚒 𝚖𝚊𝚗𝚒𝚜.
 ✦━━━━━━━━━━━━━━━━━━━━━━━━━━✦
-▸ ⚡ SPEED NGEBUT ㅤㅤ- NVMe + 1Gbps
-▸ 🛡️ ANTI DOWN    ㅤㅤ- Uptime 99.9%
-▸ 🕹️ FULL KONTROL ㅤㅤ- Root Access Penuh
-▸ 👨‍💻 OWN FAST RESPON - Nggak Ditidurin
-▸ 💎 FULL GARANSI    - Kalo Down, Kita Ganti!
+▸ ⚡ SPEED NGEBUTㅤㅤㅤ- NVMe + 1Gbps
+▸ 🛡️ ANTI DOWNㅤㅤㅤㅤㅤ- Uptime 99.9%
+▸ 🕹️ FULL KONTROLㅤㅤㅤ- Root Access Penuh
+▸ 👨‍💻 OWN FAST RESPONㅤ- Nggak Ditidurin
+▸ 💎 FULL GARANSIㅤㅤㅤ- Kalo Down, Kita Ganti!
 
 ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
 ㅤㅤㅤㅤ🔥 PROMO HARI INI 🔥
-ㅤㅤㅤㅤBeli VPS 2 GB ke atas,
+ㅤㅤBeli VPS 2 GB ke atas :
 ➤ㅤGRATIS Setup VPS sampe Selesai !
 ➤ㅤGRATIS Panel Pterodactyl !
 ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
@@ -82,40 +82,45 @@ const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━�
 |ㅤLangsung klik aja di bawah, jangan
 |ㅤsampe kehabisan slotnya 👇
 ㅤㅤ✦ㅤ━━━━━━━━━━━━━━━━━━━━ㅤ✦
-ㅤㅤㅤㅤ✨ GAS ORDER SEKARANG ✨`;
+ㅤㅤㅤㅤ✨ 𝐆𝐀𝐒 𝐎𝐑𝐃𝐄𝐑 𝐒𝐄𝐊𝐀𝐑𝐀𝐍𝐆 ✨`;
 
 const VPS_LIST = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
   ㅤㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 - 𝐕𝐏𝐒 𝐌𝐔𝐑𝐀𝐇 ⚡
-  ㅤㅤ  NVMe Gen4 | KVM | Full Root
-  ㅤㅤ  Aktif 1-2 Menit. Tanpa Ribet.
+  ㅤㅤ  𝙽𝚅𝙼𝚎 𝙶𝚎𝚗𝟺 | 𝙺𝚅𝙼 | 𝙵𝚞𝚕𝚕 𝚁𝚘𝚘𝚝
+  ㅤㅤ  𝙰𝚔𝚝𝚒𝚏 𝟷-𝟸 𝙼𝚎𝚗𝚒𝚝. 𝚃𝚊𝚗𝚙𝚊 𝚁𝚒𝚋𝚎𝚝.
 ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
 
-  ╭─► 01 — VPS 1GB ─➤ Rp 30.000/Bln
+  ╭─► 1 — VPS 1vGB ─➤ Rp 30.000/Bln
   │     ├─➤ CPUㅤㅤ─➤ㅤ1 vCPU
   │     ├─➤ RAMㅤㅤ─➤ㅤ1GB DDR4
-  │     ╰─➤ STORAGEㅤ─➤ 20GB NVMe Gen4
-  ├─► 02 — VPS 2GB ─➤ Rp 40.000/Bln
+  │     ╰─➤ STORAGE─➤ 20GB NVMe Gen4
+  │
+  ├─► 2 — VPS 2 GB ─➤ Rp 40.000/Bln
   │     ├─➤ CPUㅤㅤ─➤ㅤ1 vCPU
   │     ├─➤ RAMㅤㅤ─➤ㅤ2GB DDR4
-  │     ╰─➤ STORAGE ─➤ 30GB NVMe Gen4
-  ├─► 03 — VPS 4GB ─➤ Rp 75.000/Bln
+  │     ╰─➤ STORAGE─➤ 30GB NVMe Gen4
+  │
+  ├─► 3 — VPS 4 GB ─➤ Rp 75.000/Bln
   │     ├─➤ CPUㅤㅤ─➤ㅤ2 vCPU
   │     ├─➤ RAMㅤㅤ─➤ㅤ4GB DDR4
-  │     ╰─➤ STORAGEㅤ─➤ 60GB NVMe Gen4
-  ├─► 04 — VPS 8GB ─➤ Rp 130.000/Bln
+  │     ╰─➤ STORAGE─➤ 60GB NVMe Gen4
+  │
+  ├─► 4 — VPS 8 GB ─➤ Rp 130.000/Bln
   │     ├─➤ CPUㅤㅤ─➤ㅤ4 vCPU
   │     ├─➤ RAMㅤㅤ─➤ㅤ8GB DDR4
-  │     ╰─➤ STORAGEㅤ─➤ㅤ100GB NVMe Gen4
-  ├─► 05 — VPS 12GB ─➤ Rp 195.000/Bln
+  │     ╰─➤ STORAGE─➤ㅤ100GB NVMe Gen4
+  │
+  ├─► 5 — VPS 12 GB ─➤ Rp 195.000/Bln
   │     ├─➤ CPUㅤㅤ─➤ㅤ6 vCPU
   │     ├─➤ RAMㅤㅤ─➤ㅤ12GB DDR4
   │     ╰─➤ STORAGE─➤ㅤ160GB NVMe Gen4
-  ╰─► 06 — VPS 16GB ─➤ Rp 275.000/Bln
+  │
+  ╰─► 6 — VPS 16 GB ─➤ Rp 275.000/Bln
         ├─➤ CPUㅤㅤ─➤ㅤ8 vCPU
         ├─➤ RAMㅤㅤ─➤ㅤ16GB DDR4
-        ╰─➤ STORAGEㅤ─➤ㅤ200GB NVMe Gen4
+        ╰─➤ STORAGE─➤ㅤ200GB NVMe Gen4
 
-ㅤㅤㅤㅤKlik paket nya di bawah 👇`;
+ㅤㅤㅤㅤ𝐊𝐥𝐢𝐤 𝐩𝐚𝐤𝐞𝐭 𝐧𝐲𝐚 𝐝𝐢 𝐛𝐚𝐰𝐚𝐡 👇`;
 
 const LOKASI_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
   ㅤㅤ🌍 𝐋𝐎𝐊𝐀𝐒𝐈 𝐒𝐄𝐑𝐕𝐄𝐑 🌍
@@ -127,9 +132,11 @@ const LOKASI_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━ �
   ╭─► [1] 𝐈𝐍𝐃𝐎𝐍𝐄𝐒𝐈𝐀  — 140 ms
   │     ├─➤ REKOMENDASI | Paling Stabil
   │     ╰─➤ Cocok Buat Bot / Web
+  │
   ├─► [2] 𝐉𝐄𝐑𝐌𝐀𝐍    — 114 ms
   │     ├─➤ REKOMENDASI | Paling Enak
   │     ╰─➤ PING SEDANG, Buat Game / Bot
+  │
   ╰─► [3] 𝐒𝐈𝐍𝐆𝐀𝐏𝐔𝐑𝐀 — 30 ms
         ├─➤ STABIL | Buat Asia
         ╰─➤ Alternatif Paling Aman
@@ -144,7 +151,7 @@ const OS_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
     Paling mudah. Cocok buat pemula.
 
   ▸ 𝐃𝐄𝐁𝐈𝐀𝐍
-    Paling stabil. Favorit para pro.
+    Paling stabil. Favorit pro.
 
   ▸ 𝐀𝐋𝐌𝐀𝐋𝐈𝐍𝐔𝐗
     Rasa enterprise. Tetap ringan.
@@ -226,13 +233,21 @@ function bayarTxt(u){
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
   ╭─► 📦 PAKETㅤ:--➤ ${u.nama}
+  │
   ├─► 🖥️ CPUㅤㅤ:--➤ ${u.cpu || '-'}
+  │
   ├─► 🧠 RAMㅤㅤ:--➤ ${u.ram || '-'}
-  ├─► 💾 STORAGE :--➤ ${u.storage || '-'}
+  │
+  ├─► 💾 STORAGEㅤ:--➤ ${u.storage || '-'}
+  │
   ├─► 📍 LOKASIㅤ:--➤ ${u.lokasi || '-'}
-  ├─► 📀 OSㅤㅤㅤㅤ:--➤ ${u.os || '-'}
+  │
+  ├─► 📀 OSㅤㅤㅤ:--➤ ${u.os || '-'}
+  │
   ├─► 👤 USERNAME:--➤ ${u.username}
+  │
   ├─► 🔑 PASSWORD:--➤ Dikirim setelah Payment
+  │
   ╰─► 📅 DURASIㅤ:--➤ 30 Hari Full + Garansi Kalo Mokad
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮

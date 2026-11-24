@@ -51,13 +51,13 @@ const OS_VERSIONS_RAW = {
   rocky: ['Rocky Linux 9', 'Rocky Linux 8'],
 };
 
-const MENU = `✦ ━━━━━━━━━━━━━━━━━ ✦
-    ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ⚡
-  CEPAT. STABIL. TANPA RIBET.
-✦ ━━━━━━━━━━━━━━━━━ ✦
+const MENU = `ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+    ㅤㅤㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ⚡
+  ㅤCEPAT. STABIL. TANPA RIBET.
+ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
 
-👋 HALO KAK, SELAMAT DATANG
-di 👑 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 👑
+👋 HALO KAK, SELAMAT DATANG DI
+ ㅤㅤ👑 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 👑
 
 Udah cape cari VPS yang lelet?
 Tenang kak, disini tempatnya. 😎
@@ -72,7 +72,7 @@ ngegas, bukan yang cuma janji manis.
 ▸ 💎 GARANSI      - Kalo Down, Kita Ganti!
 
 ━━━━━━━━━━━━━━━━━━━
-🔥 PROMO HARI INI 🔥
+ㅤㅤ🔥 PROMO HARI INI 🔥
 Beli VPS 2GB ke atas,
 > GRATIS Setup VPS sampe Selesai !
 > GRATIS Panel Pterodactyl !
@@ -82,13 +82,13 @@ Mau order yang mana nih kak?
 Langsung klik aja di bawah, jangan
 sampe kehabisan slotnya 👇
 
-✨ GAS ORDER SEKARANG ✨`;
+ㅤ✨ GAS ORDER SEKARANG ✨`;
 
-const VPS_LIST = `✦ ━━━━━━━━━━━━━━━━━ ✦
-  ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 - 𝐕𝐏𝐒 𝐌𝐔𝐑𝐀𝐇 ⚡
-  🚀 NVMe Gen4 | KVM | Full Root
-  ⚡ Aktif 1-2 Menit. Tanpa Ribet.
-✦ ━━━━━━━━━━━━━━━━━ ✦
+const VPS_LIST = `ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+  ㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 - 𝐕𝐏𝐒 𝐌𝐔𝐑𝐀𝐇 ⚡
+  ㅤ🚀 NVMe Gen4 | KVM | Full Root
+  ㅤ⚡ Aktif 1-2 Menit. Tanpa Ribet.
+ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
 
   ╭─► 01 — VPS 1GB --> Rp 30.000
   │     ├─➤ CPU     : 1 vCPU
@@ -115,11 +115,11 @@ const VPS_LIST = `✦ ━━━━━━━━━━━━━━━━━ ✦
         ├─➤ RAM     : 16GB DDR4
         ╰─➤ STORAGE : 200GB NVMe Gen4
 
-Klik paket nya di bawah 👇`;
+ㅤㅤKlik paket nya di bawah 👇`;
 
-const LOKASI_TXT = `✦ ━━━━━━━━━━━━━ ✦
-  🌍 𝐋𝐎𝐊𝐀𝐒𝐈 𝐒𝐄𝐑𝐕𝐄𝐑 🌍
-✦ ━━━━━━━━━━━━━ ✦
+const LOKASI_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━ ✦
+  ㅤㅤ🌍 𝐋𝐎𝐊𝐀𝐒𝐈 𝐒𝐄𝐑𝐕𝐄𝐑 🌍
+ㅤㅤ✦ ━━━━━━━━━━━━━ ✦
 
       📍 Lokasi ngaruh ke PING !
          Makin deket, makin ngebut!
@@ -134,11 +134,11 @@ const LOKASI_TXT = `✦ ━━━━━━━━━━━━━ ✦
         ├─➤ STABIL | Buat Asia
         ╰─➤ Alternatif Paling Aman
 
-Klik lokasi nya 👇`;
+ㅤㅤKlik lokasi nya 👇`;
 
-const OS_TXT = `✦ ━━━━━━━━━━━━━ ✦
-  🖥️ 𝐒𝐈𝐒𝐓𝐄𝐌 𝐎𝐏𝐄𝐑𝐀𝐒𝐈 🖥️
-✦ ━━━━━━━━━━━━━ ✦
+const OS_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━ ✦
+  ㅤㅤ🖥️ 𝐒𝐈𝐒𝐓𝐄𝐌 𝐎𝐏𝐄𝐑𝐀𝐒𝐈 🖥️
+ㅤㅤ✦ ━━━━━━━━━━━━━ ✦
 
   ▸ 𝐔𝐁𝐔𝐍𝐓𝐔
     Paling mudah. Cocok buat pemula.
@@ -152,23 +152,23 @@ const OS_TXT = `✦ ━━━━━━━━━━━━━ ✦
   ▸ 𝐑𝐎𝐂𝐊𝐘𝐋𝐈𝐍𝐔𝐗
     Kuat dan bisa diandalkan.
 
-Klik OS nya di bawah 👇`;
+ㅤㅤKlik OS nya di bawah 👇`;
 
 function osVersionTxt(fam){
   const judul = fam === 'ubuntu' ? 'UBUNTU' : fam === 'debian' ? 'DEBIAN' : fam === 'alma' ? 'ALMALINUX' : 'ROCKY LINUX';
   const desc = fam === 'ubuntu' ? 'Paling mudah. Cocok buat pemula.' : fam === 'debian' ? 'Paling stabil. Favorit para pro.' : fam === 'alma' ? 'Rasa enterprise. Tetap ringan.' : 'Kuat dan bisa diandalkan.';
-    return `✦ ━━━━━━━━━━━━━ ✦
-  ⚙️ 𝐏𝐈𝐋𝐈𝐇 𝐕𝐄𝐑𝐒𝐈 ${judul} ⚙️
-✦ ━━━━━━━━━━━━━ ✦
+    return `ㅤㅤ✦ ━━━━━━━━━━━━━ ✦
+  ㅤㅤ⚙️ 𝐏𝐈𝐋𝐈𝐇 𝐕𝐄𝐑𝐒𝐈 ${judul} ⚙️
+ㅤㅤ✦ ━━━━━━━━━━━━━ ✦
 
   ${desc}
 
-Klik versi nya di bawah 👇`;
+ㅤㅤKlik versi nya di bawah 👇`;
 }
 function ringkasanTxt(u){
-   return `✦ ━━━━━━━━━━━━━━━━━ ✦
-  ✨ 𝐑𝐈𝐍𝐆𝐊𝐀𝐒𝐀𝐍 𝐎𝐑𝐃𝐄𝐑 𝐊𝐀𝐌𝐔 ✨
-✦ ━━━━━━━━━━━━━━━━━ ✦
+   return `ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+  ㅤ✨ 𝐑𝐈𝐍𝐆𝐊𝐀𝐒𝐀𝐍 𝐎𝐑𝐃𝐄𝐑 𝐊𝐀𝐌𝐔 ✨
+ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
     | 𝐃𝐄𝐓𝐀𝐈𝐋 𝐏𝐄𝐒𝐀𝐍𝐀𝐍 𝐊𝐀𝐌𝐔 |
@@ -199,11 +199,11 @@ function ringkasanTxt(u){
 ┃      💰 TOTAL : ${rupiah(u.harga)} 💰      ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-Udah bener? Klik YA buat lanjut 👇`;
+ㅤUdah bener? Klik YA buat lanjut 👇`;
 }
-const USERNAME_TXT = `✦ ━━━━━━━━━━━━━━━━━ ✦
-  👤 𝐀𝐓𝐔𝐑 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 𝐊𝐀𝐌𝐔 👤
-✦ ━━━━━━━━━━━━━━━━━ ✦
+const USERNAME_TXT = `ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+  ㅤ👤 𝐀𝐓𝐔𝐑 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 𝐊𝐀𝐌𝐔 👤
+ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
 
    Tentuin username buat login VPS kamu 😎
        Contoh: zuanstore
@@ -212,11 +212,11 @@ const USERNAME_TXT = `✦ ━━━━━━━━━━━━━━━━━ �
   ╭─► 🔤 Huruf kecil aja
   ╰─► 🚫 Tanpa spasi
 
-⌨️ Ketik username kamu sekarang:`;
+ㅤ⌨️ Ketik username kamu sekarang:`;
 function bayarTxt(u){
-   return `✦ ━━━━━━━━━━━━━━━━━ ✦
-  🔒 𝐎𝐑𝐃𝐄𝐑 𝐁𝐄𝐑𝐇𝐀𝐒𝐈𝐋 𝐃𝐈𝐋𝐎𝐂𝐊 🔒
-✦ ━━━━━━━━━━━━━━━━━ ✦
+   return `ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+  ㅤ🔒 𝐎𝐑𝐃𝐄𝐑 𝐁𝐄𝐑𝐇𝐀𝐒𝐈𝐋 𝐃𝐈𝐋𝐎𝐂𝐊 🔒
+ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
 
      Terima kasih sudah order di
          👑⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ⚡👑
@@ -259,9 +259,9 @@ function bayarTxt(u){
 Klik tombol QRIS di bawah 👇`;
 }
 function qrisTxt(u){
-   return `✦ ━━━━━━━━━━━━━━━━━ ✦
-  📸 𝐏𝐄𝐌𝐁𝐀𝐘𝐀𝐑𝐀𝐍 𝐕𝐈𝐀 𝐐𝐑𝐈𝐒 📸
-✦ ━━━━━━━━━━━━━━━━━ ✦
+   return `ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+  ㅤ📸 𝐏𝐄𝐌𝐁𝐀𝐘𝐀𝐑𝐀𝐍 𝐕𝐈𝐀 𝐐𝐑𝐈𝐒 📸
+ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
 
   Halo kak, terima kasih banyak sudah
   percaya order di Store Kami 

@@ -115,38 +115,44 @@ const VPS_LIST = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━�
   ㅤㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 - 𝐕𝐏𝐒 𝐌𝐔𝐑𝐀𝐇 ⚡
   ㅤㅤ  𝙽𝚅𝙼𝚎 𝙶𝚎𝚗𝟺 | 𝙺𝚅𝙼 | 𝙵𝚞𝚕𝚕 𝚁𝚘𝚘𝚝
   ㅤㅤ  𝙰𝚔𝚝𝚒𝚏 𝟷-𝟸 𝙼𝚎𝚗𝚒𝚝. 𝚃𝚊𝚗𝚙𝚊 𝚁𝚒𝚋𝚎𝚝.
-ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━━━ ✦
+✦━━━━━━━━━━━━━━━━━━━━━━━━━━✦
 
-  ╭─► 1 — VPS 1vGB ─➤ Rp 30.000/Bln
-  │     ├─➤ CPUㅤㅤ─➤ㅤ1 vCPU
-  │     ├─➤ RAMㅤㅤ─➤ㅤ1GB DDR4
-  │     ╰─➤ STORAGE─➤20GB NVMe Gen4
+  ┌─► 1 - VPS 1GB -> Rp 30.000/Bln
+  │     ├─► CPU     -> 1 vCPU
+  │     ├─► RAM     -> 1GB DDR4
+  │     └─► STORAGE -> 20GB NVMeGen4
   │
-  ├─► 2 — VPS 2 GB ─➤ Rp 40.000/Bln
-  │     ├─➤ CPUㅤㅤ─➤ㅤ1 vCPU
-  │     ├─➤ RAMㅤㅤ─➤ㅤ2GB DDR4
-  │     ╰─➤ STORAGE─➤30GB NVMe Gen4
+  ├─► 2 - VPS 2GB -> Rp 40.000/Bln
+  │     ├─► CPU     -> 1 vCPU
+  │     ├─► RAM     -> 2GB DDR4
+  │     └─► STORAGE -> 30GB NVMeGen4
   │
-  ├─► 3 — VPS 4 GB ─➤ Rp 75.000/Bln
-  │     ├─➤ CPUㅤㅤ─➤ㅤ2 vCPU
-  │     ├─➤ RAMㅤㅤ─➤ㅤ4GB DDR4
-  │     ╰─➤ STORAGE─➤60GB NVMe Gen4
+  ├─► 3 - VPS 4GB -> Rp 75.000/Bln
+  │     ├─► CPU     -> 2 vCPU
+  │     ├─► RAM     -> 4GB DDR4
+  │     └─► STORAGE -> 60GB NVMeGen4
   │
-  ├─► 4 — VPS 8 GB ─➤ Rp 130.000/Bln
-  │     ├─➤ CPUㅤㅤ─➤ㅤ4 vCPU
-  │     ├─➤ RAMㅤㅤ─➤ㅤ8GB DDR4
-  │     ╰─➤ STORAGE─➤100GB NVMe Gen4
+  ├─► 4 - VPS 8GB -> Rp 130.000/Bln
+  │     ├─► CPU     -> 4 vCPU
+  │     ├─► RAM     -> 8GB DDR4
+  │     └─► STORAGE -> 100GB NVMeGen4
   │
-  ├─► 5 — VPS 12 GB ─➤ Rp 195.000/Bln
-  │     ├─➤ CPUㅤㅤ─➤ㅤ6 vCPU
-  │     ├─➤ RAMㅤㅤ─➤ㅤ12GB DDR4
-  │     ╰─➤ STORAGE─➤160GB NVMe Gen4
+  ├─► 5 - VPS 12GB -> Rp 195.000/Bln
+  │     ├─► CPU     -> 6 vCPU
+  │     ├─► RAM     -> 12GB DDR4
+  │     └─► STORAGE -> 160GB NVMeGen4
   │
-  ╰─► 6 — VPS 16 GB ─➤ Rp 275.000/Bln
-        ├─➤ CPUㅤㅤ─➤ㅤ8 vCPU
-        ├─➤ RAMㅤㅤ─➤ㅤ16GB DDR4
-        ╰─➤ STORAGE─➤200GB NVMe Gen4
-
+  └─► 6 - VPS 16GB -> Rp 275.000/Bln
+        ├─► CPU     -> 8 vCPU
+        ├─► RAM     -> 16GB DDR4
+        └─► STORAGE -> 200GB NVMeGen4
+✦━━━━━━━━━━━━━━━━━━━━━━━━━━━✦      
+🚨 𝐍𝐎𝐓𝐄 : 𝙷𝚊𝚛𝚐𝚊 𝚈𝚊𝚗𝚐 𝚂𝚞𝚍𝚊𝚑 𝚃𝚎𝚛𝚝𝚎𝚛𝚊 
+𝚍𝚒𝚊𝚝𝚊𝚜 𝙸𝚝𝚞 𝚂𝚞𝚍𝚊𝚑 𝚃𝚎𝚛𝚖𝚊𝚜𝚞𝚔 1 𝙰𝚔𝚞𝚗 𝚅𝙿𝚂 
+𝙿𝚛𝚒𝚋𝚊𝚍𝚒, 𝙱𝚞𝚔𝚊𝚗 𝚂𝚎𝚛𝚟𝚎𝚛 𝚅𝙿𝚂 𝚂𝚊𝚓𝚊 
+𝙷𝚊𝚛𝚊𝚙 𝙳𝚒𝚋𝚊𝚌𝚊 𝚃𝚎𝚛𝚕𝚎𝚋𝚒𝚑 𝙳𝚊𝚑𝚞𝚕𝚞 
+𝚂𝚎𝚋𝚎𝚕𝚞𝚖 𝙼𝚎𝚖𝚋𝚎𝚕𝚒
+✦━━━━━━━━━━━━━━━━━━━━━━━━━━━✦
 ㅤㅤㅤㅤ𝐊𝐥𝐢𝐤 𝐩𝐚𝐤𝐞𝐭 𝐧𝐲𝐚 𝐝𝐢 𝐛𝐚𝐰𝐚𝐡 👇`;
 
 const LOKASI_TXT = `ㅤㅤ✦ ━━━━━━━━━━━━━━━━ ✦
@@ -462,18 +468,18 @@ const kbMenu = Markup.inlineKeyboard([
   [Markup.button.callback('💬 HUBUNGI ADMIN', 'menu_5')],
 ]);
 const kbVps = Markup.inlineKeyboard([
-  [Markup.button.callback('VPS 1GB | Rp 30K', 'vps_1')],
-  [Markup.button.callback('VPS 2GB | Rp 40K', 'vps_2')],
-  [Markup.button.callback('VPS 4GB | Rp 75K', 'vps_3')],
-  [Markup.button.callback('VPS 8GB | Rp 130K', 'vps_4')],
-  [Markup.button.callback('VPS 12GB | Rp 195K', 'vps_5')],
-  [Markup.button.callback('VPS 16GB | Rp 275K', 'vps_6')],
+  [Markup.button.callback('1', 'vps_1')],
+  [Markup.button.callback('2', 'vps_2')],
+  [Markup.button.callback('3', 'vps_3')],
+  [Markup.button.callback('4', 'vps_4')],
+  [Markup.button.callback('5', 'vps_5')],
+  [Markup.button.callback('6', 'vps_6')],
   [Markup.button.callback('⏪ Kembali', 'back_menu')],
 ]);
 const kbLokasi = Markup.inlineKeyboard([
-  [Markup.button.callback('🇮🇩 INDONESIA - 15ms', 'lok_1')],
-  [Markup.button.callback('🇩🇪 JERMAN - 114ms', 'lok_2')],
-  [Markup.button.callback('🇸🇬 SINGAPURA - 30ms', 'lok_3')],
+  [Markup.button.callback('🇮🇩 INDONESIA', 'lok_1')],
+  [Markup.button.callback('🇩🇪 JERMAN', 'lok_2')],
+  [Markup.button.callback('🇸🇬 SINGAPURA', 'lok_3')],
   [Markup.button.callback('⏪ Kembali', 'back_menu')],
 ]);
 const kbOsFamily = Markup.inlineKeyboard([

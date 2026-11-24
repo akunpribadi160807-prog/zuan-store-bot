@@ -51,13 +51,13 @@ const OS_VERSIONS_RAW = {
   rocky: ['Rocky Linux 9', 'Rocky Linux 8'],
 };
 
-const MENU = `ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
-    ㅤㅤㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ⚡
-  ㅤCEPAT. STABIL. TANPA RIBET.
-ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+const MENU = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+    ㅤㅤㅤㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 ⚡
+  ㅤㅤㅤCEPAT. STABIL. TANPA RIBET.
+ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
 
-👋 HALO KAK, SELAMAT DATANG DI
- ㅤㅤ👑 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 👑
+ㅤ👋 HALO KAK, SELAMAT DATANG DI
+ ㅤㅤㅤㅤ👑 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 👑
 
 Udah cape cari VPS yang lelet?
 Tenang kak, disini tempatnya. 😎
@@ -82,13 +82,13 @@ Mau order yang mana nih kak?
 Langsung klik aja di bawah, jangan
 sampe kehabisan slotnya 👇
 
-ㅤ✨ GAS ORDER SEKARANG ✨`;
+ㅤㅤ✨ GAS ORDER SEKARANG ✨`;
 
-const VPS_LIST = `ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
-  ㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 - 𝐕𝐏𝐒 𝐌𝐔𝐑𝐀𝐇 ⚡
-  ㅤ🚀 NVMe Gen4 | KVM | Full Root
-  ㅤ⚡ Aktif 1-2 Menit. Tanpa Ribet.
-ㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+const VPS_LIST = `ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
+  ㅤㅤ⚡ 𝐙𝐔𝐀𝐍 𝐒𝐓𝐎𝐑𝐄 - 𝐕𝐏𝐒 𝐌𝐔𝐑𝐀𝐇 ⚡
+  ㅤㅤ🚀 NVMe Gen4 | KVM | Full Root
+  ㅤㅤ⚡ Aktif 1-2 Menit. Tanpa Ribet.
+ㅤㅤㅤ✦ ━━━━━━━━━━━━━━━━━ ✦
 
   ╭─► 01 — VPS 1GB --> Rp 30.000
   │     ├─➤ CPU     : 1 vCPU

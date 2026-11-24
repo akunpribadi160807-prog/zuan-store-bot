@@ -463,67 +463,97 @@ function tolakTxt(u){
 }
 
 const kbMenu = Markup.inlineKeyboard([
-  [Markup.button.callback('💻 VPS MURAH', 'menu_1'), Markup.button.callback('📱 PANEL', 'menu_2')],
-  [Markup.button.callback('🌐 DOMAIN MURAH', 'menu_3'), Markup.button.callback('🛠️ JASA INSTALL', 'menu_4')],
-  [Markup.button.callback('💬 HUBUNGI ADMIN', 'menu_5')],
+  [
+    { text: '💻 VPS MURAH', callback_data: 'menu_1', style: 'success' },
+    { text: '📱 PANEL', callback_data: 'menu_2', style: 'primary' }
+  ],
+  [
+    { text: '🌐 DOMAIN MURAH', callback_data: 'menu_3', style: 'primary' },
+    { text: '🛠️ JASA INSTALL', callback_data: 'menu_4', style: 'primary' }
+  ],
+  [
+    { text: '💬 HUBUNGI ADMIN', callback_data: 'menu_5', style: 'secondary' }
+  ],
 ]);
+
 const kbVps = Markup.inlineKeyboard([
-  [Markup.button.callback('1', 'vps_1')],
-  [Markup.button.callback('2', 'vps_2')],
-  [Markup.button.callback('3', 'vps_3')],
-  [Markup.button.callback('4', 'vps_4')],
-  [Markup.button.callback('5', 'vps_5')],
-  [Markup.button.callback('6', 'vps_6')],
-  [Markup.button.callback('⏪ Kembali', 'back_menu')],
+  [{ text: '1', callback_data: 'vps_1', style: 'primary' }],
+  [{ text: '2', callback_data: 'vps_2', style: 'primary' }],
+  [{ text: '3', callback_data: 'vps_3', style: 'primary' }],
+  [{ text: '4', callback_data: 'vps_4', style: 'primary' }],
+  [{ text: '5', callback_data: 'vps_5', style: 'primary' }],
+  [{ text: '6', callback_data: 'vps_6', style: 'primary' }],
+  [{ text: '⏪ Kembali', callback_data: 'back_menu', style: 'danger' }],
 ]);
+
 const kbLokasi = Markup.inlineKeyboard([
-  [Markup.button.callback('🇮🇩 INDONESIA', 'lok_1')],
-  [Markup.button.callback('🇩🇪 JERMAN', 'lok_2')],
-  [Markup.button.callback('🇸🇬 SINGAPURA', 'lok_3')],
-  [Markup.button.callback('⏪ Kembali', 'back_menu')],
+  [{ text: '🇮🇩 INDONESIA', callback_data: 'lok_1', style: 'primary' }],
+  [{ text: '🇩🇪 JERMAN', callback_data: 'lok_2', style: 'primary' }],
+  [{ text: '🇸🇬 SINGAPURA', callback_data: 'lok_3', style: 'primary' }],
+  [{ text: '⏪ Kembali', callback_data: 'back_menu', style: 'danger' }],
 ]);
+
 const kbOsFamily = Markup.inlineKeyboard([
-  [Markup.button.callback('UBUNTU', 'osfam_ubuntu')],
-  [Markup.button.callback('DEBIAN', 'osfam_debian')],
-  [Markup.button.callback('ALMALINUX', 'osfam_alma')],
-  [Markup.button.callback('ROCKY LINUX', 'osfam_rocky')],
-  [Markup.button.callback('⏪ Kembali', 'back_menu')],
+  [{ text: 'UBUNTU', callback_data: 'osfam_ubuntu', style: 'primary' }],
+  [{ text: 'DEBIAN', callback_data: 'osfam_debian', style: 'primary' }],
+  [{ text: 'ALMALINUX', callback_data: 'osfam_alma', style: 'primary' }],
+  [{ text: 'ROCKY LINUX', callback_data: 'osfam_rocky', style: 'primary' }],
+  [{ text: '⏪ Kembali', callback_data: 'back_menu', style: 'danger' }],
 ]);
+
 function kbOsVersion(fam){
-  const btns = OS_VERSIONS_LABEL[fam].map((label, i) => [Markup.button.callback('✅ ' + label, `osver_${fam}_${i}`)]);
-  btns.push([Markup.button.callback('⏪ Kembali ke OS', 'back_os')]);
+  const btns = OS_VERSIONS_LABEL[fam].map((label, i) => [{ text: '✅ ' + label, callback_data: `osver_${fam}_${i}`, style: 'primary' }]);
+  btns.push([{ text: '⏪ Kembali ke OS', callback_data: 'back_os', style: 'danger' }]);
   return Markup.inlineKeyboard(btns);
 }
+
 const kbYaBatal = Markup.inlineKeyboard([
-  [Markup.button.callback('✅ YA, LANJUT', 'ya'), Markup.button.callback('❌ BATAL', 'batal')],
+  [
+    { text: '✅ YA, LANJUT', callback_data: 'ya', style: 'success' },
+    { text: '❌ BATAL', callback_data: 'batal', style: 'danger' }
+  ],
 ]);
+
 const kbBayar = Markup.inlineKeyboard([
-  [Markup.button.callback('📷 LIAT QRIS', 'qris')],
-  [Markup.button.callback('⏪ MENU UTAMA', 'back_menu')],
+  [{ text: '📷 LIAT QRIS', callback_data: 'qris', style: 'primary' }],
+  [{ text: '⏪ MENU UTAMA', callback_data: 'back_menu', style: 'danger' }],
 ]);
+
 const kbPanel = Markup.inlineKeyboard([
-  [Markup.button.callback('PANEL 1GB | Rp 3K', 'panel_1')],
-  [Markup.button.callback('PANEL 2GB | Rp 6K', 'panel_2')],
-  [Markup.button.callback('PANEL 4GB | Rp 9K', 'panel_3')],
-  [Markup.button.callback('PANEL UNLIMITED | Rp 25K', 'panel_4')],
-  [Markup.button.callback('⏪ Kembali', 'back_menu')],
+  [{ text: 'PANEL 1GB | Rp 3K', callback_data: 'panel_1', style: 'primary' }],
+  [{ text: 'PANEL 2GB | Rp 6K', callback_data: 'panel_2', style: 'primary' }],
+  [{ text: 'PANEL 4GB | Rp 9K', callback_data: 'panel_3', style: 'primary' }],
+  [{ text: 'PANEL UNLIMITED | Rp 25K', callback_data: 'panel_4', style: 'success' }],
+  [{ text: '⏪ Kembali', callback_data: 'back_menu', style: 'danger' }],
 ]);
+
 const kbDomain = Markup.inlineKeyboard([
-  [Markup.button.callback('.my.id - Rp 12K', 'dom_1'), Markup.button.callback('.xyz - Rp 15K', 'dom_2')],
-  [Markup.button.callback('.online - Rp 20K', 'dom_3'), Markup.button.callback('.store - Rp 25K', 'dom_4')],
-  [Markup.button.callback('.com - Rp 95K', 'dom_5'), Markup.button.callback('.id - Rp 180K', 'dom_6')],
-  [Markup.button.callback('⏪ Kembali', 'back_menu')],
+  [
+    { text: '.my.id - Rp 12K', callback_data: 'dom_1', style: 'primary' },
+    { text: '.xyz - Rp 15K', callback_data: 'dom_2', style: 'primary' }
+  ],
+  [
+    { text: '.online - Rp 20K', callback_data: 'dom_3', style: 'primary' },
+    { text: '.store - Rp 25K', callback_data: 'dom_4', style: 'primary' }
+  ],
+  [
+    { text: '.com - Rp 95K', callback_data: 'dom_5', style: 'primary' },
+    { text: '.id - Rp 180K', callback_data: 'dom_6', style: 'primary' }
+  ],
+  [{ text: '⏪ Kembali', callback_data: 'back_menu', style: 'danger' }],
 ]);
+
 const kbJasa = Markup.inlineKeyboard([
-  [Markup.button.callback('🤖 INSTALL BOT WA - Rp 15K', 'jasa_1')],
-  [Markup.button.callback('🎮 INSTALL PANEL - Rp 20K', 'jasa_2')],
-  [Markup.button.callback('🌐 INSTALL WEB - Rp 25K', 'jasa_3')],
-  [Markup.button.callback('🔧 SETTING VPS - Rp 10K', 'jasa_4')],
-  [Markup.button.callback('⏪ Kembali', 'back_menu')],
+  [{ text: '🤖 INSTALL BOT WA - Rp 15K', callback_data: 'jasa_1', style: 'primary' }],
+  [{ text: '🎮 INSTALL PANEL - Rp 20K', callback_data: 'jasa_2', style: 'primary' }],
+  [{ text: '🌐 INSTALL WEB - Rp 25K', callback_data: 'jasa_3', style: 'primary' }],
+  [{ text: '🔧 SETTING VPS - Rp 10K', callback_data: 'jasa_4', style: 'primary' }],
+  [{ text: '⏪ Kembali', callback_data: 'back_menu', style: 'danger' }],
 ]);
+
 const kbAdmin = Markup.inlineKeyboard([
-  [Markup.button.callback('💬 CHAT ADMIN SEKARANG', 'admin_chat')],
-  [Markup.button.callback('⏪ MENU UTAMA', 'back_menu')],
+  [{ text: '💬 CHAT ADMIN SEKARANG', callback_data: 'admin_chat', style: 'success' }],
+  [{ text: '⏪ MENU UTAMA', callback_data: 'back_menu', style: 'danger' }],
 ]);
 
 const sendMenu = (ctx) => ctx.reply(MENU, kbMenu);
@@ -642,8 +672,8 @@ bot.on('photo', async (ctx) => {
   await bot.telegram.sendPhoto(ADMIN_ID, photoId, {
     caption: `📸 BUKTI BARU\n> ${u.nama||'-'}\n> ${u.harga?rupiah(u.harga):'-'}\n> @${ctx.from.username||'-'} | ID: ${id}\n> USER VPS: ${u.username||'-'}`,
     ...Markup.inlineKeyboard([
-      [Markup.button.callback('✅ VALID', `valid_${id}`), Markup.button.callback('❌ TOLAK', `tolak_${id}`)]
-    ])
+  [{ text: '✅ VALID', callback_data: `valid_${id}`, style: 'success' }, { text: '❌ TOLAK', callback_data: `tolak_${id}`, style: 'danger' }]
+])
   });
   await ctx.reply('Bukti udah dikirim ke admin, tunggu divalidasi ya kak 🙏');
 });

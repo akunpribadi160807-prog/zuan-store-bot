@@ -1,150 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZUAN STORE - Order VPS</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
-*{box-sizing:border-box}
-body{font-family:sans-serif;background:#0f172a;color:white;padding:15px;margin:0;padding-bottom:30px}
-.header{text-align:center;background:linear-gradient(135deg,#7c3aed,#2563eb);padding:20px;border-radius:15px;margin-bottom:15px}
-.header h2{margin:0}.header p{margin:5px 0 0;color:#ddd;font-size:13px}
-.card{background:#1e293b;padding:15px;border-radius:15px;margin-bottom:12px}
-.card h3{margin:0 0 5px}.card p{margin:0;color:#94a3b8;font-size:14px;line-height:1.5}
-.price{color:#4ade80;font-weight:bold;margin:8px 0}
-.btn{width:100%;padding:13px;border:none;border-radius:12px;font-weight:bold;font-size:16px;color:white;cursor:pointer;margin-bottom:8px}
-.btn:active{opacity:.8}
-.green{background:#22c55e}.blue{background:#3b82f6}.orange{background:#f97316}.purple{background:#a855f7}.red{background:#ef4444}.yellow{background:#eab308;color:black}.pink{background:#ec4899}.cyan{background:#06b6d4}
-.small{font-size:13px;color:#94a3b8;line-height:1.5}
-.title{font-size:18px;font-weight:bold;text-align:center;margin:10px 0}
-.back{background:#334155}
-input{width:100%;padding:13px;border-radius:12px;border:none;background:#0f172a;color:white;font-size:16px;margin:10px 0}
-.hidden{display:none}
-.summary{background:#0f172a;border:1px solid #334155;padding:12px;border-radius:12px;font-size:14px;line-height:1.7}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+  body{background:#0f0f1a;color:#fff;padding:16px;padding-bottom:100px}
+  h1{text-align:center;color:#00ff88;font-size:22px;margin-bottom:4px}
+  p.sub{text-align:center;color:#aaa;font-size:13px;margin-bottom:16px}
+  .card{background:#1e1e2e;border-radius:14px;padding:14px;margin-bottom:12px;border:1px solid #333}
+  .card h3{font-size:15px;margin-bottom:10px;color:#00ff88}
+  .opt{background:#2a2a3d;border:2px solid #333;border-radius:10px;padding:12px;margin-bottom:8px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+  .opt.active{border-color:#00ff88;background:#1a3a2a}
+  .opt b{font-size:14px}
+  .opt span{font-size:12px;color:#aaa}
+  .opt .harga{color:#00ff88;font-weight:bold;font-size:14px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  input{width:100%;background:#2a2a3d;border:2px solid #333;border-radius:10px;padding:12px;color:#fff;font-size:14px;outline:none}
+  input:focus{border-color:#00ff88}
+  small{color:#aaa;font-size:11px}
+  .total{background:#00ff88;color:#000;border-radius:14px;padding:14px;text-align:center;margin-top:12px}
+  .total b{font-size:22px}
+  button.main{width:100%;background:#00ff88;color:#000;border:none;border-radius:12px;padding:15px;font-size:16px;font-weight:bold;cursor:pointer;margin-top:12px}
+  button.main:active{transform:scale(0.97)}
+  button.back{background:#333;color:#fff;border:none;border-radius:10px;padding:10px 14px;cursor:pointer;margin-bottom:12px}
+  .hidden{display:none}
+  .summary-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed #333;font-size:13px}
+  .summary-row span:last-child{font-weight:bold}
 </style>
 </head>
 <body>
 
-<!-- ===== MENU UTAMA ===== -->
-<div id="page-menu">
-<div class="header"><h2>✨ ZUAN STORE ✨</h2><p>🔥 SERVER DIPANTAU 24 JAM — NONSTOP! 🔥</p></div>
-<div class="card"><h3>💻 VPS MURAH</h3><p>Spek Gahar, Harga Pelajar!</p><div class="price">Mulai Rp 30.000 / bln</div><button class="btn green" onclick="show('page-vps')">🛒 BELI VPS</button></div>
-<div class="card"><h3>📱 PANEL</h3><p>Panel Pterodactyl & Lainnya</p><div class="price">Mulai Rp 5.000 / bln</div><button class="btn blue" onclick="orderSimple('PANEL')">🛒 BELI PANEL</button></div>
-<div class="card"><h3>🌐 DOMAIN MURAH</h3><p>Domain .COM, .ID, dll</p><div class="price">Mulai Rp 25.000 / thn</div><button class="btn orange" onclick="orderSimple('DOMAIN MURAH')">🛒 BELI DOMAIN</button></div>
-<div class="card"><h3>🛠️ JASA INSTALL</h3><p>Install Panel, VPS, dll - Beres!</p><div class="price">Mulai Rp 10.000</div><button class="btn purple" onclick="orderSimple('JASA INSTALL')">🛒 ORDER JASA</button></div>
-<div class="card"><h3>📞 HUBUNGI ADMIN</h3><p>Admin Fast Respon 24 Jam</p><button class="btn cyan" onclick="orderSimple('HUBUNGI ADMIN')">💬 CHAT ADMIN</button></div>
+<h1>⚡ ZUAN STORE</h1>
+<p class="sub">Order VPS Otomatis - Cepat & Murah</p>
+
+<!-- PAGE 1 : PILIH PAKET -->
+<div id="page-paket">
+  <div class="card">
+    <h3>1. Pilih Paket VPS</h3>
+    <div class="opt" onclick="pilihPaket(this,'1 Hari',1,1,'20GB','Rp 5.000',5000)">
+      <div><b>1 Hari</b><br><span>1 CPU • 1GB RAM • 20GB</span></div><div class="harga">Rp 5.000</div>
+    </div>
+    <div class="opt" onclick="pilihPaket(this,'7 Hari',1,2,'30GB','Rp 15.000',15000)">
+      <div><b>7 Hari</b><br><span>1 CPU • 2GB RAM • 30GB</span></div><div class="harga">Rp 15.000</div>
+    </div>
+    <div class="opt" onclick="pilihPaket(this,'30 Hari',2,4,'50GB','Rp 30.000',30000)">
+      <div><b>30 Hari</b><br><span>2 CPU • 4GB RAM • 50GB</span></div><div class="harga">Rp 30.000</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>2. Pilih Lokasi</h3>
+    <div class="grid">
+      <div class="opt" onclick="pilihLokasi(this,'Singapore')"><b>🇸🇬 SG</b></div>
+      <div class="opt" onclick="pilihLokasi(this,'Indonesia')"><b>🇮🇩 ID</b></div>
+      <div class="opt" onclick="pilihLokasi(this,'USA')"><b>🇺🇸 US</b></div>
+      <div class="opt" onclick="pilihLokasi(this,'Germany')"><b>🇩🇪 DE</b></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>3. Pilih OS</h3>
+    <div class="grid">
+      <div class="opt" onclick="pilihOS(this,'Ubuntu','24.04')"><b>Ubuntu 24.04</b></div>
+      <div class="opt" onclick="pilihOS(this,'Ubuntu','22.04')"><b>Ubuntu 22.04</b></div>
+      <div class="opt" onclick="pilihOS(this,'Debian','12')"><b>Debian 12</b></div>
+      <div class="opt" onclick="pilihOS(this,'Debian','11')"><b>Debian 11</b></div>
+    </div>
+  </div>
+
+  <div class="total" id="totalBox">Pilih paket dulu bang<br><b>-</b></div>
+  <button class="main" onclick="lanjut()">YA, LANJUT ➡️</button>
 </div>
 
-<!-- ===== PILIH PAKET VPS ===== -->
-<div id="page-vps" class="hidden">
-<div class="title">💻 PILIH PAKET VPS 💻</div>
-<div class="small" style="text-align:center">Klik paketnya di bawah 👇</div><br>
-<button class="btn green" onclick="pilihPaket('VPS 1GB','1 vCPU','1GB DDR4','20GB NVMe Gen4','Rp 30.000')">1 - VPS 1GB - Rp 30.000</button>
-<button class="btn blue" onclick="pilihPaket('VPS 2GB','2 vCPU','2GB DDR4','40GB NVMe Gen4','Rp 55.000')">2 - VPS 2GB - Rp 55.000</button>
-<button class="btn orange" onclick="pilihPaket('VPS 4GB','2 vCPU','4GB DDR4','60GB NVMe Gen4','Rp 85.000')">3 - VPS 4GB - Rp 85.000</button>
-<button class="btn purple" onclick="pilihPaket('VPS 8GB','4 vCPU','8GB DDR4','100GB NVMe Gen4','Rp 135.000')">4 - VPS 8GB - Rp 135.000</button>
-<button class="btn pink" onclick="pilihPaket('VPS 12GB','6 vCPU','12GB DDR4','160GB NVMe Gen4','Rp 195.000')">5 - VPS 12GB - Rp 195.000</button>
-<button class="btn cyan" onclick="pilihPaket('VPS 16GB','8 vCPU','16GB DDR4','200GB NVMe Gen4','Rp 275.000')">6 - VPS 16GB - Rp 275.000</button>
-<button class="btn back" onclick="show('page-menu')">⬅️ Kembali</button>
-</div>
-
-<!-- ===== LOKASI ===== -->
-<div id="page-lokasi" class="hidden">
-<div class="title">🌍 LOKASI SERVER 🌍</div>
-<div class="card"><p>📍 <b>Lokasi ngaruh ke PING!</b><br>Makin deket, makin ngebut!</p></div>
-<button class="btn red" onclick="pilihLokasi('Indonesia - 140ms')">🇮🇩 INDONESIA - 140ms<br><span style="font-size:12px">Paling Stabil, Cocok Buat Bot / Web</span></button>
-<button class="btn yellow" onclick="pilihLokasi('Jerman - 114ms')">🇩🇪 JERMAN - 114ms<br><span style="font-size:12px">Paling Enak, Buat Game / Bot</span></button>
-<button class="btn green" onclick="pilihLokasi('Singapura - 30ms')">🇸🇬 SINGAPURA - 30ms<br><span style="font-size:12px">STABIL, Alternatif Paling Aman</span></button>
-<button class="btn back" onclick="show('page-vps')">⬅️ Kembali</button>
-</div>
-
-<!-- ===== OS ===== -->
-<div id="page-os" class="hidden">
-<div class="title">🖥️ SISTEM OPERASI 🖥️</div>
-<button class="btn orange" onclick="pilihOS('Ubuntu')">🟠 UBUNTU<br><span style="font-size:12px">Paling mudah, Cocok buat pemula</span></button>
-<button class="btn red" onclick="pilihOS('Debian')">🔴 DEBIAN<br><span style="font-size:12px">Paling stabil, Favorit pro</span></button>
-<button class="btn cyan" onclick="pilihOS('AlmaLinux')">🔵 ALMALINUX<br><span style="font-size:12px">Rasa enterprise, Tetap ringan</span></button>
-<button class="btn green" onclick="pilihOS('Rocky Linux')">🟢 ROCKY LINUX<br><span style="font-size:12px">Kuat dan bisa diandalkan</span></button>
-<button class="btn back" onclick="show('page-lokasi')">⬅️ Kembali</button>
-</div>
-
-<!-- ===== VERSI ===== -->
-<div id="page-versi" class="hidden">
-<div class="title">⚙️ PILIH VERSI <span id="osName"></span> ⚙️</div>
-<div id="versiList"></div>
-<button class="btn back" onclick="show('page-os')">⬅️ Kembali ke OS</button>
-</div>
-
-<!-- ===== RINGKASAN ===== -->
-<div id="page-summary" class="hidden">
-<div class="title">✨ RINGKASAN ORDER KAMU ✨</div>
-<div class="summary" id="summaryText"></div><br>
-<div class="small" style="text-align:center">Udah bener? Klik YA buat lanjut 👇</div><br>
-<button class="btn green" onclick="show('page-user')">✅ YA, LANJUT</button>
-<button class="btn red" onclick="show('page-menu')">❌ BATAL</button>
-</div>
-
-<!-- ===== USERNAME ===== -->
+<!-- PAGE 2 : USERNAME + KIRIM -->
 <div id="page-user" class="hidden">
-<div class="title">👤 ATUR USERNAME KAMU 👤</div>
-<div class="card"><p>Tentuin username buat login VPS kamu 😊<br>Contoh: zuanstore<br><br>⚠️ Huruf kecil aja<br>🚫 Tanpa spasi</p></div>
-<input id="usernameInput" placeholder="Ketik username kamu... contoh: zuanstore">
-<button class="btn green" onclick="kirimOrder()">🚀 KIRIM ORDER KE BOT</button>
-<button class="btn back" onclick="show('page-summary')">⬅️ Kembali</button>
+  <button class="back" onclick="show('page-paket')">⬅️ Kembali</button>
+  <div class="card">
+    <h3>Isi Username VPS</h3>
+    <input id="usernameInput" type="text" placeholder="contoh: apakau" autocapitalize="none" autocomplete="off" spellcheck="false">
+    <small>⚠️ Huruf kecil aja<br>🚫 Tanpa spasi</small>
+  </div>
+
+  <div class="card">
+    <h3>Ringkasan Order</h3>
+    <div id="ringkasan"></div>
+  </div>
+
+  <button class="main" onclick="kirimOrder()">🚀 KIRIM ORDER KE BOT</button>
 </div>
 
 <script>
-let tg = window.Telegram.WebApp; tg.expand();
+let tg = window.Telegram.WebApp;
+tg.expand();
+tg.ready();
+
 let BOT = "Auto_orderpanelbaru_bot";
-let data = { paket:'', cpu:'', ram:'', storage:'', harga:'', lokasi:'', os:'', versi:'', username:'' };
+
+let data = { paket:"", cpu:"", ram:"", storage:"", harga:"", hargaNum:0, lokasi:"", os:"", versi:"", username:"" };
 
 function show(id){
-  document.querySelectorAll('div[id^="page-"]').forEach(e=>e.classList.add('hidden'));
+  document.getElementById('page-paket').classList.add('hidden');
+  document.getElementById('page-user').classList.add('hidden');
   document.getElementById(id).classList.remove('hidden');
   window.scrollTo(0,0);
 }
-function pilihPaket(paket,cpu,ram,storage,harga){
-  data.paket=paket; data.cpu=cpu; data.ram=ram; data.storage=storage; data.harga=harga;
-  show('page-lokasi');
+
+function pilihPaket(el,paket,cpu,ram,storage,harga,hargaNum){
+  document.querySelectorAll('#page-paket .card:first-child .opt').forEach(o=>o.classList.remove('active'));
+  el.classList.add('active');
+  data.paket = paket; data.cpu = cpu; data.ram = ram; data.storage = storage; data.harga = harga; data.hargaNum = hargaNum;
+  document.getElementById('totalBox').innerHTML = "Total Bayar<br><b>"+harga+"</b>";
 }
-function pilihLokasi(lokasi){ data.lokasi=lokasi; show('page-os'); }
-function pilihOS(os){
-  data.os=os;
-  document.getElementById('osName').innerText=os.toUpperCase();
-  let versi = {
-    'Ubuntu': ['Ubuntu 24.04 LTS','Ubuntu 22.04 LTS','Ubuntu 20.04 LTS'],
-    'Debian': ['Debian 12','Debian 11','Debian 10'],
-    'AlmaLinux': ['AlmaLinux 9','AlmaLinux 8'],
-    'Rocky Linux': ['Rocky Linux 9','Rocky Linux 8']
-  }[os];
-  let colors=['green','blue','orange','purple'];
-  document.getElementById('versiList').innerHTML = versi.map((v,i)=>`<button class="btn ${colors[i%4]}" onclick="pilihVersi('${v}')">✅ ${v}</button>`).join('');
-  show('page-versi');
+
+function pilihLokasi(el,lokasi){
+  el.parentElement.querySelectorAll('.opt').forEach(o=>o.classList.remove('active'));
+  el.classList.add('active');
+  data.lokasi = lokasi;
 }
-function pilihVersi(v){
-  data.versi=v;
-  document.getElementById('summaryText').innerHTML = `
-  📦 <b>PAKET</b><br>➡️ ${data.paket}<br>
-  🖥️ <b>CPU</b><br>➡️ ${data.cpu}<br>
-  💾 <b>RAM</b><br>➡️ ${data.ram}<br>
-  💿 <b>STORAGE</b><br>➡️ ${data.storage}<br>
-  📍 <b>LOKASI</b><br>➡️ ${data.lokasi}<br>
-  🖥️ <b>OS</b><br>➡️ ${data.os} ${data.versi}<br>
-  📅 <b>DURASI</b><br>➡️ 30 Hari Full + Garansi<br><br>
-  💰 <b>TOTAL: ${data.harga}</b>`;
-  show('page-summary');
+
+function pilihOS(el,os,versi){
+  el.parentElement.querySelectorAll('.opt').forEach(o=>o.classList.remove('active'));
+  el.classList.add('active');
+  data.os = os; data.versi = versi;
 }
-function orderSimple(item){
-  let text = "Halo bang, mau order " + item;
-  tg.openTelegramLink("https://t.me/" + BOT + "?text=" + encodeURIComponent(text));
+
+function lanjut(){
+  if(!data.paket){ alert('Pilih paket dulu bang!'); return; }
+  if(!data.lokasi){ alert('Pilih lokasi dulu bang!'); return; }
+  if(!data.os){ alert('Pilih OS dulu bang!'); return; }
+  document.getElementById('ringkasan').innerHTML =
+    '<div class="summary-row"><span>Paket</span><span>'+data.paket+'</span></div>' +
+    '<div class="summary-row"><span>CPU / RAM</span><span>'+data.cpu+' CPU / '+data.ram+'GB</span></div>' +
+    '<div class="summary-row"><span>Storage</span><span>'+data.storage+'</span></div>' +
+    '<div class="summary-row"><span>Lokasi</span><span>'+data.lokasi+'</span></div>' +
+    '<div class="summary-row"><span>OS</span><span>'+data.os+' '+data.versi+'</span></div>' +
+    '<div class="summary-row"><span>Total</span><span>'+data.harga+'</span></div>';
+  show('page-user');
 }
+
 function kirimOrder(){
   let u = document.getElementById('usernameInput').value.trim().toLowerCase();
   if(!u){ alert('Isi username dulu bang!'); return; }
-  data.username=u;
-  let pesan = "Halo bang, mau ORDER VPS\n\nPaket: " + data.paket + "\nCPU: " + data.cpu + "\nRAM: " + data.ram + "\nStorage: " + data.storage + "\nLokasi: " + data.lokasi + "\nOS: " + data.os + " " + data.versi + "\nHarga: " + data.harga + "\nUsername: " + data.username;
+  if(u.includes(' ')){ alert('Username jangan pake spasi bang!'); return; }
+  data.username = u;
+
+  let pesan = "Halo bang, mau ORDER VPS\n\n" +
+    "Paket: " + data.paket + "\n" +
+    "CPU: " + data.cpu + "\n" +
+    "RAM: " + data.ram + "GB\n" +
+    "Storage: " + data.storage + "\n" +
+    "Lokasi: " + data.lokasi + "\n" +
+    "OS: " + data.os + " " + data.versi + "\n" +
+    "Username: " + data.username + "\n" +
+    "Total: " + data.harga;
+
   tg.openTelegramLink("https://t.me/" + BOT + "?text=" + encodeURIComponent(pesan));
 }
 </script>
 </body>
-  </html>
+</html>

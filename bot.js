@@ -477,28 +477,38 @@ const kbMenu = Markup.inlineKeyboard([
 ]);
 
 const kbVps = Markup.inlineKeyboard([
-  [{ text: '1', callback_data: 'vps_1', style: 'primary' }],
-  [{ text: '2', callback_data: 'vps_2', style: 'primary' }],
-  [{ text: '3', callback_data: 'vps_3', style: 'primary' }],
-  [{ text: '4', callback_data: 'vps_4', style: 'primary' }],
-  [{ text: '5', callback_data: 'vps_5', style: 'primary' }],
-  [{ text: '6', callback_data: 'vps_6', style: 'primary' }],
-  [{ text: '⏪ Kembali', callback_data: 'back_menu', style: 'danger' }],
+  [
+    { text: '1', callback_data: 'vps_1', style: 'primary' },
+    { text: '4', callback_data: 'vps_4', style: 'primary' }
+  ],
+  [
+    { text: '2', callback_data: 'vps_2', style: 'primary' },
+    { text: '5', callback_data: 'vps_5', style: 'primary' }
+  ],
+  [
+    { text: '3', callback_data: 'vps_3', style: 'primary' },
+    { text: '6', callback_data: 'vps_6', style: 'primary' }
+  ],
+  [{ text: '⏪ BACK', callback_data: 'back_menu', style: 'danger' }],
 ]);
 
 const kbLokasi = Markup.inlineKeyboard([
   [{ text: '🇮🇩 INDONESIA', callback_data: 'lok_1', style: 'primary' }],
   [{ text: '🇩🇪 JERMAN', callback_data: 'lok_2', style: 'primary' }],
   [{ text: '🇸🇬 SINGAPURA', callback_data: 'lok_3', style: 'primary' }],
-  [{ text: '⏪ Kembali', callback_data: 'back_menu', style: 'danger' }],
+  [{ text: '⏪ Kembali', callback_data: 'back_vps', style: 'danger' }],
 ]);
 
 const kbOsFamily = Markup.inlineKeyboard([
-  [{ text: 'UBUNTU', callback_data: 'osfam_ubuntu', style: 'primary' }],
-  [{ text: 'DEBIAN', callback_data: 'osfam_debian', style: 'primary' }],
-  [{ text: 'ALMALINUX', callback_data: 'osfam_alma', style: 'primary' }],
-  [{ text: 'ROCKY LINUX', callback_data: 'osfam_rocky', style: 'primary' }],
-  [{ text: '⏪ Kembali', callback_data: 'back_menu', style: 'danger' }],
+  [
+    { text: 'UBUNTU', callback_data: 'osfam_ubuntu', style: 'primary' },
+    { text: 'DEBIAN', callback_data: 'osfam_debian', style: 'primary' }
+  ],
+  [
+    { text: 'ALMALINUX', callback_data: 'osfam_alma', style: 'primary' },
+    { text: 'ROCKY LINUX', callback_data: 'osfam_rocky', style: 'primary' }
+  ],
+  [{ text: '⏪ Kembali', callback_data: 'back_lokasi', style: 'danger' }],
 ]);
 
 function kbOsVersion(fam){
@@ -520,10 +530,14 @@ const kbBayar = Markup.inlineKeyboard([
 ]);
 
 const kbPanel = Markup.inlineKeyboard([
-  [{ text: 'PANEL 1GB | Rp 3K', callback_data: 'panel_1', style: 'primary' }],
-  [{ text: 'PANEL 2GB | Rp 6K', callback_data: 'panel_2', style: 'primary' }],
-  [{ text: 'PANEL 4GB | Rp 9K', callback_data: 'panel_3', style: 'primary' }],
-  [{ text: 'PANEL UNLIMITED | Rp 25K', callback_data: 'panel_4', style: 'success' }],
+  [
+    { text: 'PANEL 1GB | 3K', callback_data: 'panel_1', style: 'primary' },
+    { text: 'PANEL 2GB | 6K', callback_data: 'panel_2', style: 'primary' }
+  ],
+  [
+    { text: 'PANEL 4GB | 9K', callback_data: 'panel_3', style: 'primary' },
+    { text: 'UNLI | 25K', callback_data: 'panel_4', style: 'success' }
+  ],
   [{ text: '⏪ Kembali', callback_data: 'back_menu', style: 'danger' }],
 ]);
 
@@ -544,10 +558,14 @@ const kbDomain = Markup.inlineKeyboard([
 ]);
 
 const kbJasa = Markup.inlineKeyboard([
-  [{ text: '🤖 INSTALL BOT WA - Rp 15K', callback_data: 'jasa_1', style: 'primary' }],
-  [{ text: '🎮 INSTALL PANEL - Rp 20K', callback_data: 'jasa_2', style: 'primary' }],
-  [{ text: '🌐 INSTALL WEB - Rp 25K', callback_data: 'jasa_3', style: 'primary' }],
-  [{ text: '🔧 SETTING VPS - Rp 10K', callback_data: 'jasa_4', style: 'primary' }],
+  [
+    { text: '🤖 BOT WA - 15K', callback_data: 'jasa_1', style: 'primary' },
+    { text: '🎮 PANEL - 20K', callback_data: 'jasa_2', style: 'primary' }
+  ],
+  [
+    { text: '🌐 WEB - 25K', callback_data: 'jasa_3', style: 'primary' },
+    { text: '🔧 VPS - 10K', callback_data: 'jasa_4', style: 'primary' }
+  ],
   [{ text: '⏪ Kembali', callback_data: 'back_menu', style: 'danger' }],
 ]);
 

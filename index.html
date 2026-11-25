@@ -3,51 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZUAN STORE - Order VPS</title>
+<title>ZUAN STORE - Order VPS Premium</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-  body{background:#0f0f1a;color:#fff;padding:16px;padding-bottom:100px}
-  h1{text-align:center;color:#00ff88;font-size:22px;margin-bottom:4px}
-  p.sub{text-align:center;color:#aaa;font-size:13px;margin-bottom:16px}
-  .card{background:#1e1e2e;border-radius:14px;padding:14px;margin-bottom:12px;border:1px solid #333}
-  .card h3{font-size:15px;margin-bottom:10px;color:#00ff88}
-  .opt{background:#2a2a3d;border:2px solid #333;border-radius:10px;padding:12px;margin-bottom:8px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
-  .opt.active{border-color:#00ff88;background:#1a3a2a}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+  body{background:#050505;color:#fff;padding:16px;padding-bottom:100px;background-image:radial-gradient(circle at 50% 0%, #2a2100 0%, #050505 45%)}
+  .top-badge{text-align:center;margin-bottom:8px}
+  .top-badge span{background:linear-gradient(135deg,#f6d873,#b8860b);color:#000;font-size:10px;font-weight:900;letter-spacing:2px;padding:5px 12px;border-radius:20px}
+  h1{text-align:center;font-size:26px;letter-spacing:1px;background:linear-gradient(135deg,#fff3a6,#d4af37,#8a6d00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:2px}
+  p.sub{text-align:center;color:#c9b458;font-size:12px;margin-bottom:6px;letter-spacing:0.5px}
+  .divider{height:1px;background:linear-gradient(90deg,transparent,#d4af37,transparent);margin:12px 0 16px}
+  .card{background:linear-gradient(180deg,#141414,#0c0c0c);border:1px solid #2b2200;border-radius:18px;padding:16px;margin-bottom:14px;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+  .card h3{font-size:13px;margin-bottom:12px;color:#e8c93a;letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+  .card h3:after{content:"";flex:1;height:1px;background:#2b2200}
+  .opt{background:#1a1a1a;border:1.5px solid #2a2a2a;border-radius:12px;padding:13px;margin-bottom:9px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:0.2s}
+  .opt.active{border-color:#d4af37;background:linear-gradient(135deg,#2a2100,#171100);box-shadow:0 0 0 1px #d4af37, 0 0 20px rgba(212,175,55,0.25)}
   .opt b{font-size:14px}
   .opt span{font-size:12px;color:#aaa}
-  .opt .harga{color:#00ff88;font-weight:bold;font-size:14px}
+  .opt .harga{color:#f6d873;font-weight:900;font-size:14px;white-space:nowrap;margin-left:10px}
+  .badge{font-size:9px;background:#d4af37;color:#000;padding:3px 7px;border-radius:20px;font-weight:900;margin-left:6px;vertical-align:middle}
+  .badge.silver{background:#c0c0c0}
+  .badge.bronze{background:#cd7f32;color:#fff}
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-  input{width:100%;background:#2a2a3d;border:2px solid #333;border-radius:10px;padding:12px;color:#fff;font-size:14px;outline:none}
-  input:focus{border-color:#00ff88}
-  small{color:#aaa;font-size:11px}
-  .total{background:#00ff88;color:#000;border-radius:14px;padding:14px;text-align:center;margin-top:12px}
-  .total b{font-size:22px}
-  button.main{width:100%;background:#00ff88;color:#000;border:none;border-radius:12px;padding:15px;font-size:16px;font-weight:bold;cursor:pointer;margin-top:12px}
+  .grid .opt{justify-content:center;text-align:center}
+  input{width:100%;background:#151515;border:1.5px solid #2a2a2a;border-radius:12px;padding:13px;color:#fff;font-size:14px;outline:none}
+  input:focus{border-color:#d4af37;box-shadow:0 0 0 2px rgba(212,175,55,0.2)}
+  small{color:#aaa;font-size:11px;line-height:1.5;display:block;margin-top:8px}
+  .total{background:linear-gradient(135deg,#f6d873,#d4af37,#a67c00);color:#000;border-radius:16px;padding:16px;text-align:center;margin-top:12px;box-shadow:0 10px 25px rgba(212,175,55,0.3)}
+  .total b{font-size:24px}
+  button.main{width:100%;background:linear-gradient(135deg,#ffe97a,#d4af37,#a67c00);color:#000;border:none;border-radius:14px;padding:16px;font-size:16px;font-weight:900;cursor:pointer;margin-top:12px;letter-spacing:0.5px;box-shadow:0 10px 25px rgba(212,175,55,0.35)}
   button.main:active{transform:scale(0.97)}
-  button.back{background:#333;color:#fff;border:none;border-radius:10px;padding:10px 14px;cursor:pointer;margin-bottom:12px}
+  button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10px;padding:10px 14px;cursor:pointer;margin-bottom:12px;font-weight:bold}
   .hidden{display:none}
-  .summary-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed #333;font-size:13px}
-  .summary-row span:last-child{font-weight:bold}
+  .summary-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #2a2a2a;font-size:13px}
+  .summary-row span:last-child{font-weight:bold;color:#f6d873}
+  .footer{text-align:center;color:#666;font-size:10px;margin-top:16px;letter-spacing:1px}
 </style>
 </head>
 <body>
 
-<h1>⚡ ZUAN STORE</h1>
-<p class="sub">Order VPS Otomatis - Cepat & Murah</p>
+<div class="top-badge"><span>✦ PREMIUM STORE ✦</span></div>
+<h1>👑 ZUAN STORE</h1>
+<p class="sub">Order VPS Otomatis - Cepat, Aman & Premium</p>
+<div class="divider"></div>
 
-<!-- PAGE 1 : PILIH PAKET -->
 <div id="page-paket">
   <div class="card">
     <h3>1. Pilih Paket VPS</h3>
     <div class="opt" onclick="pilihPaket(this,'1 Hari',1,1,'20GB','Rp 5.000',5000)">
-      <div><b>1 Hari</b><br><span>1 CPU • 1GB RAM • 20GB</span></div><div class="harga">Rp 5.000</div>
+      <div><b>1 Hari</b><span class="badge bronze">PEMUULA</span><br><span>1 CPU • 1GB RAM • 20GB</span></div><div class="harga">Rp 5.000</div>
     </div>
     <div class="opt" onclick="pilihPaket(this,'7 Hari',1,2,'30GB','Rp 15.000',15000)">
-      <div><b>7 Hari</b><br><span>1 CPU • 2GB RAM • 30GB</span></div><div class="harga">Rp 15.000</div>
+      <div><b>7 Hari</b><span class="badge silver">AMIR</span><br><span>1 CPU • 2GB RAM • 30GB</span></div><div class="harga">Rp 15.000</div>
     </div>
     <div class="opt" onclick="pilihPaket(this,'30 Hari',2,4,'50GB','Rp 30.000',30000)">
-      <div><b>30 Hari</b><br><span>2 CPU • 4GB RAM • 50GB</span></div><div class="harga">Rp 30.000</div>
+      <div><b>30 Hari</b><span class="badge">SULTAN 👑</span><br><span>2 CPU • 4GB RAM • 50GB</span></div><div class="harga">Rp 30.000</div>
     </div>
   </div>
 
@@ -73,9 +83,9 @@
 
   <div class="total" id="totalBox">Pilih paket dulu bang<br><b>-</b></div>
   <button class="main" onclick="lanjut()">YA, LANJUT ➡️</button>
+  <div class="footer">ZUAN STORE • TRUSTED & PREMIUM</div>
 </div>
 
-<!-- PAGE 2 : USERNAME + KIRIM -->
 <div id="page-user" class="hidden">
   <button class="back" onclick="show('page-paket')">⬅️ Kembali</button>
   <div class="card">
@@ -83,12 +93,10 @@
     <input id="usernameInput" type="text" placeholder="contoh: apakau" autocapitalize="none" autocomplete="off" spellcheck="false">
     <small>⚠️ Huruf kecil aja<br>🚫 Tanpa spasi</small>
   </div>
-
   <div class="card">
     <h3>Ringkasan Order</h3>
     <div id="ringkasan"></div>
   </div>
-
   <button class="main" onclick="kirimOrder()">🚀 KIRIM ORDER KE BOT</button>
 </div>
 
@@ -96,37 +104,30 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
 tg.ready();
-
 let BOT = "Auto_orderpanelbaru_bot";
-
 let data = { paket:"", cpu:"", ram:"", storage:"", harga:"", hargaNum:0, lokasi:"", os:"", versi:"", username:"" };
-
 function show(id){
   document.getElementById('page-paket').classList.add('hidden');
   document.getElementById('page-user').classList.add('hidden');
   document.getElementById(id).classList.remove('hidden');
   window.scrollTo(0,0);
 }
-
 function pilihPaket(el,paket,cpu,ram,storage,harga,hargaNum){
   document.querySelectorAll('#page-paket .card:first-child .opt').forEach(o=>o.classList.remove('active'));
   el.classList.add('active');
   data.paket = paket; data.cpu = cpu; data.ram = ram; data.storage = storage; data.harga = harga; data.hargaNum = hargaNum;
   document.getElementById('totalBox').innerHTML = "Total Bayar<br><b>"+harga+"</b>";
 }
-
 function pilihLokasi(el,lokasi){
   el.parentElement.querySelectorAll('.opt').forEach(o=>o.classList.remove('active'));
   el.classList.add('active');
   data.lokasi = lokasi;
 }
-
 function pilihOS(el,os,versi){
   el.parentElement.querySelectorAll('.opt').forEach(o=>o.classList.remove('active'));
   el.classList.add('active');
   data.os = os; data.versi = versi;
 }
-
 function lanjut(){
   if(!data.paket){ alert('Pilih paket dulu bang!'); return; }
   if(!data.lokasi){ alert('Pilih lokasi dulu bang!'); return; }
@@ -140,13 +141,11 @@ function lanjut(){
     '<div class="summary-row"><span>Total</span><span>'+data.harga+'</span></div>';
   show('page-user');
 }
-
 function kirimOrder(){
   let u = document.getElementById('usernameInput').value.trim().toLowerCase();
   if(!u){ alert('Isi username dulu bang!'); return; }
   if(u.includes(' ')){ alert('Username jangan pake spasi bang!'); return; }
   data.username = u;
-
   let pesan = "Halo bang, mau ORDER VPS\n\n" +
     "Paket: " + data.paket + "\n" +
     "CPU: " + data.cpu + "\n" +
@@ -156,14 +155,9 @@ function kirimOrder(){
     "OS: " + data.os + " " + data.versi + "\n" +
     "Username: " + data.username + "\n" +
     "Total: " + data.harga;
-
   let link = "https://t.me/Auto_orderpanelbaru_bot?text=" + encodeURIComponent(pesan);
-
-  // Tutup dulu WebApp nya, baru buka link - ini kuncinya!
   try { tg.close(); } catch(e){}
-  setTimeout(() => {
-    window.open(link, "_blank");
-  }, 300);
+  setTimeout(() => { window.open(link, "_blank"); }, 300);
 }
 </script>
 </body>

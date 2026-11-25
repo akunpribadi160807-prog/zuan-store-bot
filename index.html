@@ -7,68 +7,111 @@
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
-body{background:#050505;color:#fff;padding:16px;padding-bottom:100px;background-image:radial-gradient(circle at 50% 0%, #2a2100 0%, #050505 45%)}
+body{background:#050505;color:#fff;padding:16px;padding-bottom:110px;background-image:radial-gradient(circle at 50% 0%, #2a2100 0%, #050505 45%)}
 .top-badge{text-align:center;margin-bottom:8px}
-.top-badge span{background:linear-gradient(135deg,#f6d873,#b8860b);color:#000;font-size:10px;font-weight:900;letter-spacing:2px;padding:5px 12px;border-radius:20px}
-h1{text-align:center;font-size:26px;background:linear-gradient(135deg,#fff3a6,#d4af37,#8a6d00);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-p.sub{text-align:center;color:#c9b458;font-size:12px;margin-bottom:14px}
+.top-badge span{background:linear-gradient(135deg,#f6d873,#b8860b);color:#000;font-size:10px;font-weight:800;letter-spacing:2px;padding:5px 12px;border-radius:20px}
+h1{text-align:center;font-size:25px;letter-spacing:1px;background:linear-gradient(135deg,#fff3a6,#d4af37,#8a6d00);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+p.sub{text-align:center;color:#c9b458;font-size:11px;letter-spacing:2px;margin-bottom:14px;font-weight:600}
 .progress{display:flex;gap:6px;margin-bottom:6px}
-.progress div{flex:1;height:6px;background:#222;border-radius:10px;overflow:hidden}
+.progress div{flex:1;height:5px;background:#222;border-radius:10px;overflow:hidden}
 .progress div i{display:block;height:100%;background:linear-gradient(90deg,#ffe97a,#d4af37);width:0%;transition:0.3s}
 .step-label{text-align:center;font-size:11px;color:#aaa;margin-bottom:14px;letter-spacing:1px}
 .step-label b{color:#f6d873}
-.card{background:linear-gradient(180deg,#141414,#0c0c0c);border:1px solid #2b2200;border-radius:18px;padding:16px;margin-bottom:14px}
-.card h3{font-size:14px;margin-bottom:12px;color:#e8c93a;letter-spacing:1px;text-transform:uppercase}
-.opt{background:#1a1a1a;border:1.5px solid #2a2a2a;border-radius:14px;padding:16px;margin-bottom:10px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
-.opt.active{border-color:#d4af37;background:linear-gradient(135deg,#2a2100,#171100);box-shadow:0 0 20px rgba(212,175,55,0.25)}
-.opt b{font-size:15px}
+.card{background:linear-gradient(180deg,#141414,#0c0c0c);border:1px solid #2b2200;border-radius:16px;padding:15px;margin-bottom:13px}
+.card h3{font-size:13px;margin-bottom:12px;color:#e8c93a;letter-spacing:1px;text-transform:uppercase}
+.opt{background:#1a1a1a;border:1.5px solid #2a2a2a;border-radius:13px;padding:13px;margin-bottom:9px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.opt.active{border-color:#d4af37;background:linear-gradient(135deg,#2a2100,#171100);box-shadow:0 0 18px rgba(212,175,55,0.22)}
+.opt b{font-size:14px}
 .opt span{font-size:12px;color:#aaa}
-.opt .harga{color:#f6d873;font-weight:900;font-size:15px;text-align:right}
-.badge{font-size:10px;padding:4px 8px;border-radius:20px;font-weight:900;margin-left:6px}
-.badge.bronze{background:#ff8c00;color:#000}.badge.silver{background:#fff;color:#000}.badge.gold{background:#ffe97a;color:#000;border:1px solid #000}.badge.plat{background:#00e5ff;color:#000}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.grid .opt{justify-content:center;text-align:center;padding:18px 10px}
-input{width:100%;background:#151515;border:1.5px solid #2a2a2a;border-radius:12px;padding:14px;color:#fff;font-size:15px;outline:none}
+.opt .harga{color:#f6d873;font-weight:800;font-size:14px;text-align:right}
+.badge{font-size:9px;padding:3px 7px;border-radius:20px;font-weight:800;margin-left:6px}
+.badge.gold{background:#ffe97a;color:#000;border:1px solid #000}.badge.plat{background:#00e5ff;color:#000}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.grid .opt{justify-content:center;text-align:center;padding:14px 8px}
+input{width:100%;background:#151515;border:1.5px solid #2a2a2a;border-radius:11px;padding:12px;color:#fff;font-size:14px;outline:none}
 input:focus{border-color:#d4af37}
 small{color:#aaa;font-size:11px;line-height:1.6;display:block;margin-top:8px}
-.total{background:linear-gradient(135deg,#f6d873,#d4af37,#a67c00);color:#000;border-radius:16px;padding:16px;text-align:center;margin-top:12px}
-.total b{font-size:24px}
-button.main{width:100%;background:linear-gradient(135deg,#ffe97a,#d4af37,#a67c00);color:#000;border:none;border-radius:14px;padding:16px;font-size:16px;font-weight:900;cursor:pointer;margin-top:12px}
+.total{background:linear-gradient(135deg,#f6d873,#d4af37,#a67c00);color:#000;border-radius:14px;padding:14px;text-align:center;margin-top:12px}
+.total b{font-size:22px}
+button.main{width:100%;background:linear-gradient(135deg,#ffe97a,#d4af37,#a67c00);color:#000;border:none;border-radius:12px;padding:13px;font-size:15px;font-weight:800;cursor:pointer;margin-top:11px}
 button.main:disabled{opacity:0.4}
-button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10px;padding:10px 14px;cursor:pointer;margin-bottom:12px;font-weight:bold;width:100%}
+button.main:active{transform:scale(0.98)}
+button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10px;padding:9px 12px;cursor:pointer;margin-bottom:11px;font-weight:700;width:100%;font-size:13px}
 .hidden{display:none}
-.summary-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #2a2a2a;font-size:13px}
-.summary-row span:last-child{font-weight:bold;color:#f6d873}
-.hint{text-align:center;color:#888;font-size:11px;margin-top:10px}
-.welcome-hero{text-align:center;padding:10px 4px 16px}
-.welcome-hero .crown{font-size:42px}
-.welcome-hero h2{font-size:22px;line-height:1.3;margin:8px 0}
+.summary-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed #2a2a2a;font-size:13px}
+.summary-row span:last-child{font-weight:700;color:#f6d873}
+.hint{text-align:center;color:#888;font-size:11px;margin-top:9px}
+.welcome-hero{text-align:center;padding:8px 4px 14px}
+.welcome-hero .crown{font-size:38px}
+.welcome-hero h2{font-size:21px;line-height:1.35;margin:8px 0;font-weight:800}
 .welcome-hero h2 span{background:linear-gradient(135deg,#fff3a6,#d4af37);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.welcome-hero p{color:#aaa;font-size:13px;line-height:1.6}
-.benefit{display:flex;gap:12px;background:#141414;border:1px solid #2b2200;border-radius:14px;padding:14px;margin-bottom:10px}
-.benefit .icon{font-size:24px}
-.benefit b{font-size:14px;color:#f6d873}
+.welcome-hero p{color:#aaa;font-size:13px;line-height:1.65}
+.benefit{display:flex;gap:11px;background:#141414;border:1px solid #2b2200;border-radius:13px;padding:13px;margin-bottom:9px}
+.benefit .icon{font-size:22px}
+.benefit b{font-size:13.5px;color:#f6d873}
 .benefit span{font-size:12px;color:#aaa;line-height:1.5;display:block;margin-top:3px}
-.promo{background:linear-gradient(135deg,#2a2100,#171100);border:1.5px solid #d4af37;border-radius:16px;padding:16px;text-align:center;margin-bottom:14px}
-.promo b{color:#ffe97a;font-size:15px}
+.promo{background:linear-gradient(135deg,#2a2100,#171100);border:1.5px solid #d4af37;border-radius:15px;padding:15px;text-align:center;margin-bottom:13px}
+.promo b{color:#ffe97a;font-size:14px;letter-spacing:0.5px}
 .promo span{font-size:12px;color:#ddd;line-height:1.7;display:block;margin-top:6px}
-.hemat{color:#00ff88!important;font-weight:bold}
-.durasi-box{border-top:1px dashed #333;margin-top:14px;padding-top:14px}
-.check-box{background:linear-gradient(135deg,#1a1400,#0c0c0c);border:1.5px solid #d4af37;border-radius:18px;padding:18px;margin-bottom:14px}
-.check-box h2{text-align:center;font-size:18px;margin-bottom:4px;letter-spacing:1px}
-.check-box p{text-align:center;color:#aaa;font-size:12px;margin-bottom:14px}
-.check-item{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px dashed #2a2a2a}
+.hemat{color:#00ff88!important;font-weight:700}
+.durasi-box{border-top:1px dashed #333;margin-top:13px;padding-top:13px}
+.check-box{background:linear-gradient(135deg,#1a1400,#0c0c0c);border:1.5px solid #d4af37;border-radius:16px;padding:16px;margin-bottom:13px}
+.check-box h2{text-align:center;font-size:17px;margin-bottom:4px;letter-spacing:1px}
+.check-box p{text-align:center;color:#aaa;font-size:12px;margin-bottom:13px;line-height:1.5}
+.check-item{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px dashed #2a2a2a}
 .check-item span:first-child{color:#aaa;font-size:13px}
-.check-item span:last-child{font-weight:bold;font-size:14px;text-align:right}
-.check-item button{background:#222;color:#f6d873;border:1px solid #444;border-radius:8px;padding:4px 10px;font-size:11px;cursor:pointer;margin-left:8px}
-.notice{background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:12px;font-size:12px;color:#aaa;line-height:1.7;margin-bottom:14px}
+.check-item span:last-child{font-weight:700;font-size:13.5px;text-align:right}
+.check-item button{background:#222;color:#f6d873;border:1px solid #444;border-radius:8px;padding:4px 9px;font-size:11px;cursor:pointer;margin-left:8px}
+.notice{background:#1a1a1a;border:1px solid #333;border-radius:11px;padding:11px;font-size:12px;color:#aaa;line-height:1.7;margin-bottom:13px}
 .notice b{color:#f6d873}
+.testi-card{background:#141414;border:1px solid #2b2200;border-radius:13px;padding:13px;margin-bottom:9px}
+.testi-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.testi-head b{font-size:13px;color:#fff}
+.testi-head span{color:#ffcc00;font-size:12px;letter-spacing:1px}
+.testi-card p{font-size:12.5px;color:#ccc;line-height:1.6}
+.testi-card small{color:#00ff88;font-size:11px;font-weight:700}
+.pay-opt{border:1.5px solid #2a2a2a;background:#1a1a1a;border-radius:13px;padding:13px;margin-bottom:9px;cursor:pointer;display:flex;gap:11px;align-items:center}
+.pay-opt.active{border-color:#d4af37;background:linear-gradient(135deg,#2a2100,#171100)}
+.pay-opt .p-icon{font-size:26px}
+.pay-opt b{font-size:14px}
+.pay-opt span{font-size:12px;color:#aaa;display:block;margin-top:2px}
+.pay-box{background:#111;border:1.5px dashed #d4af37;border-radius:14px;padding:15px;text-align:center;margin-top:12px}
+.pay-box img{width:210px;max-width:100%;border-radius:10px;background:#fff;padding:8px}
+.bank-row{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:11px;padding:11px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.bank-row b{font-size:13px}
+.bank-row span{font-size:12px;color:#aaa}
+.copy-btn{background:#d4af37;color:#000;border:none;border-radius:8px;padding:6px 10px;font-size:11px;font-weight:800;cursor:pointer}
+.chat-float{position:fixed;right:14px;bottom:18px;z-index:99;background:linear-gradient(135deg,#ffe97a,#d4af37);color:#000;border:none;border-radius:50px;padding:11px 15px;font-size:13px;font-weight:800;box-shadow:0 8px 20px rgba(0,0,0,0.5);cursor:pointer;display:flex;align-items:center;gap:6px}
+.os-card{background:#1a1a1a;border:1.5px solid #2a2a2a;border-radius:13px;padding:13px;margin-bottom:9px;cursor:pointer;display:flex;gap:11px;align-items:flex-start}
+.os-card.active{border-color:#d4af37;background:linear-gradient(135deg,#2a2100,#171100)}
+.os-card .os-icon{font-size:24px}
+.os-card b{font-size:14px}
+.os-card span{font-size:12px;color:#aaa;line-height:1.5;display:block;margin-top:2px}
+.versi-box{border-top:1px dashed #333;margin-top:13px;padding-top:13px}
+/* BARU - BIAR GAK POLOS */
+.step-hero{background:linear-gradient(135deg,#1a1400,#0c0c0c);border:1px solid #d4af37;border-radius:15px;padding:14px;text-align:center;margin-bottom:12px}
+.step-hero .sh-icon{font-size:26px}
+.step-hero h2{font-size:16px;margin:5px 0;line-height:1.3}
+.step-hero p{font-size:12px;color:#aaa;line-height:1.6}
+.step-hero p b{color:#f6d873}
+.mini-info{background:#141414;border:1px solid #2b2200;border-radius:12px;padding:12px;margin-bottom:10px;display:flex;gap:10px;align-items:flex-start}
+.mini-info .mi{font-size:20px}
+.mini-info b{font-size:12.5px;color:#f6d873}
+.mini-info span{font-size:11.5px;color:#aaa;line-height:1.5;display:block;margin-top:2px}
+.trust-strip{display:flex;gap:8px;margin-bottom:12px}
+.trust-strip div{flex:1;background:#141414;border:1px solid #2b2200;border-radius:11px;padding:10px 6px;text-align:center}
+.trust-strip b{font-size:12px;color:#fff;display:block}
+.trust-strip span{font-size:10px;color:#aaa}
+.bottom-banner{background:linear-gradient(135deg,#2a2100,#171100);border:1px solid #d4af37;border-radius:14px;padding:13px;text-align:center;margin-top:12px}
+.bottom-banner b{font-size:13px;color:#ffe97a}
+.bottom-banner span{font-size:11.5px;color:#ddd;line-height:1.6;display:block;margin-top:4px}
+.live-dot{color:#00ff88}
 </style>
 </head>
 <body>
 <div class="top-badge"><span>✦ PREMIUM STORE ✦</span></div>
 <h1>👑 ZUAN STORE</h1>
-<p class="sub">CEPAT. STABIL. TANPA RIBET.</p>
+<p class="sub">CEPAT • STABIL • TANPA RIBET</p>
 <div id="progressWrap">
 <div class="progress"><div><i id="p1"></i></div><div><i id="p2"></i></div><div><i id="p3"></i></div><div><i id="p4"></i></div><div><i id="p5"></i></div></div>
 <div class="step-label" id="stepLabel"></div>
@@ -76,80 +119,127 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 
 <!-- WELCOME -->
 <div id="step0">
-<div class="welcome-hero"><div class="crown">👑</div><h2>Selamat Datang di<br><span>ZUAN STORE</span></h2><p>Terima kasih sudah mampir dan percaya sama kami.<br>Di sini kakak bukan cuma beli VPS,<br>tapi dapet <b style="color:#fff">kenyamanan & keamanan</b> kelas premium.</p></div>
-<div class="benefit"><div class="icon">⚡</div><div><b>1. Speed Ngebut - NVMe Gen4 + 1 Gbps</b><span>Dijamin ngebut, anti lemot. Buat bot, web, atau game, semua libas.</span></div></div>
-<div class="benefit"><div class="icon">🛡️</div><div><b>2. Anti Down - Uptime 99.9%</b><span>Server dipantau 24 jam. Kakak tidur tenang, server tetap jalan.</span></div></div>
-<div class="benefit"><div class="icon">🎛️</div><div><b>3. Full Kontrol Penuh</b><span>Bebas install apa aja. Ini server kakak, kakak yang pegang kendali.</span></div></div>
-<div class="benefit"><div class="icon">👨‍💼</div><div><b>4. Admin Fast Respon 24 Jam</b><span>Chat dibalas 1-5 menit, dibantu sampai beres.</span></div></div>
-<div class="benefit"><div class="icon">💎</div><div><b>5. Full Garansi</b><span>Kalau server down tanpa sebab, kami ganti! Kakak nggak akan rugi.</span></div></div>
-<div class="promo"><b>🔥 PROMO HARI INI 🔥</b><span>Beli VPS 2GB ke atas :<br>✅ GRATIS Setup VPS sampai selesai!<br>✅ GRATIS Panel Pterodactyl!</span></div>
-<p style="text-align:center;color:#aaa;font-size:13px;line-height:1.6">Mau order yang mana nih?<br>Langsung gas aja di bawah, jangan sampai kehabisan slotnya.<br><br><b style="color:#f6d873">Salam sukses dari ZUAN STORE 👑</b></p>
+<div class="welcome-hero"><div class="crown">👑</div><h2>Selamat Datang di<br><span>ZUAN STORE</span></h2><p>Terima kasih sudah mampir dan percaya kepada kami.<br>Di sini, Anda bukan sekadar membeli VPS —<br>Anda mendapatkan <b style="color:#fff">kenyamanan & keamanan</b> kelas premium.</p></div>
+<div class="trust-strip"><div><b>🔥 2.847+</b><span>Order Sukses</span></div><div><b>⭐ 4.9 / 5.0</b><span>Rating Pelanggan</span></div><div><b>⚡ 5 Menit</b><span>Rata-rata Jadi</span></div></div>
+<div class="benefit"><div class="icon">⚡</div><div><b>Performa Ngebut — NVMe Gen4 + 1 Gbps</b><span>Dijamin ngebut, anti lemot. Untuk bot, website, hingga game — semua libas.</span></div></div>
+<div class="benefit"><div class="icon">🛡️</div><div><b>Anti Down — Uptime 99.9%</b><span>Server dipantau 24 jam nonstop. Anda bisa tidur tenang, server tetap stabil.</span></div></div>
+<div class="benefit"><div class="icon">🎛️</div><div><b>Kontrol Penuh 100%</b><span>Bebas install apa pun, bebas atur sesuka hati. Ini server Anda, Anda yang pegang kendali.</span></div></div>
+<div class="benefit"><div class="icon">👨‍💼</div><div><b>Admin Fast Respon 24 Jam</b><span>Tidak ada cerita ditinggal admin. Chat dibalas 1–5 menit, dibantu sampai beres.</span></div></div>
+<div class="benefit"><div class="icon">💎</div><div><b>Garansi Penuh</b><span>Jika server down tanpa sebab, kami ganti. Anda tidak akan rugi sepeser pun.</span></div></div>
+<div class="promo"><b>🔥 PROMO HARI INI 🔥</b><span>Beli VPS 2GB ke atas :<br>✅ GRATIS Setup VPS sampai selesai<br>✅ GRATIS Panel Pterodactyl</span></div>
+<div class="card"><h3>⭐ Apa Kata Mereka?</h3>
+<div class="testi-card"><div class="testi-head"><b>⭐ Rizky • Jakarta</b><span>★★★★★</span></div><p>"Order jam 11 malem, 5 menit langsung jadi. Adminnya ramah banget, dibantuin sampe bot jalan. Gokil!"</p><small>✅ Sudah Terverifikasi - VPS 4GB / 1 Bulan</small></div>
+<div class="testi-card"><div class="testi-head"><b>⭐ Andi • Surabaya</b><span>★★★★★</span></div><p>"Udah coba 3 toko, paling stabil di sini. Buat bot 24 jam gak pernah down. Worth it banget!"</p><small>✅ Sudah Terverifikasi - VPS 2GB / 1 Bulan</small></div>
+<div class="testi-card"><div class="testi-head"><b>⭐ Fajar • Bandung</b><span>★★★★★</span></div><p>"Awalnya cuma coba 1 hari 6rb, eh keterusan sampe bulanan. Speednya beneran ngebut, gak bohong."</p><small>✅ Sudah Terverifikasi - VPS 8GB / 14 Hari</small></div>
+</div>
+<p style="text-align:center;color:#aaa;font-size:13px;line-height:1.6">Siap order yang mana?<br>Langsung gas di bawah, jangan sampai kehabisan slot.<br><br><b style="color:#f6d873">Salam sukses dari ZUAN STORE 👑</b></p>
 <button class="main" onclick="go(1)">✨ GAS ORDER SEKARANG ✨</button>
-<div class="hint">Proses cuma 1 menit, langsung jadi!</div>
+<div class="hint">Proses hanya 1 menit, langsung jadi!</div>
+<div class="bottom-banner"><b>🟢 <span class="live-dot">●</span> SERVER ONLINE — 128 SLOT TERSEDIA HARI INI</b><span>Stok terbatas. Kemarin 47 orang kehabisan slot SULTAN, jangan sampai Anda berikutnya.</span></div>
 </div>
 
-<!-- STEP 1 SPEK + DURASI -->
+<!-- STEP 1 SPEK + DURASI - UDAH DIISI FULL -->
 <div id="step1" class="hidden">
+<div class="step-hero"><div class="sh-icon">💻</div><h2>Pilih Spek Yang Pas Buat Kebutuhanmu</h2><p>Jangan asal pilih yang paling murah. <b>Sesuaikan dengan bot / web kamu</b> biar gak lemot & gak buang duit.</p></div>
+<div class="trust-strip"><div><b>⚡ NVMe Gen4</b><span>10x Lebih Cepat</span></div><div><b>🛡️ Garansi</b><span>Down = Ganti</span></div><div><b>🔄 Upgrade</b><span>Bisa Naik Kapan Aja</span></div></div>
 <div class="card"><h3>1. Pilih Spek VPS</h3>
-<div class="opt" onclick="pilihSpek(this,'VPS 1GB',1,1,'20GB NVMe')"><div><b>VPS 1GB</b><span class="badge bronze">PEMUULA</span><br><span>1 vCPU • 1GB DDR4 • 20GB NVMe Gen4</span></div><div class="harga">Mulai<br>Rp 3.000</div></div>
-<div class="opt" onclick="pilihSpek(this,'VPS 2GB',1,2,'30GB NVMe')"><div><b>VPS 2GB</b><span class="badge silver">AMIR</span><br><span>1 vCPU • 2GB DDR4 • 30GB NVMe Gen4</span></div><div class="harga">Mulai<br>Rp 4.000</div></div>
-<div class="opt" onclick="pilihSpek(this,'VPS 4GB',2,4,'60GB NVMe')"><div><b>VPS 4GB</b><span class="badge gold">SULTAN 👑</span><br><span>2 vCPU • 4GB DDR4 • 60GB NVMe Gen4</span></div><div class="harga">Mulai<br>Rp 6.000</div></div>
-<div class="opt" onclick="pilihSpek(this,'VPS 8GB',4,8,'100GB NVMe')"><div><b>VPS 8GB</b><span class="badge plat">PRO</span><br><span>4 vCPU • 8GB DDR4 • 100GB NVMe Gen4</span></div><div class="harga">Mulai<br>Rp 10.000</div></div>
+<div class="opt" onclick="pilihSpek(this,'VPS 1GB',1,1,'20GB NVMe')"><div><b>VPS 1GB</b><br><span>1 vCPU • 1GB DDR4 • 20GB NVMe Gen4</span></div><div class="harga">Mulai<br>Rp 3.000</div></div>
+<div class="opt" onclick="pilihSpek(this,'VPS 2GB',1,2,'30GB NVMe')"><div><b>VPS 2GB</b><br><span>1 vCPU • 2GB DDR4 • 30GB NVMe Gen4</span></div><div class="harga">Mulai<br>Rp 4.000</div></div>
+<div class="opt" onclick="pilihSpek(this,'VPS 4GB',2,4,'60GB NVMe')"><div><b>VPS 4GB</b><br><span>2 vCPU • 4GB DDR4 • 60GB NVMe Gen4</span></div><div class="harga">Mulai<br>Rp 6.000</div></div>
+<div class="opt" onclick="pilihSpek(this,'VPS 8GB',4,8,'100GB NVMe')"><div><b>VPS 8GB</b><br><span>4 vCPU • 8GB DDR4 • 100GB NVMe Gen4</span></div><div class="harga">Mulai<br>Rp 10.000</div></div>
 <div class="opt" onclick="pilihSpek(this,'VPS 12GB',6,12,'160GB NVMe')"><div><b>VPS 12GB</b><span class="badge plat">PRO</span><br><span>6 vCPU • 12GB DDR4 • 160GB NVMe Gen4</span></div><div class="harga">Mulai<br>Rp 15.000</div></div>
 <div class="opt" onclick="pilihSpek(this,'VPS 16GB',8,16,'200GB NVMe')"><div><b>VPS 16GB</b><span class="badge gold">SULTAN 👑</span><br><span>8 vCPU • 16GB DDR4 • 200GB NVMe Gen4</span></div><div class="harga">Mulai<br>Rp 20.000</div></div>
-<div id="durasiWrap" class="durasi-box hidden"><h3>2. Pilih Durasi - <span id="durasiSpek" style="color:#f6d873"></span></h3><div id="durasiList"></div><small>💡 Semakin lama, semakin hemat per-hari nya!</small></div>
+<div id="durasiWrap" class="durasi-box hidden"><h3>2. Pilih Durasi - <span id="durasiSpek" style="color:#f6d873"></span></h3><div id="durasiList"></div><small>💡 Semakin lama, semakin hemat per harinya. Ambil 1 Bulan = paling untung!</small></div>
 </div>
+<div class="mini-info"><div class="mi">💡</div><div><b>Bingung Pilih Spek? Ini Panduan Cepatnya:</b><span>• 1-2GB → Buat 1-2 bot kecil / coba-coba<br>• 4GB → Buat bot + web, paling laris di toko ini<br>• 8GB ke atas → Buat banyak bot / game / panel berat</span></div></div>
+<div class="mini-info"><div class="mi">🔒</div><div><b>Tenang, Bisa Upgrade Kapan Aja</b><span>Salah pilih spek kecil? Gak masalah. Chat admin aja, spek bisa dinaikin tanpa install ulang.</span></div></div>
 <button class="main" id="btn1" onclick="go(2)" disabled>LANJUT PILIH LOKASI ➡️</button>
-<div class="hint" id="hint1">Pilih Spek dulu, baru harga durasi muncul di bawah 👇</div>
+<div class="hint" id="hint1">Pilih Spek dulu, harga durasi muncul di bawah 👇</div>
 <button class="back" onclick="go(0)">⬅️ Kembali ke Beranda</button>
+<div class="bottom-banner"><b>⭐ 92% PELANGGAN PILIH VPS 4GB</b><span>Karena paling pas: gak lemot, gak boros. Kalau masih ragu, ambil yang ini aja.</span></div>
 </div>
 
-<!-- STEP 2 LOKASI -->
+<!-- STEP 2 LOKASI - UDAH DIISI FULL -->
 <div id="step2" class="hidden">
+<div class="step-hero"><div class="sh-icon">🌍</div><h2>Lokasi Menentukan Kecepatan!</h2><p>Makin dekat lokasi server dengan target kamu, <b>makin ngebut & makin stabil</b> ping nya.</p></div>
 <div class="card"><h3>2. Pilih Lokasi Server</h3><div class="grid">
 <div class="opt" onclick="pilihLokasi(this,'Singapore')"><b>🇸🇬 Singapore</b></div>
 <div class="opt" onclick="pilihLokasi(this,'Indonesia')"><b>🇮🇩 Indonesia</b></div>
 <div class="opt" onclick="pilihLokasi(this,'USA')"><b>🇺🇸 USA</b></div>
 <div class="opt" onclick="pilihLokasi(this,'Germany')"><b>🇩🇪 Germany</b></div>
-</div></div>
+</div>
+<small>💡 Tips: Target pelanggan Indonesia? Pilih Singapore / Indonesia. Target luar? Pilih USA / Germany.</small></div>
+<div class="mini-info"><div class="mi">⚡</div><div><b>Kenapa Lokasi Itu Penting?</b><span>Server Singapore ke Indonesia ping nya cuma 20-30ms, ngebut banget. Kalau server USA ke Indonesia bisa 200ms+, kerasa lemotnya.</span></div></div>
+<div class="mini-info"><div class="mi">🏆</div><div><b>Rekomendasi Admin:</b><span>90% pelanggan kami pilih <b style="color:#fff">Singapore</b> karena paling stabil buat bot & web Indonesia. Kalau ragu, pilih ini.</span></div></div>
 <button class="main" id="btn2" onclick="go(3)" disabled>LANJUT PILIH OS ➡️</button>
 <button class="back" onclick="go(1)">⬅️ Kembali ke Spek</button>
+<div class="bottom-banner"><b>🟢 SEMUA LOKASI ONLINE & STABIL</b><span>Server kami dipantau 24 jam. Uptime 99.9% — kalau down tanpa sebab, kami ganti!</span></div>
 </div>
 
-<!-- STEP 3 OS -->
+<!-- STEP 3 OS - UDAH DIISI FULL, GAK POLOS LAGI -->
 <div id="step3" class="hidden">
-<div class="card"><h3>3. Pilih OS</h3><div class="grid">
-<div class="opt" onclick="pilihOS(this,'Ubuntu','24.04')"><b>Ubuntu 24.04</b></div>
-<div class="opt" onclick="pilihOS(this,'Ubuntu','22.04')"><b>Ubuntu 22.04</b></div>
-<div class="opt" onclick="pilihOS(this,'Debian','12')"><b>Debian 12</b></div>
-<div class="opt" onclick="pilihOS(this,'Debian','11')"><b>Debian 11</b></div>
-</div></div>
+<div class="step-hero"><div class="sh-icon">🖥️</div><h2>Pilih Sistem Operasi — Jangan Asal Klik!</h2><p>OS itu kayak fondasi rumah. <b>Salah pilih = install ulang dari nol.</b> Tenang, gua kasih panduan nya di bawah.</p></div>
+<div class="mini-info"><div class="mi">🤔</div><div><b>Bingung? Pilih UBUNTU 24.04 Aja!</b><span>90% pelanggan pakai ini. Paling gampang, tutorial paling banyak, admin paling gampang bantuin.</span></div></div>
+<div class="card"><h3>🖥️ 3. Pilih Sistem Operasi</h3>
+<div class="os-card" onclick="pilihOSCard(this,'Ubuntu')"><div class="os-icon">🐧</div><div><b>UBUNTU</b><span>Paling mudah. Cocok buat pemula.</span></div></div>
+<div class="os-card" onclick="pilihOSCard(this,'Debian')"><div class="os-icon">🌀</div><div><b>DEBIAN</b><span>Paling stabil. Favorit pro.</span></div></div>
+<div class="os-card" onclick="pilihOSCard(this,'AlmaLinux')"><div class="os-icon">💼</div><div><b>ALMALINUX</b><span>Rasa enterprise. Tetap ringan.</span></div></div>
+<div class="os-card" onclick="pilihOSCard(this,'Rocky Linux')"><div class="os-icon">🪨</div><div><b>ROCKY LINUX</b><span>Kuat dan bisa diandalkan.</span></div></div>
+<div id="versiWrap" class="versi-box hidden"><h3>Pilih Versi - <span id="versiOS" style="color:#f6d873"></span></h3><div id="versiList"></div><small>💡 Kalau bingung, pilih yang paling atas aja, itu yang paling baru & paling aman.</small></div>
+</div>
+<div class="mini-info"><div class="mi">⚠️</div><div><b>Perbedaan Singkatnya:</b><span>• Ubuntu → Paling gampang, cocok buat semua<br>• Debian → Paling irit RAM, cocok buat pro<br>• Alma / Rocky → Buat yang butuh rasa enterprise / cPanel</span></div></div>
 <button class="main" id="btn3" onclick="go(4)" disabled>LIAT RINCIAN ORDER ➡️</button>
 <button class="back" onclick="go(2)">⬅️ Kembali ke Lokasi</button>
+<div class="bottom-banner"><b>💬 MASIH BINGUNG PILIH OS?</b><span>Klik tombol 💬 Chat Admin di pojok kanan bawah, admin bantu pilihin yang paling pas buat kebutuhan kamu. GRATIS!</span></div>
 </div>
 
-<!-- STEP 4 RINCIAN ORDER KAMU -->
+<!-- STEP 4 RINCIAN - UDAH DIISI FULL -->
 <div id="step4" class="hidden">
+<div class="step-hero"><div class="sh-icon">🧾</div><h2>Cek Lagi Sebelum Bayar!</h2><p>Ini step paling penting. <b>Order yang udah dibayar gak bisa refund</b> kalau salah pilih. Cek 10 detik, aman selamanya.</p></div>
 <div class="check-box">
 <h2>🧾 RINCIAN ORDER KAMU</h2>
-<p>Cek dulu ya, udah bener belum? Kalo salah, tinggal klik UBAH!</p>
+<p>Cek dulu ya, sudah benar belum? Jika salah, klik UBAH.</p>
 <div id="cekList"></div>
 </div>
-<div class="notice"><b>⚠️ PENTING - Baca dulu kak:</b><br>✅ Order yang udah dibayar <b>tidak bisa refund</b> kalo salah pilih spek / OS.<br>✅ Pastikan OS nya bener, soalnya ganti OS = install ulang dari nol.<br>✅ Username yang udah dibuat tidak bisa diganti.</div>
+<div class="mini-info"><div class="mi">✅</div><div><b>Checklist Wajib Sebelum Lanjut:</b><span>• Spek udah sesuai kebutuhan?<br>• Durasi udah bener? (1 Hari / 1 Bulan)<br>• Lokasi udah bener?<br>• OS udah bener? (Salah OS = install ulang)</span></div></div>
+<div class="notice"><b>⚠️ PENTING — Baca dulu:</b><br>✅ Order yang sudah dibayar <b>tidak bisa refund</b> jika salah pilih spek / OS.<br>✅ Pastikan OS benar, ganti OS = install ulang dari nol.<br>✅ Username yang sudah dibuat tidak bisa diganti.</div>
 <div class="total" id="totalBox4">Total Bayar<br><b>-</b></div>
-<button class="main" onclick="go(5)">✅ UDAH BENER, LANJUT BAYAR</button>
+<button class="main" onclick="go(5)">✅ SUDAH BENAR, LANJUT BAYAR</button>
 <button class="back" onclick="go(3)">⬅️ Kembali ke OS</button>
-<div class="hint">Kalo ada yang salah, klik tombol UBAH di sampingnya</div>
+<div class="hint">Jika ada yang salah, klik tombol UBAH di sampingnya</div>
+<div class="bottom-banner"><b>🛡️ GARANSI 100% UANG KEMBALI JIKA SERVER GAK JADI</b><span>Kalau server gak kami buatkan setelah bayar, uang balik full. No drama, no ribet.</span></div>
 </div>
 
-<!-- STEP 5 USERNAME + BAYAR -->
+<!-- STEP 5 PEMBAYARAN - UDAH DIISI FULL -->
 <div id="step5" class="hidden">
-<div class="card"><h3>Terakhir! Isi Username VPS</h3><input id="usernameInput" type="text" placeholder="contoh: apakau" autocapitalize="none" autocomplete="off" spellcheck="false"><small>⚠️ Huruf kecil aja<br>🚫 Tanpa spasi<br>🚫 Username tidak bisa diganti setelah order</small></div>
+<div class="step-hero"><div class="sh-icon">💳</div><h2>Tinggal Selangkah Lagi!</h2><p>Isi username, pilih pembayaran, bayar, <b>server langsung diproses 5 menit.</b> Gak pake lama!</p></div>
+<div class="mini-info"><div class="mi">👤</div><div><b>Username Itu Penting Banget!</b><span>Username ini yang jadi nama login VPS kamu. Pakai huruf kecil, tanpa spasi, tanpa simbol aneh. Contoh: <b style="color:#fff">zuanstore, apakau, rizkybot</b></span></div></div>
+<div class="card"><h3>Username VPS</h3><input id="usernameInput" type="text" placeholder="contoh: apakau" autocapitalize="none" autocomplete="off" spellcheck="false"><small>⚠️ Huruf kecil saja • Tanpa spasi • Tidak bisa diganti setelah order</small></div>
 <div class="card"><h3>RINCIAN ORDER KAMU</h3><div id="ringkasan"></div></div>
 <div class="total" id="totalBox">Total Bayar<br><b>-</b></div>
-<button class="main" onclick="kirimOrder()">🚀 KIRIM ORDER KE BOT</button>
-<button class="back" onclick="go(4)">⬅️ Cek Lagi Rincian</button>
+<div class="card" style="margin-top:13px"><h3>💳 Pilih Metode Pembayaran</h3>
+<div class="pay-opt" id="payQRIS" onclick="pilihBayar('QRIS')"><div class="p-icon">📱</div><div><b>QRIS — Scan & Bayar</b><span>Semua e-wallet & m-banking. Paling cepat, 1 menit beres.</span></div></div>
+<div class="pay-opt" id="payTF" onclick="pilihBayar('Transfer Bank')"><div class="p-icon">🏦</div><div><b>Transfer Bank</b><span>BCA / BRI / Mandiri / SeaBank. Manual, konfirmasi ke admin.</span></div></div>
+<div id="boxQRIS" class="pay-box hidden">
+<b style="color:#f6d873">SCAN QRIS DI BAWAH INI</b><br><small style="margin-bottom:8px">Nominal harus PAS: <b id="qrisNominal" style="color:#fff">-</b> biar langsung ke-detect</small><br>
+<img src="https://via.placeholder.com/300x300/ffffff/000000?text=GANTI+DENGAN+QRIS+KAMU" alt="QRIS ZUAN STORE">
+<br><small>⚠️ Ganti gambar di atas dengan QRIS asli kamu di GitHub.<br>File: qris.jpg, lalu ganti src nya jadi qris.jpg</small>
 </div>
+<div id="boxTF" class="pay-box hidden" style="text-align:left">
+<b style="color:#f6d873;display:block;text-align:center;margin-bottom:10px">TRANSFER KE REKENING INI</b>
+<div class="bank-row"><div><b>BCA</b><br><span>1234567890 • a.n ZUAN STORE</span></div><button class="copy-btn" onclick="copyText('1234567890')">SALIN</button></div>
+<div class="bank-row"><div><b>DANA / OVO / GoPay</b><br><span>0812-XXXX-XXXX • a.n ZUAN STORE</span></div><button class="copy-btn" onclick="copyText('0812XXXX')">SALIN</button></div>
+<small style="text-align:center">⚠️ Ganti nomor rekening di atas dengan rekening asli kamu.<br>Nominal harus PAS: <b id="tfNominal" style="color:#fff">-</b></small>
+</div>
+</div>
+<div class="mini-info"><div class="mi">⚡</div><div><b>Abis Bayar, Terus Gimana?</b><span>1. Klik tombol SAYA SUDAH BAYAR di bawah<br>2. Kirim bukti ke admin (otomatis ke-forward)<br>3. Admin buatin VPS 5-10 menit<br>4. Kamu dapet IP + Password, langsung pake!</span></div></div>
+<button class="main" id="btnBayar" onclick="konfirmasiBayar()" disabled>✅ SAYA SUDAH BAYAR — KONFIRMASI</button>
+<button class="back" onclick="go(4)">⬅️ Cek Lagi Rincian</button>
+<div class="hint">Setelah klik konfirmasi, bukti akan diteruskan ke admin & VPS langsung diproses.</div>
+<div class="bottom-banner"><b>🔒 PEMBAYARAN AMAN & TERPERCAYA</b><span>2.847+ order sudah sukses diproses. Kalau ragu, chat admin dulu sebelum bayar. Kami fast respon 24 jam!</span></div>
+</div>
+
+<button class="chat-float" onclick="chatAdmin()">💬 Chat Admin</button>
 
 <script>
 let tg = window.Telegram.WebApp; tg.expand(); tg.ready();
@@ -161,13 +251,19 @@ let HARGA = {
  'VPS 12GB': [['1 Hari',15000],['3 Hari',35000],['5 Hari',58000],['7 Hari',80000],['14 Hari',125000],['1 Bulan',195000]],
  'VPS 16GB': [['1 Hari',20000],['3 Hari',50000],['5 Hari',80000],['7 Hari',110000],['14 Hari',175000],['1 Bulan',275000]]
 };
-let data={spek:"",cpu:"",ram:"",storage:"",durasi:"",hargaNum:0,harga:"",lokasi:"",os:"",versi:"",username:""};
+let VERSI_OS = {
+ 'Ubuntu': ['24.04','22.04','20.04','18.04'],
+ 'Debian': ['12','11','10','9'],
+ 'AlmaLinux': ['10','9','8'],
+ 'Rocky Linux': ['10','9','8']
+};
+let data={spek:"",cpu:"",ram:"",storage:"",durasi:"",hargaNum:0,harga:"",lokasi:"",os:"",versi:"",username:"",bayar:""};
 function formatRp(n){return 'Rp '+n.toLocaleString('id-ID');}
 function go(n){
  [0,1,2,3,4,5].forEach(i=>document.getElementById('step'+i).classList.add('hidden'));
  document.getElementById('step'+n).classList.remove('hidden');
  document.getElementById('progressWrap').style.display = n==0 ? 'none':'block';
- let labels={1:"STEP <b>1 / 5</b> - PILIH SPEK + DURASI",2:"STEP <b>2 / 5</b> - PILIH LOKASI",3:"STEP <b>3 / 5</b> - PILIH OS",4:"STEP <b>4 / 5</b> - RINCIAN ORDER KAMU",5:"STEP <b>5 / 5</b> - BAYAR"};
+ let labels={1:"STEP <b>1 / 5</b> - PILIH SPEK + DURASI",2:"STEP <b>2 / 5</b> - PILIH LOKASI",3:"STEP <b>3 / 5</b> - PILIH OS",4:"STEP <b>4 / 5</b> - RINCIAN ORDER KAMU",5:"STEP <b>5 / 5</b> - PEMBAYARAN"};
  if(n>0) document.getElementById('stepLabel').innerHTML=labels[n];
  for(let i=1;i<=5;i++) document.getElementById('p'+i).style.width = i<=n ? '100%':'0%';
  window.scrollTo(0,0);
@@ -189,6 +285,8 @@ function go(n){
   '<div class="summary-row"><span>Lokasi</span><span>'+data.lokasi+'</span></div>'+
   '<div class="summary-row"><span>OS</span><span>'+data.os+' '+data.versi+'</span></div>';
   document.getElementById('totalBox').innerHTML="Total Bayar<br><b>"+data.harga+"</b>";
+  document.getElementById('qrisNominal').innerText=data.harga;
+  document.getElementById('tfNominal').innerText=data.harga;
  }
 }
 function pilihSpek(el,spek,cpu,ram,storage){
@@ -218,23 +316,52 @@ function pilihLokasi(el,lokasi){
  document.getElementById('btn2').disabled=false;
  setTimeout(()=>go(3),350);
 }
-function pilihOS(el,os,versi){
- el.parentElement.querySelectorAll('.opt').forEach(o=>o.classList.remove('active'));
- el.classList.add('active'); data.os=os; data.versi=versi;
+function pilihOSCard(el,os){
+ document.querySelectorAll('#step3 .os-card').forEach(o=>o.classList.remove('active'));
+ el.classList.add('active'); data.os=os; data.versi=""; document.getElementById('btn3').disabled=true;
+ document.getElementById('versiOS').innerText=os;
+ document.getElementById('versiWrap').classList.remove('hidden');
+ let html='';
+ VERSI_OS[os].forEach(v=>{
+   let tag = v==VERSI_OS[os][0] ? '<span class="hemat">⭐ REKOMENDASI - PALING BARU</span>' : '<span>Versi stabil</span>';
+   html+='<div class="opt" onclick="pilihVersi(this,\''+v+'\')"><div><b>'+os+' '+v+'</b><br><span>'+tag+'</span></div><div class="harga">Pilih Ini</div></div>';
+ });
+ document.getElementById('versiList').innerHTML=html;
+ document.getElementById('versiWrap').scrollIntoView({behavior:'smooth'});
+}
+function pilihVersi(el,versi){
+ document.querySelectorAll('#versiList .opt').forEach(o=>o.classList.remove('active'));
+ el.classList.add('active'); data.versi=versi;
  document.getElementById('btn3').disabled=false;
  setTimeout(()=>go(4),350);
 }
-function kirimOrder(){
+function pilihBayar(metode){
+ data.bayar=metode;
+ document.getElementById('payQRIS').classList.toggle('active', metode=='QRIS');
+ document.getElementById('payTF').classList.toggle('active', metode=='Transfer Bank');
+ document.getElementById('boxQRIS').classList.toggle('hidden', metode!=='QRIS');
+ document.getElementById('boxTF').classList.toggle('hidden', metode!=='Transfer Bank');
+ document.getElementById('btnBayar').disabled=false;
+ if(metode=='QRIS') document.getElementById('boxQRIS').scrollIntoView({behavior:'smooth'});
+ else document.getElementById('boxTF').scrollIntoView({behavior:'smooth'});
+}
+function copyText(t){ navigator.clipboard.writeText(t); alert('Berhasil disalin: '+t); }
+function chatAdmin(){
+ let link="https://t.me/Auto_orderpanelbaru_bot?text="+encodeURIComponent("Halo bang, mau tanya soal VPS 🙏");
+ try{tg.close();}catch(e){}
+ setTimeout(()=>{window.open(link,"_blank");},300);
+}
+function konfirmasiBayar(){
  let u=document.getElementById('usernameInput').value.trim().toLowerCase();
- if(!u){ alert('Isi username dulu bang!'); return; }
- if(u.includes(' ')){ alert('Username jangan pake spasi bang!'); return; }
+ if(!u){ alert('Isi username dulu!'); return; }
+ if(u.includes(' ')){ alert('Username jangan pake spasi!'); return; }
+ if(!data.bayar){ alert('Pilih metode pembayaran dulu!'); return; }
  data.username=u;
- let pesan="Halo bang, mau ORDER VPS\n\nPaket: "+data.spek+"\nDurasi: "+data.durasi+"\nCPU: "+data.cpu+" vCPU\nRAM: "+data.ram+"GB DDR4\nStorage: "+data.storage+"\nLokasi: "+data.lokasi+"\nOS: "+data.os+" "+data.versi+"\nUsername: "+data.username+"\nTotal: "+data.harga;
+ let pesan="✅ KONFIRMASI PEMBAYARAN - ZUAN STORE\n\nPaket: "+data.spek+"\nDurasi: "+data.durasi+"\nCPU: "+data.cpu+" vCPU\nRAM: "+data.ram+"GB DDR4\nStorage: "+data.storage+"\nLokasi: "+data.lokasi+"\nOS: "+data.os+" "+data.versi+"\nUsername: "+data.username+"\nMetode Bayar: "+data.bayar+"\nTotal: "+data.harga+"\n\nSaya sudah bayar, mohon diproses 🙏";
  let link="https://t.me/Auto_orderpanelbaru_bot?text="+encodeURIComponent(pesan);
  try{tg.close();}catch(e){}
  setTimeout(()=>{window.open(link,"_blank");},300);
 }
 go(0);
 </script>
-</body>
-</html>
+</html>                                                                                        </body>

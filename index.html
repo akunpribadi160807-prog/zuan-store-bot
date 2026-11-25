@@ -314,7 +314,6 @@ function pilihLokasi(el,lokasi){
  el.parentElement.querySelectorAll('.opt').forEach(o=>o.classList.remove('active'));
  el.classList.add('active'); data.lokasi=lokasi;
  document.getElementById('btn2').disabled=false;
- setTimeout(()=>go(3),350);
 }
 function pilihOSCard(el,os){
  document.querySelectorAll('#step3 .os-card').forEach(o=>o.classList.remove('active'));
@@ -333,7 +332,6 @@ function pilihVersi(el,versi){
  document.querySelectorAll('#versiList .opt').forEach(o=>o.classList.remove('active'));
  el.classList.add('active'); data.versi=versi;
  document.getElementById('btn3').disabled=false;
- setTimeout(()=>go(4),350);
 }
 function pilihBayar(metode){
  data.bayar=metode;

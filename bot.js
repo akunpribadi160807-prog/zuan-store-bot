@@ -498,7 +498,7 @@ const kbLokasi = Markup.inlineKeyboard([
   [{ text: '🇮🇩 INDONESIA', callback_data: 'lok_1', style: 'primary' }],
   [{ text: '🇩🇪 JERMAN', callback_data: 'lok_2', style: 'primary' }],
   [{ text: '🇸🇬 SINGAPURA', callback_data: 'lok_3', style: 'primary' }],
-  [{ text: '⏪ Kembali', callback_data: 'back_to_vps', style: 'danger' }],
+  [{ text: '⏪ Kembali', callback_data: 'back_vps', style: 'danger' }],
 ]);
 
 const kbOsFamily = Markup.inlineKeyboard([
@@ -510,7 +510,7 @@ const kbOsFamily = Markup.inlineKeyboard([
     { text: 'ALMALINUX', callback_data: 'osfam_alma', style: 'primary' },
     { text: 'ROCKY LINUX', callback_data: 'osfam_rocky', style: 'primary' }
   ],
-  [{ text: '⏪ Kembali', callback_data: 'back_to_lokasi', style: 'danger' }],
+  [{ text: '⏪ Kembali', callback_data: 'back_lokasi', style: 'danger' }],
 ]);
 
 function kbOsVersion(fam){

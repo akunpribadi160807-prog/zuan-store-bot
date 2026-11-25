@@ -466,114 +466,114 @@ function tolakTxt(u){
 
 const kbMenu = Markup.inlineKeyboard([
   [
-    { text: '💻 VPS MURAH', callback_data: 'menu_1', style: 'success' },
-    { text: '📱 PANEL', callback_data: 'menu_2', style: 'primary' }
+    { text: '💻 VPS MURAH', callback_data: 'menu_1' },
+    { text: '📱 PANEL', callback_data: 'menu_2' }
   ],
   [
-    { text: '🌐 DOMAIN MURAH', callback_data: 'menu_3', style: 'primary' },
-    { text: '🛠️ JASA INSTALL', callback_data: 'menu_4', style: 'primary' }
+    { text: '🌐 DOMAIN MURAH', callback_data: 'menu_3' },
+    { text: '🛠️ JASA INSTALL', callback_data: 'menu_4' }
   ],
   [
-    { text: '💬 HUBUNGI ADMIN', callback_data: 'menu_5', style: 'secondary' }
+    { text: '💬 HUBUNGI ADMIN', callback_data: 'menu_5' }
   ],
 ]);
 
 const kbVps = Markup.inlineKeyboard([
   [
-    { text: '1', callback_data: 'vps_1', style: 'primary' },
-    { text: '4', callback_data: 'vps_4', style: 'primary' }
+    { text: '1', callback_data: 'vps_1' },
+    { text: '4', callback_data: 'vps_4' }
   ],
   [
-    { text: '2', callback_data: 'vps_2', style: 'primary' },
-    { text: '5', callback_data: 'vps_5', style: 'primary' }
+    { text: '2', callback_data: 'vps_2' },
+    { text: '5', callback_data: 'vps_5' }
   ],
   [
-    { text: '3', callback_data: 'vps_3', style: 'primary' },
-    { text: '6', callback_data: 'vps_6', style: 'primary' }
+    { text: '3', callback_data: 'vps_3' },
+    { text: '6', callback_data: 'vps_6' }
   ],
-  [{ text: '⏪ BACK', callback_data: 'back_menu', style: 'danger' }],
+  [{ text: '⏪ BACK', callback_data: 'back_menu' }],
 ]);
 
 const kbLokasi = Markup.inlineKeyboard([
-  [{ text: '🇮🇩 INDONESIA', callback_data: 'lok_1', style: 'primary' }],
-  [{ text: '🇩🇪 JERMAN', callback_data: 'lok_2', style: 'primary' }],
-  [{ text: '🇸🇬 SINGAPURA', callback_data: 'lok_3', style: 'primary' }],
-  [{ text: '⏪ Kembali', callback_data: 'back_vps', style: 'danger' }],
+  [{ text: '🇮🇩 INDONESIA', callback_data: 'lok_1' }],
+  [{ text: '🇩🇪 JERMAN', callback_data: 'lok_2' }],
+  [{ text: '🇸🇬 SINGAPURA', callback_data: 'lok_3' }],
+  [{ text: '⏪ Kembali', callback_data: 'back_vps' }],
 ]);
 
 const kbOsFamily = Markup.inlineKeyboard([
   [
-    { text: 'UBUNTU', callback_data: 'osfam_ubuntu', style: 'primary' },
-    { text: 'DEBIAN', callback_data: 'osfam_debian', style: 'primary' }
+    { text: 'UBUNTU', callback_data: 'osfam_ubuntu' },
+    { text: 'DEBIAN', callback_data: 'osfam_debian' }
   ],
   [
-    { text: 'ALMALINUX', callback_data: 'osfam_alma', style: 'primary' },
-    { text: 'ROCKY LINUX', callback_data: 'osfam_rocky', style: 'primary' }
+    { text: 'ALMALINUX', callback_data: 'osfam_alma' },
+    { text: 'ROCKY LINUX', callback_data: 'osfam_rocky' }
   ],
-  [{ text: '⏪ Kembali', callback_data: 'back_lokasi', style: 'danger' }],
+  [{ text: '⏪ Kembali', callback_data: 'back_lokasi' }],
 ]);
 
 function kbOsVersion(fam){
-  const btns = OS_VERSIONS_LABEL[fam].map((label, i) => [{ text: '✅ ' + label, callback_data: `osver_${fam}_${i}`, style: 'primary' }]);
-  btns.push([{ text: '⏪ Kembali ke OS', callback_data: 'back_os', style: 'danger' }]);
+  const btns = OS_VERSIONS_LABEL[fam].map((label, i) => [{ text: '✅ ' + label, callback_data: `osver_${fam}_${i}` }]);
+  btns.push([{ text: '⏪ Kembali ke OS', callback_data: 'back_os' }]);
   return Markup.inlineKeyboard(btns);
 }
 
 const kbYaBatal = Markup.inlineKeyboard([
   [
-    { text: '✅ YA, LANJUT', callback_data: 'ya', style: 'success' },
-    { text: '❌ BATAL', callback_data: 'batal', style: 'danger' }
+    { text: '✅ YA, LANJUT', callback_data: 'ya' },
+    { text: '❌ BATAL', callback_data: 'batal' }
   ],
 ]);
 
 const kbBayar = Markup.inlineKeyboard([
-  [{ text: '📷 LIAT QRIS', callback_data: 'qris', style: 'primary' }],
-  [{ text: '⏪ MENU UTAMA', callback_data: 'back_menu', style: 'danger' }],
+  [{ text: '📷 LIAT QRIS', callback_data: 'qris' }],
+  [{ text: '⏪ MENU UTAMA', callback_data: 'back_menu' }],
 ]);
 
 const kbPanel = Markup.inlineKeyboard([
   [
-    { text: 'PANEL 1GB | 3K', callback_data: 'panel_1', style: 'primary' },
-    { text: 'PANEL 2GB | 6K', callback_data: 'panel_2', style: 'primary' }
+    { text: 'PANEL 1GB | 3K', callback_data: 'panel_1' },
+    { text: 'PANEL 2GB | 6K', callback_data: 'panel_2' }
   ],
   [
-    { text: 'PANEL 4GB | 9K', callback_data: 'panel_3', style: 'primary' },
-    { text: 'UNLI | 25K', callback_data: 'panel_4', style: 'success' }
+    { text: 'PANEL 4GB | 9K', callback_data: 'panel_3' },
+    { text: 'UNLI | 25K', callback_data: 'panel_4' }
   ],
-  [{ text: '⏪ Kembali', callback_data: 'back_menu', style: 'danger' }],
+  [{ text: '⏪ Kembali', callback_data: 'back_menu' }],
 ]);
 
 const kbDomain = Markup.inlineKeyboard([
   [
-    { text: '.my.id - Rp 12K', callback_data: 'dom_1', style: 'primary' },
-    { text: '.xyz - Rp 15K', callback_data: 'dom_2', style: 'primary' }
+    { text: '.my.id - Rp 12K', callback_data: 'dom_1' },
+    { text: '.xyz - Rp 15K', callback_data: 'dom_2' }
   ],
   [
-    { text: '.online - Rp 20K', callback_data: 'dom_3', style: 'primary' },
-    { text: '.store - Rp 25K', callback_data: 'dom_4', style: 'primary' }
+    { text: '.online - Rp 20K', callback_data: 'dom_3' },
+    { text: '.store - Rp 25K', callback_data: 'dom_4' }
   ],
   [
-    { text: '.com - Rp 95K', callback_data: 'dom_5', style: 'primary' },
-    { text: '.id - Rp 180K', callback_data: 'dom_6', style: 'primary' }
+    { text: '.com - Rp 95K', callback_data: 'dom_5' },
+    { text: '.id - Rp 180K', callback_data: 'dom_6' }
   ],
-  [{ text: '⏪ Kembali', callback_data: 'back_menu', style: 'danger' }],
+  [{ text: '⏪ Kembali', callback_data: 'back_menu' }],
 ]);
 
 const kbJasa = Markup.inlineKeyboard([
   [
-    { text: '🤖 BOT WA - 15K', callback_data: 'jasa_1', style: 'primary' },
-    { text: '🎮 PANEL - 20K', callback_data: 'jasa_2', style: 'primary' }
+    { text: '🤖 BOT WA - 15K', callback_data: 'jasa_1' },
+    { text: '🎮 PANEL - 20K', callback_data: 'jasa_2' }
   ],
   [
-    { text: '🌐 WEB - 25K', callback_data: 'jasa_3', style: 'primary' },
-    { text: '🔧 VPS - 10K', callback_data: 'jasa_4', style: 'primary' }
+    { text: '🌐 WEB - 25K', callback_data: 'jasa_3' },
+    { text: '🔧 VPS - 10K', callback_data: 'jasa_4' }
   ],
-  [{ text: '⏪ Kembali', callback_data: 'back_menu', style: 'danger' }],
+  [{ text: '⏪ Kembali', callback_data: 'back_menu' }],
 ]);
 
 const kbAdmin = Markup.inlineKeyboard([
-  [{ text: '💬 CHAT ADMIN SEKARANG', callback_data: 'admin_chat', style: 'success' }],
-  [{ text: '⏪ MENU UTAMA', callback_data: 'back_menu', style: 'danger' }],
+  [{ text: '💬 CHAT ADMIN SEKARANG', callback_data: 'admin_chat' }],
+  [{ text: '⏪ MENU UTAMA', callback_data: 'back_menu' }],
 ]);
 
 const sendMenu = (ctx) => ctx.reply(MENU, kbMenu);
@@ -598,6 +598,8 @@ bot.on('callback_query', async (ctx) => {
   const u = users.get(id);
 
   if(data==='back_menu'){ u.step='menu'; return editTo(ctx, MENU, kbMenu); }
+  if(data==='back_vps'){ u.step='pilih_vps'; return editTo(ctx, VPS_LIST, kbVps); }
+  if(data==='back_lokasi'){ u.step='pilih_lokasi'; return editTo(ctx, LOKASI_TXT, kbLokasi); }
   if(data==='menu_1'){ u.step='pilih_vps'; return editTo(ctx, VPS_LIST, kbVps); }
   if(data==='menu_2'){ u.step='pilih_panel'; return editTo(ctx, PANEL_TXT, kbPanel); }
   if(data==='menu_3'){ u.step='pilih_domain'; return editTo(ctx, DOMAIN_TXT, kbDomain); }
@@ -625,8 +627,9 @@ bot.on('callback_query', async (ctx) => {
     catch(e){ await ctx.reply(qrisTxt(u) + '\n\n⚠️ Foto QRIS belum ada, taro file qris.jpg di folder bot ya'); }
     return;
   }
+});
 
-  // FIX VALID - DULU CRASH DI SINI
+ // FIX VALID - DULU CRASH DI SINI
   if(data.startsWith('valid_')){
     if(id !== ADMIN_ID) return ctx.reply('Cuma owner yang bisa VALID.');
     const custId = Number(data.split('_')[1]);

@@ -6,6 +6,10 @@
 <title>ZUAN STORE - Order VPS</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
+ /* KHUSUS RINCIAN ORDER DOANG */
+.rincian-effect{position:relative;overflow:hidden;border:1px solid #f6d873 !important;box-shadow:0 0 25px rgba(246,216,115,0.30) !important;}
+.rincian-effect::before{content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(100deg, transparent, rgba(246,216,115,0.22), transparent);animation:kilauRincian 2.5s infinite;pointer-events:none;}
+@keyframes kilauRincian{0%{left:-100%;}100%{left:150%;}}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
 body{background:#050505;color:#fff;padding:16px;padding-bottom:110px;background-image:radial-gradient(circle at 50% 0%, #2a2100 0%, #050505 45%)}
 .top-badge{text-align:center;margin-bottom:8px}
@@ -196,7 +200,7 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 <!-- STEP 4 RINCIAN - UDAH DIISI FULL -->
 <div id="step4" class="hidden">
 <div class="step-hero"><div class="sh-icon">🧾</div><h2>Cek Lagi Sebelum Bayar!</h2><p>Ini step paling penting. <b>Order yang udah dibayar gak bisa refund</b> kalau salah pilih. Cek 10 detik, aman selamanya.</p></div>
-<div class="check-box">
+<div class="check-box rincian-effect">
 <h2>🧾 RINCIAN ORDER KAMU</h2>
 <p>Cek dulu ya, sudah benar belum? Jika salah, klik UBAH.</p>
 <div id="cekList"></div>

@@ -403,7 +403,17 @@ if(n=='panel'||n=='panel-bayar'||n=='panel-selesai'){
   ['step1-panel','step-panel-bayar','step-panel-selesai'].forEach(id=>{let e=document.getElementById(id); if(e) e.style.display='none';});
   let target = n=='panel' ? 'step1-panel' : n=='panel-bayar' ? 'step-panel-bayar' : 'step-panel-selesai';
   let el=document.getElementById(target);
-  if(el){ el.style.setProperty('display','block','important'); el.classList.remove('hidden'); }
+  if(el){
+    el.style.setProperty('display','block','important');
+    el.classList.remove('hidden');
+    // PAKSA BAPAK-BAPAKNYA MUNCUL JUGA
+    let p=el.parentElement;
+    while(p && p.tagName!='BODY'){
+      p.style.setProperty('display','block','important');
+      p.classList.remove('hidden');
+      p=p.parentElement;
+    }
+  }
   window.scrollTo(0,0);
   return;
 }

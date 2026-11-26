@@ -267,7 +267,17 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 <div class="bottom-banner"><b>⭐ 92% PELANGGAN PILIH VPS 4GB</b><span>Karena paling pas: gak lemot, gak boros. Kalau masih ragu, ambil yang ini aja.</span></div>
 </div>
 <!-- STEP PANEL - KHUSUS PANEL, BUKAN VPS -->
-<div id="step1-panel" class="hidden">
+  <style>
+#step1-panel .opt{border-color:#ff1e1e !important; background:#220a0a !important; color:#fff !important}
+#step1-panel .opt:hover{background:#ff1e1e !important; color:#fff !important}
+#step1-panel .opt.selected{background:#ff1e1e !important; color:#fff !important}
+#step1-panel h3{color:#ff1e1e !important}
+#step1-panel .main{background:#ff1e1e !important; color:#fff !important; border:none !important}
+#step-panel-bayar .opt{border-color:#ff1e1e !important; background:#220a0a !important}
+#step-panel-bayar h3{color:#ff1e1e !important}
+#step-panel-bayar .main{background:#ff1e1e !important; color:#fff !important; border:none !important}
+  </style>
+<div id="step1-panel" style="display:none">
   <div class="card"><h3>1. Pilih Panel</h3>
     <div class="opt" onclick="pilihSpek(this,'Panel 1GB')">Panel 1GB - Rp 5.000</div>
     <div class="opt" onclick="pilihSpek(this,'Panel 2GB')">Panel 2GB - Rp 10.000</div>
@@ -278,7 +288,7 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 </div>
 
 <!-- STEP PANEL BAYAR - KHUSUS PANEL -->
-<div id="step-panel-bayar" class="hidden">
+<div id="step-panel-bayar" style="display:none">
   <div class="card"><h3>2. Pembayaran Panel</h3>
     <p>Bayar via QRIS, lalu kirim bukti ke WhatsApp</p>
   </div>

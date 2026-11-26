@@ -7,7 +7,7 @@
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
-body{background:#050505;color:#fff;padding:16px;padding-bottom:110px;background-image:radial-gradient(circle at 50% 0%, #2a2100 0%, #050505 45%)}
+body{background:#050505;color:#fff;padding:16px;padding-bottom:130px;background-image:radial-gradient(circle at 50% 0%, #2a2100 0%, #050505 45%)}
 .top-badge{text-align:center;margin-bottom:8px}
 .top-badge span{background:linear-gradient(135deg,#f6d873,#b8860b);color:#000;font-size:10px;font-weight:800;letter-spacing:2px;padding:5px 12px;border-radius:20px}
 h1{text-align:center;font-size:25px;letter-spacing:1px;background:linear-gradient(135deg,#fff3a6,#d4af37,#8a6d00);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -81,14 +81,13 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 .bank-row b{font-size:13px}
 .bank-row span{font-size:12px;color:#aaa}
 .copy-btn{background:#d4af37;color:#000;border:none;border-radius:8px;padding:6px 10px;font-size:11px;font-weight:800;cursor:pointer}
-.chat-float{position:fixed;right:14px;bottom:18px;z-index:99;background:linear-gradient(135deg,#ffe97a,#d4af37);color:#000;border:none;border-radius:50px;padding:11px 15px;font-size:13px;font-weight:800;box-shadow:0 8px 20px rgba(0,0,0,0.5);cursor:pointer;display:flex;align-items:center;gap:6px}
+.chat-float{position:fixed;right:14px;bottom:95px;z-index:99;background:linear-gradient(135deg,#ffe97a,#d4af37);color:#000;border:none;border-radius:50px;padding:11px 15px;font-size:13px;font-weight:800;box-shadow:0 8px 20px rgba(0,0,0,0.5);cursor:pointer;display:flex;align-items:center;gap:6px}
 .os-card{background:#1a1a1a;border:1.5px solid #2a2a2a;border-radius:13px;padding:13px;margin-bottom:9px;cursor:pointer;display:flex;gap:11px;align-items:flex-start}
 .os-card.active{border-color:#d4af37;background:linear-gradient(135deg,#2a2100,#171100)}
 .os-card .os-icon{font-size:24px}
 .os-card b{font-size:14px}
 .os-card span{font-size:12px;color:#aaa;line-height:1.5;display:block;margin-top:2px}
 .versi-box{border-top:1px dashed #333;margin-top:13px;padding-top:13px}
-/* BARU - BIAR GAK POLOS */
 .step-hero{background:linear-gradient(135deg,#1a1400,#0c0c0c);border:1px solid #d4af37;border-radius:15px;padding:14px;text-align:center;margin-bottom:12px}
 .step-hero .sh-icon{font-size:26px}
 .step-hero h2{font-size:16px;margin:5px 0;line-height:1.3}
@@ -106,130 +105,28 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 .bottom-banner b{font-size:13px;color:#ffe97a}
 .bottom-banner span{font-size:11.5px;color:#ddd;line-height:1.6;display:block;margin-top:4px}
 .live-dot{color:#00ff88}
-/* RINCIAN VIP FINAL - 1 SC JADI */
 .mahkota{text-align:center !important; font-size:52px !important; margin-top:-38px !important; filter:drop-shadow(0 0 15px rgba(255,215,0,0.9)) !important;}
 .rincian-effect{padding-top:45px !important;}
-.rincian-effect #cekList div{
-  display:block !important;
-  text-align:center !important;
-  background:rgba(255,255,255,0.06) !important;
-  border:1px solid rgba(246,216,115,0.4) !important;
-  border-radius:16px !important;
-  padding:16px 10px 14px !important;
-  margin-bottom:12px !important;
-}
-.rincian-effect #cekList div span{
-  display:block !important;
-  text-align:center !important;
-}
-.rincian-effect #cekList div span:first-child{
-  font-size:11px !important;
-  letter-spacing:2px !important;
-  text-transform:uppercase !important;
-  color:#f6d873 !important;
-  font-weight:700 !important;
-  margin-bottom:4px !important;
-}
-.rincian-effect #cekList div span:last-of-type{
-  font-size:19px !important;
-  font-weight:900 !important;
-  color:#fff !important;
-}
-.rincian-effect #cekList div button{
-  display:block !important;
-  margin:8px auto 0 auto !important;
-}
-/* START - VIP FINAL ALL STEP + BADGE */
-
-/* ===== SEMUA CARD - DASAR ===== */
-.pkg-card,.paket-card,.card-paket,.package-card,
-.opt,.lokasi-btn,.loc-btn,.location-card,
-.os-card,.durasi-card,.payment-card,.pay-card{
-  background:rgba(255,255,255,0.05) !important;
-  border:1px solid rgba(255,255,255,0.12) !important;
-  border-radius:20px !important;
-  transition:0.2s !important;
-  position:relative !important;
-}
-
-/* ===== SEMUA YANG DIPILIH - KUNING FULL ===== */
-.pkg-card.selected,.paket-card.selected,.card-paket.selected,.package-card.selected,
-.pkg-card.active,.paket-card.active,.card-paket.active,
-.opt.active,.opt.selected,.lokasi-btn.active,.loc-btn.active,.location-card.active,
-.os-card.active,.os-card.selected,.durasi-card.active,.payment-card.active,.pay-card.active,
-.selected,.active{
-  background:linear-gradient(135deg, #ffe27a, #f6d873) !important;
-  border:3px solid #ffe27a !important;
-  color:#000 !important;
-  box-shadow:0 0 35px rgba(246,216,115,0.6) !important;
-  transform:scale(1.02) !important;
-}
-
-/* TEKS DI DALEM YANG DIPILIH JADI ITEM */
-.selected b,.selected strong,.selected span,.selected p,
-.active b,.active strong,.active span,.active p,
-.pkg-card.selected b,.opt.active b{
-  color:#000 !important;
-}
-
-/* HARGA YANG DIPILIH */
-.selected .price,.active .price{
-  color:#000 !important;
-  font-size:24px !important;
-  font-weight:900 !important;
-  text-shadow:none !important;
-}
-
-/* DENYUT GOLD */
-@keyframes denyutGold{
-  0%{box-shadow:0 0 15px rgba(246,216,115,0.4)}
-  50%{box-shadow:0 0 45px rgba(246,216,115,0.95)}
-  100%{box-shadow:0 0 15px rgba(246,216,115,0.4)}
-}
-.selected,.active,.opt.active,.pkg-card.selected{
-  animation:denyutGold 1.8s infinite !important;
-}
-
-/* FIX - TEKS GAK GEDE */
-.opt.active span:first-child{
-  font-size:inherit !important;
-  filter:none !important;
-}
-
-/* ===== BADGE DIPILIH KAYA DI FOTO ===== */
-.pkg-card.selected::after,.paket-card.selected::after,.opt.active::after{
-  content:"✓ DIPILIH";
-  position:absolute;
-  top:10px;
-  right:10px;
-  background:#000;
-  color:#ffe27a;
-  font-size:11px;
-  font-weight:900;
-  padding:4px 10px;
-  border-radius:20px;
-  z-index:5;
-}
-
-/* END - VIP FINAL ALL STEP + BADGE */
-/* === PANEL DOANG - MERAH HITAM MEWAH === */
-#step1-panel .panel-opt{
-  background:#0d0d0d !important;
-  border:1.5px solid #333 !important;
-  color:#ddd !important;
-}
-#step1-panel .panel-opt.active, #step1-panel .panel-opt.selected{
-  background:linear-gradient(135deg,#ff0000,#6b0000) !important;
-  border-color:#ff4444 !important;
-  color:#fff !important;
-  box-shadow:0 0 25px #ff000066 !important;
-  font-weight:800 !important;
-}
-#step1-panel .main{
-  background:linear-gradient(135deg,#ff2222,#8a0000) !important;
-  color:#fff !important;
-  box-shadow:0 8px 25px #ff000055 !important;
-}
+.rincian-effect #cekList div{display:block !important;text-align:center !important;background:rgba(255,255,255,0.06) !important;border:1px solid rgba(246,216,115,0.4) !important;border-radius:16px !important;padding:16px 10px 14px !important;margin-bottom:12px !important;}
+.rincian-effect #cekList div span{display:block !important;text-align:center !important;}
+.rincian-effect #cekList div span:first-child{font-size:11px !important;letter-spacing:2px !important;text-transform:uppercase !important;color:#f6d873 !important;font-weight:700 !important;margin-bottom:4px !important;}
+.rincian-effect #cekList div span:last-of-type{font-size:19px !important;font-weight:900 !important;color:#fff !important;}
+.rincian-effect #cekList div button{display:block !important;margin:8px auto 0 auto !important;}
+.pkg-card,.paket-card,.card-paket,.package-card,.opt,.lokasi-btn,.loc-btn,.location-card,.os-card,.durasi-card,.payment-card,.pay-card{background:rgba(255,255,255,0.05) !important;border:1px solid rgba(255,255,255,0.12) !important;border-radius:20px !important;transition:0.2s !important;position:relative !important;}
+.pkg-card.selected,.paket-card.selected,.card-paket.selected,.package-card.selected,.pkg-card.active,.paket-card.active,.card-paket.active,.opt.active,.opt.selected,.lokasi-btn.active,.loc-btn.active,.location-card.active,.os-card.active,.os-card.selected,.durasi-card.active,.payment-card.active,.pay-card.active,.selected,.active{background:linear-gradient(135deg, #ffe27a, #f6d873) !important;border:3px solid #ffe27a !important;color:#000 !important;box-shadow:0 0 35px rgba(246,216,115,0.6) !important;transform:scale(1.02) !important;}
+.selected b,.selected strong,.selected span,.selected p,.active b,.active strong,.active span,.active p,.pkg-card.selected b,.opt.active b{color:#000 !important;}
+.selected .price,.active .price{color:#000 !important;font-size:24px !important;font-weight:900 !important;text-shadow:none !important;}
+@keyframes denyutGold{0%{box-shadow:0 0 15px rgba(246,216,115,0.4)}50%{box-shadow:0 0 45px rgba(246,216,115,0.95)}100%{box-shadow:0 0 15px rgba(246,216,115,0.4)}}
+.selected,.active,.opt.active,.pkg-card.selected{animation:denyutGold 1.8s infinite !important;}
+.opt.active span:first-child{font-size:inherit !important;filter:none !important;}
+.pkg-card.selected::after,.paket-card.selected::after,.opt.active::after{content:"✓ DIPILIH";position:absolute;top:10px;right:10px;background:#000;color:#ffe27a;font-size:11px;font-weight:900;padding:4px 10px;border-radius:20px;z-index:5;}
+.bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:100;background:#0c0c0c;border-top:1px solid #2b2200;display:flex;align-items:flex-end;justify-content:space-around;padding:8px 8px 12px;}
+.bottom-nav button{background:none;border:none;color:#aaa;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;font-weight:700;flex:1;padding:6px 0;}
+.bottom-nav button span:first-child{font-size:21px;}
+.bottom-nav button.active{color:#f6d873;}
+.nav-center{flex:1;display:flex;justify-content:center;}
+.nav-center button{background:linear-gradient(135deg,#ffe27a,#d4af37) !important;color:#000 !important;width:62px;height:62px;border-radius:50%;margin-top:-32px;border:3px solid #050505;box-shadow:0 8px 20px rgba(212,175,55,0.5);font-size:11px;font-weight:900;flex:none;}
+.nav-center button span:first-child{font-size:26px;}
 </style>
 </head>
 <body>
@@ -240,8 +137,6 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 <div class="progress"><div><i id="p1"></i></div><div><i id="p2"></i></div><div><i id="p3"></i></div><div><i id="p4"></i></div><div><i id="p5"></i></div></div>
 <div class="step-label" id="stepLabel"></div>
 </div>
-
-<!-- WELCOME -->
 <div id="step0">
 <div class="welcome-hero"><div class="crown">👑</div><h2>Selamat Datang di<br><span>ZUAN STORE</span></h2><p>Terima kasih sudah mampir dan percaya kepada kami.<br>Di sini, Anda bukan sekadar membeli VPS —<br>Anda mendapatkan <b style="color:#fff">kenyamanan & keamanan</b> kelas premium.</p></div>
 <div class="trust-strip"><div><b>🔥 2.847+</b><span>Order Sukses</span></div><div><b>⭐ 4.9 / 5.0</b><span>Rating Pelanggan</span></div><div><b>⚡ 5 Menit</b><span>Rata-rata Jadi</span></div></div>
@@ -261,8 +156,6 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 <div class="hint">Proses hanya 1 menit, langsung jadi!</div>
 <div class="bottom-banner"><b>🟢 <span class="live-dot">●</span> SERVER ONLINE — 128 SLOT TERSEDIA HARI INI</b><span>Stok terbatas. Kemarin 47 orang kehabisan slot SULTAN, jangan sampai Anda berikutnya.</span></div>
 </div>
-
-<!-- STEP 1 SPEK + DURASI - UDAH DIISI FULL -->
 <div id="step1" class="hidden">
 <div class="step-hero"><div class="sh-icon">💻</div><h2>Pilih Spek Yang Pas Buat Kebutuhanmu</h2><p>Jangan asal pilih yang paling murah. <b>Sesuaikan dengan bot / web kamu</b> biar gak lemot & gak buang duit.</p></div>
 <div class="trust-strip"><div><b>⚡ NVMe Gen4</b><span>10x Lebih Cepat</span></div><div><b>🛡️ Garansi</b><span>Down = Ganti</span></div><div><b>🔄 Upgrade</b><span>Bisa Naik Kapan Aja</span></div></div>
@@ -282,43 +175,6 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 <button class="back" onclick="go(0)">⬅️ Kembali ke Beranda</button>
 <div class="bottom-banner"><b>⭐ 92% PELANGGAN PILIH VPS 4GB</b><span>Karena paling pas: gak lemot, gak boros. Kalau masih ragu, ambil yang ini aja.</span></div>
 </div>
-<!-- STEP PANEL - KHUSUS PANEL, BUKAN VPS -->
-  <style>
-#step1-panel .opt{border-color:#ff1e1e !important; background:#220a0a !important; color:#fff !important}
-#step1-panel .opt:hover{background:#ff1e1e !important; color:#fff !important}
-#step1-panel .opt.selected{background:#ff1e1e !important; color:#fff !important}
-#step1-panel h3{color:#ff1e1e !important}
-#step1-panel .main{background:#ff1e1e !important; color:#fff !important; border:none !important}
-#step-panel-bayar .opt{border-color:#ff1e1e !important; background:#220a0a !important}
-#step-panel-bayar h3{color:#ff1e1e !important}
-#step-panel-bayar .main{background:#ff1e1e !important; color:#fff !important; border:none !important}
-  </style>
-<div id="step1-panel" style="display:none">
-  <div class="card"><h3>1. Pilih Panel</h3>
-<div class="opt panel-opt" onclick="pilihPanel(this,'Panel 1GB')">Panel 1GB - Rp 5.000</div>
-<div class="opt panel-opt" onclick="pilihPanel(this,'Panel 2GB')">Panel 2GB - Rp 10.000</div>
-<div class="opt panel-opt" onclick="pilihPanel(this,'Panel Unlimited')">Panel Unlimited - Rp 25.000</div>
-  </div>
-  <button class="main" onclick="goPanelBayar()">Lanjut ke Pembayaran</button>
-  <button class="back" onclick="go(0)">⬅ Kembali</button>
-</div>
-
-<!-- STEP PANEL BAYAR - KHUSUS PANEL -->
-<div id="step-panel-bayar" style="display:none">
-  <div class="card"><h3>2. Pembayaran Panel</h3>
-    <p>Bayar via QRIS, lalu kirim bukti ke WhatsApp</p>
-  </div>
-  <button class="main" onclick="go('panel-selesai')">Buat Pesanan Panel</button>
-  <button class="back" onclick="go('panel')">⬅ Kembali</button>
-</div>
-<!-- SELESAI PANEL -->
-  <div id="step-panel-selesai" style="display:none">
-  <div class="card"><h3>3. Selesai Panel</h3>
-    <p>Terima kasih! Pesanan Panel kamu sudah kami terima, kirim bukti ke WhatsApp ya.</p>
-  </div>
-  <button class="main" onclick="go(0)">Kembali ke Beranda</button>
-  </div>
-<!-- STEP 2 LOKASI - UDAH DIISI FULL -->
 <div id="step2" class="hidden">
 <div class="step-hero"><div class="sh-icon">🌍</div><h2>Lokasi Menentukan Kecepatan!</h2><p>Makin dekat lokasi server dengan target kamu, <b>makin ngebut & makin stabil</b> ping nya.</p></div>
 <div class="card"><h3>2. Pilih Lokasi Server</h3><div class="grid">
@@ -334,8 +190,6 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 <button class="back" onclick="go(1)">⬅️ Kembali ke Spek</button>
 <div class="bottom-banner"><b>🟢 SEMUA LOKASI ONLINE & STABIL</b><span>Server kami dipantau 24 jam. Uptime 99.9% — kalau down tanpa sebab, kami ganti!</span></div>
 </div>
-
-<!-- STEP 3 OS - UDAH DIISI FULL, GAK POLOS LAGI -->
 <div id="step3" class="hidden">
 <div class="step-hero"><div class="sh-icon">🖥️</div><h2>Pilih Sistem Operasi — Jangan Asal Klik!</h2><p>OS itu kayak fondasi rumah. <b>Salah pilih = install ulang dari nol.</b> Tenang, gua kasih panduan nya di bawah.</p></div>
 <div class="mini-info"><div class="mi">🤔</div><div><b>Bingung? Pilih UBUNTU 24.04 Aja!</b><span>90% pelanggan pakai ini. Paling gampang, tutorial paling banyak, admin paling gampang bantuin.</span></div></div>
@@ -351,8 +205,6 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 <button class="back" onclick="go(2)">⬅️ Kembali ke Lokasi</button>
 <div class="bottom-banner"><b>💬 MASIH BINGUNG PILIH OS?</b><span>Klik tombol 💬 Chat Admin di pojok kanan bawah, admin bantu pilihin yang paling pas buat kebutuhan kamu. GRATIS!</span></div>
 </div>
-
-<!-- STEP 4 RINCIAN - UDAH DIISI FULL -->
 <div id="step4" class="hidden">
 <div class="step-hero"><div class="sh-icon">🧾</div><h2>Cek Lagi Sebelum Bayar!</h2><p>Ini step paling penting. <b>Order yang udah dibayar gak bisa refund</b> kalau salah pilih. Cek 10 detik, aman selamanya.</p></div>
 <div class="check-box rincian-effect">
@@ -369,8 +221,6 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 <div class="hint">Jika ada yang salah, klik tombol UBAH di sampingnya</div>
 <div class="bottom-banner"><b>🛡️ GARANSI 100% UANG KEMBALI JIKA SERVER GAK JADI</b><span>Kalau server gak kami buatkan setelah bayar, uang balik full. No drama, no ribet.</span></div>
 </div>
-
-<!-- STEP 5 PEMBAYARAN - UDAH DIISI FULL -->
 <div id="step5" class="hidden">
 <div class="step-hero"><div class="sh-icon">💳</div><h2>Tinggal Selangkah Lagi!</h2><p>Isi username, pilih pembayaran, bayar, <b>server langsung diproses 5 menit.</b> Gak pake lama!</p></div>
 <div class="mini-info"><div class="mi">👤</div><div><b>Username Itu Penting Banget!</b><span>Username ini yang jadi nama login VPS kamu. Pakai huruf kecil, tanpa spasi, tanpa simbol aneh. Contoh: <b style="color:#fff">zuanstore, apakau, rizkybot</b></span></div></div>
@@ -391,15 +241,26 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 <small style="text-align:center">⚠️ Ganti nomor rekening di atas dengan rekening asli kamu.<br>Nominal harus PAS: <b id="tfNominal" style="color:#fff">-</b></small>
 </div>
 </div>
-<div class="mini-info"><div class="mi">⚡</div><div><b>Abis Bayar, Terus Gimana?</b><span>1. Klik tombol SAYA SUDAH BAYAR di bawah<br>2. Kirim bukti ke admin (otomatis ke-forward)<br>3. Admin buatin VPS 5-10 menit<br>4. Kamu dapet IP + Password, langsung pake!</span></div></div>
-<button class="main" id="btnBayar" onclick="konfirmasiBayar()" disabled>✅ SAYA SUDAH BAYAR — KONFIRMASI</button>
+<div class="card" id="buktiWrap"><h3>📸 Upload Bukti Transfer</h3>
+<input id="buktiInput" type="file" accept="image/*" onchange="uploadBukti(this)" style="padding:10px">
+<small>⚠️ Wajib upload foto bukti / screenshot transfer! Tanpa bukti, tombol konfirmasi gak akan muncul.</small>
+<div id="buktiPreview" class="hidden" style="margin-top:10px;text-align:center">
+<img id="buktiImg" style="width:100%;max-width:280px;border-radius:12px;border:1.5px solid #d4af37">
+<small style="color:#00ff88;font-weight:700">✅ Bukti berhasil diupload! Sekarang lu bisa konfirmasi.</small>
+</div></div>
+<button class="main hidden" id="btnBayar" onclick="konfirmasiBayar()">✅ SAYA SUDAH BAYAR — KONFIRMASI</button>
+<p id="hintBukti" class="hint">👆 Upload bukti dulu di atas, baru tombol SAYA SUDAH BAYAR muncul!</p>
 <button class="back" onclick="go(4)">⬅️ Cek Lagi Rincian</button>
-<div class="hint">Setelah klik konfirmasi, bukti akan diteruskan ke admin & VPS langsung diproses.</div>
 <div class="bottom-banner"><b>🔒 PEMBAYARAN AMAN & TERPERCAYA</b><span>2.847+ order sudah sukses diproses. Kalau ragu, chat admin dulu sebelum bayar. Kami fast respon 24 jam!</span></div>
 </div>
-
-<button class="chat-float" onclick="chatAdmin()">💬 Chat Admin</button>
-
+<button class="chat-float" onclick="chatTele()">✈️ ADMIN TELE</button>
+<div class="bottom-nav">
+  <button onclick="go(0)"><span>🏠</span>HOME</button>
+  <button onclick="chatWA()"><span>💬</span>ADMIN WA</button>
+  <div class="nav-center"><button onclick="go(1)"><span>💻</span>ORDER</button></div>
+  <button onclick="go(0)"><span>ℹ️</span>INFO</button>
+  <button onclick="chatWA()"><span>🛠️</span>TOOLS</button>
+</div>
 <script>
 let tg = window.Telegram.WebApp; tg.expand(); tg.ready();
 let HARGA = {
@@ -410,39 +271,11 @@ let HARGA = {
  'VPS 12GB': [['1 Hari',15000],['3 Hari',35000],['5 Hari',58000],['7 Hari',80000],['14 Hari',125000],['1 Bulan',195000]],
  'VPS 16GB': [['1 Hari',20000],['3 Hari',50000],['5 Hari',80000],['7 Hari',110000],['14 Hari',175000],['1 Bulan',275000]]
 };
-let VERSI_OS = {
- 'Ubuntu': ['24.04','22.04','20.04','18.04'],
- 'Debian': ['12','11','10','9'],
- 'AlmaLinux': ['10','9','8'],
- 'Rocky Linux': ['10','9','8']
-};
+let VERSI_OS = { 'Ubuntu': ['24.04','22.04','20.04','18.04'], 'Debian': ['12','11','10','9'], 'AlmaLinux': ['10','9','8'], 'Rocky Linux': ['10','9','8'] };
 let data={spek:"",cpu:"",ram:"",storage:"",durasi:"",hargaNum:0,harga:"",lokasi:"",os:"",versi:"",username:"",bayar:""};
+let sudahUploadBukti = false;
 function formatRp(n){return 'Rp '+n.toLocaleString('id-ID');}
 function go(n){
-// === KHUSUS PANEL - JANGAN UBAH VPS ===
-if(n=='panel'||n=='panel-bayar'||n=='panel-selesai'){
-  [0,1,2,3,4,5].forEach(i=>{let e=document.getElementById('step'+i); if(e) e.style.display='none';});
-  ['step1-panel','step-panel-bayar','step-panel-selesai'].forEach(id=>{let e=document.getElementById(id); if(e) e.style.display='none';});
-  let target = n=='panel' ? 'step1-panel' : n=='panel-bayar' ? 'step-panel-bayar' : 'step-panel-selesai';
-  let el=document.getElementById(target);
-  if(el){
-    el.style.setProperty('display','block','important');
-    el.classList.remove('hidden');
-    // PAKSA BAPAK-BAPAKNYA MUNCUL JUGA
-    let p=el.parentElement;
-    while(p && p.tagName!='BODY'){
-      p.style.setProperty('display','block','important');
-      p.classList.remove('hidden');
-      p=p.parentElement;
-    }
-  }
-  window.scrollTo(0,0);
-  return;
-}
-document.getElementById('step1-panel').style.display='none';
-document.getElementById('step-panel-bayar').style.display='none';
-let sps=document.getElementById('step-panel-selesai'); if(sps) sps.style.display='none';
-  // === SELESAI PANEL ===
  [0,1,2,3,4,5].forEach(i=>document.getElementById('step'+i).classList.add('hidden'));
  document.getElementById('step'+n).classList.remove('hidden');
  document.getElementById('progressWrap').style.display = n==0 ? 'none':'block';
@@ -522,43 +355,49 @@ function pilihBayar(metode){
  document.getElementById('payTF').classList.toggle('active', metode=='Transfer Bank');
  document.getElementById('boxQRIS').classList.toggle('hidden', metode!=='QRIS');
  document.getElementById('boxTF').classList.toggle('hidden', metode!=='Transfer Bank');
- document.getElementById('btnBayar').disabled=false;
+ sudahUploadBukti = false;
+ document.getElementById('btnBayar').classList.add('hidden');
+ document.getElementById('hintBukti').classList.remove('hidden');
+ document.getElementById('buktiInput').value="";
+ document.getElementById('buktiPreview').classList.add('hidden');
  if(metode=='QRIS') document.getElementById('boxQRIS').scrollIntoView({behavior:'smooth'});
  else document.getElementById('boxTF').scrollIntoView({behavior:'smooth'});
 }
 function copyText(t){ navigator.clipboard.writeText(t); alert('Berhasil disalin: '+t); }
-function chatAdmin(){
- let link="https://t.me/Auto_orderpanelbaru_bot?text="+encodeURIComponent("Halo bang, mau tanya soal VPS 🙏");
- try{tg.close();}catch(e){}
- setTimeout(()=>{window.open(link,"_blank");},300);
+function chatWA(){
+ let link="https://wa.me/6285872257850?text="+encodeURIComponent("Halo bang, mau tanya soal VPS 🙏");
+ window.open(link,"_blank");
+}
+function chatTele(){
+ let link="https://t.me/ShanXPLD?text="+encodeURIComponent("Halo bang, mau tanya soal VPS 🙏");
+ window.open(link,"_blank");
+}
+function uploadBukti(input){
+  if(!input.files || !input.files[0]) return;
+  let file = input.files[0];
+  let reader = new FileReader();
+  reader.onload = function(e){
+    document.getElementById('buktiImg').src = e.target.result;
+    document.getElementById('buktiPreview').classList.remove('hidden');
+    document.getElementById('btnBayar').classList.remove('hidden');
+    document.getElementById('hintBukti').classList.add('hidden');
+    sudahUploadBukti = true;
+    document.getElementById('btnBayar').scrollIntoView({behavior:'smooth'});
+  };
+  reader.readAsDataURL(file);
 }
 function konfirmasiBayar(){
  let u=document.getElementById('usernameInput').value.trim().toLowerCase();
  if(!u){ alert('Isi username dulu!'); return; }
  if(u.includes(' ')){ alert('Username jangan pake spasi!'); return; }
  if(!data.bayar){ alert('Pilih metode pembayaran dulu!'); return; }
+ if(!sudahUploadBukti){ alert('Upload bukti transfer dulu bang!'); return; }
  data.username=u;
- let pesan="✅ KONFIRMASI PEMBAYARAN - ZUAN STORE\n\nPaket: "+data.spek+"\nDurasi: "+data.durasi+"\nCPU: "+data.cpu+" vCPU\nRAM: "+data.ram+"GB DDR4\nStorage: "+data.storage+"\nLokasi: "+data.lokasi+"\nOS: "+data.os+" "+data.versi+"\nUsername: "+data.username+"\nMetode Bayar: "+data.bayar+"\nTotal: "+data.harga+"\n\nSaya sudah bayar, mohon diproses 🙏";
- let link="https://t.me/Auto_orderpanelbaru_bot?text="+encodeURIComponent(pesan);
- try{tg.close();}catch(e){}
- setTimeout(()=>{window.open(link,"_blank");},300);
+ let pesan="✅ KONFIRMASI PEMBAYARAN - ZUAN STORE\n\nPaket: "+data.spek+"\nDurasi: "+data.durasi+"\nCPU: "+data.cpu+" vCPU\nRAM: "+data.ram+"GB DDR4\nStorage: "+data.storage+"\nLokasi: "+data.lokasi+"\nOS: "+data.os+" "+data.versi+"\nUsername: "+data.username+"\nMetode Bayar: "+data.bayar+"\nTotal: "+data.harga+"\n\nSaya sudah bayar, mohon dicek mutasi 🙏\n\n(Jangan lupa kirim foto bukti di sini ya)";
+ let link="https://t.me/ShanXPLD?text="+encodeURIComponent(pesan);
+ window.open(link,"_blank");
 }
 go(0);
-function pilihPanel(el,nama){
-  document.querySelectorAll('.panel-opt').forEach(o=>{o.classList.remove('active');o.classList.remove('selected');});
-  el.classList.add('active');
-  el.classList.add('selected');
-  window.panelTerpilih = nama;
-}
-function goPanelBayar(){
-  document.getElementById('step1-panel').style.display='none';
-  document.getElementById('step-panel-bayar').style.display='block';
-  window.scrollTo(0,0);
-}
-function goPanelSelesai(){
-  document.getElementById('step-panel-bayar').style.display='none';
-  document.getElementById('step-panel-selesai').style.display='block';
-  window.scrollTo(0,0);
-}
 </script>
-</html>                                                                                        </body>
+</body>
+</html>

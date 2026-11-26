@@ -279,11 +279,11 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
   </style>
 <div id="step1-panel" style="display:none">
   <div class="card"><h3>1. Pilih Panel</h3>
-    <div class="opt" onclick="pilihSpek(this,'Panel 1GB')">Panel 1GB - Rp 5.000</div>
-    <div class="opt" onclick="pilihSpek(this,'Panel 2GB')">Panel 2GB - Rp 10.000</div>
-    <div class="opt" onclick="pilihSpek(this,'Panel Unlimited')">Panel Unlimited - Rp 25.000</div>
+<div class="opt panel-opt" onclick="pilihPanel(this,'Panel 1GB')">Panel 1GB - Rp 5.000</div>
+<div class="opt panel-opt" onclick="pilihPanel(this,'Panel 2GB')">Panel 2GB - Rp 10.000</div>
+<div class="opt panel-opt" onclick="pilihPanel(this,'Panel Unlimited')">Panel Unlimited - Rp 25.000</div>
   </div>
-  <button class="main" onclick="go('panel-bayar')">Lanjut ke Pembayaran</button>
+  <button class="main" onclick="goPanelBayar()">Lanjut ke Pembayaran</button>
   <button class="back" onclick="go(0)">⬅ Kembali</button>
 </div>
 
@@ -528,5 +528,21 @@ function konfirmasiBayar(){
  setTimeout(()=>{window.open(link,"_blank");},300);
 }
 go(0);
+function pilihPanel(el,nama){
+  document.querySelectorAll('.panel-opt').forEach(o=>{o.classList.remove('active');o.classList.remove('selected');});
+  el.classList.add('active');
+  el.classList.add('selected');
+  window.panelTerpilih = nama;
+}
+function goPanelBayar(){
+  document.getElementById('step1-panel').style.display='none';
+  document.getElementById('step-panel-bayar').style.display='block';
+  window.scrollTo(0,0);
+}
+function goPanelSelesai(){
+  document.getElementById('step-panel-bayar').style.display='none';
+  document.getElementById('step-panel-selesai').style.display='block';
+  window.scrollTo(0,0);
+}
 </script>
 </html>                                                                                        </body>

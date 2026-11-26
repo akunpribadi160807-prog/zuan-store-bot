@@ -139,6 +139,59 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
   display:block !important;
   margin:8px auto 0 auto !important;
 }
+/* START - VIP-ULTRA-GLOW.css - TINGGAL TEMPEL */
+
+/* ===== STEP 1 - PAKET ===== */
+.pkg-card,.paket-card,.card-paket,.package-card{
+  background:rgba(255,255,255,0.05) !important;
+  border:1px solid rgba(255,255,255,0.12) !important;
+  border-radius:20px !important;
+}
+.pkg-card.selected,.paket-card.selected,.card-paket.selected,.package-card.selected,
+.pkg-card.active,.paket-card.active,.card-paket.active{
+  background:linear-gradient(135deg, rgba(246,216,115,0.32), rgba(255,215,0,0.08)) !important;
+  border:3px solid #ffe27a !important;
+  transform:scale(1.02) !important;
+}
+.pkg-card.selected .price,.paket-card.selected .price,.card-paket.selected .price{
+  color:#ffe27a !important;
+  text-shadow:0 0 15px rgba(246,216,115,0.9) !important;
+  font-size:24px !important;
+  font-weight:900 !important;
+}
+
+/* ===== STEP 2 - LOKASI ===== */
+.opt,.lokasi-btn,.loc-btn,.location-card{
+  background:rgba(255,255,255,0.05) !important;
+  border:1px solid rgba(255,255,255,0.12) !important;
+  border-radius:16px !important;
+  font-size:18px !important;
+  font-weight:700 !important;
+  padding:16px 10px !important;
+}
+.info-box,.tips,.kenapa,.tip-box{
+  background:rgba(255,255,255,0.05) !important;
+  border:1px solid rgba(246,216,115,0.25) !important;
+  border-radius:16px !important;
+}
+
+/* ===== ULTRA GLOW - DENYUT ===== */
+@keyframes denyutGold{
+  0%{box-shadow:0 0 15px rgba(246,216,115,0.4)}
+  50%{box-shadow:0 0 45px rgba(246,216,115,0.95), 0 0 80px rgba(246,216,115,0.45)}
+  100%{box-shadow:0 0 15px rgba(246,216,115,0.4)}
+}
+.opt.active,.lokasi-btn.active,.loc-btn.active,.opt.selected,.location-card.active,
+.pkg-card.selected,.paket-card.selected,.card-paket.selected,.package-card.selected{
+  animation:denyutGold 1.8s infinite !important;
+  border:3px solid #ffe27a !important;
+}
+.opt.active span:first-child,.lokasi-btn.active span:first-child{
+  font-size:55px !important;
+  filter:drop-shadow(0 0 12px rgba(255,255,255,0.9)) !important;
+}
+
+/* END - VIP-ULTRA-GLOW.css */
 </style>
 </head>
 <body>

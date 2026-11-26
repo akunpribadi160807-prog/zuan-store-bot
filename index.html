@@ -397,21 +397,19 @@ let VERSI_OS = {
 let data={spek:"",cpu:"",ram:"",storage:"",durasi:"",hargaNum:0,harga:"",lokasi:"",os:"",versi:"",username:"",bayar:""};
 function formatRp(n){return 'Rp '+n.toLocaleString('id-ID');}
 function go(n){
-    // === KHUSUS PANEL - JANGAN UBAH VPS ===
-  document.getElementById('step1-panel').style.display='none';
-  document.getElementById('step-panel-bayar').style.display='none';
-  if(n=='panel'){
-    [0,1,2,3,4,5].forEach(i=>document.getElementById('step'+i).style.display='none');
-    document.getElementById('step1-panel').style.display='block';
-    window.scrollTo(0,0);
-    return;
-  }
-  if(n=='panel-bayar'){
-    [0,1,2,3,4,5].forEach(i=>document.getElementById('step'+i).style.display='none');
-    document.getElementById('step-panel-bayar').style.display='block';
-    window.scrollTo(0,0);
-    return;
-  }
+// === KHUSUS PANEL - JANGAN UBAH VPS ===
+if(n=='panel'||n=='panel-bayar'||n=='panel-selesai'){
+  [0,1,2,3,4,5].forEach(i=>{let e=document.getElementById('step'+i); if(e) e.style.display='none';});
+  ['step1-panel','step-panel-bayar','step-panel-selesai'].forEach(id=>{let e=document.getElementById(id); if(e) e.style.display='none';});
+  let target = n=='panel' ? 'step1-panel' : n=='panel-bayar' ? 'step-panel-bayar' : 'step-panel-selesai';
+  let el=document.getElementById(target);
+  if(el){ el.style.setProperty('display','block','important'); el.classList.remove('hidden'); }
+  window.scrollTo(0,0);
+  return;
+}
+document.getElementById('step1-panel').style.display='none';
+document.getElementById('step-panel-bayar').style.display='none';
+let sps=document.getElementById('step-panel-selesai'); if(sps) sps.style.display='none';
   // === SELESAI PANEL ===
  [0,1,2,3,4,5].forEach(i=>document.getElementById('step'+i).classList.add('hidden'));
  document.getElementById('step'+n).classList.remove('hidden');

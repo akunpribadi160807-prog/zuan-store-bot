@@ -127,6 +127,12 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 .nav-center{flex:1;display:flex;justify-content:center;}
 .nav-center button{background:linear-gradient(135deg,#ffe27a,#d4af37) !important;color:#000 !important;width:62px;height:62px;border-radius:50%;margin-top:-32px;border:3px solid #050505;box-shadow:0 8px 20px rgba(212,175,55,0.5);font-size:11px;font-weight:900;flex:none;}
 .nav-center button span:first-child{font-size:26px;}
+/* BARU: Edit di dalam Rincian */
+.edit-box{background:#0c0c0c !important;border:1.5px dashed #d4af37 !important;border-radius:14px !important;padding:12px !important;margin-top:12px !important;text-align:left !important;}
+.edit-box h4{font-size:12px !important;color:#f6d873 !important;letter-spacing:1px !important;margin-bottom:10px !important;text-align:center !important;}
+.edit-box .opt{padding:11px !important;margin-bottom:8px !important;}
+.edit-box .opt:last-child{margin-bottom:0 !important;}
+.edit-close{background:#222 !important;color:#aaa !important;border:1px solid #444 !important;border-radius:8px !important;padding:7px 12px !important;font-size:11px !important;cursor:pointer !important;margin:10px auto 0 auto !important;display:block !important;}
 </style>
 </head>
 <body>
@@ -210,7 +216,7 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 <div class="check-box rincian-effect">
 <div class="mahkota">👑</div>
 <h2>🧾 RINCIAN ORDER KAMU</h2>
-<p>Cek dulu ya, sudah benar belum? Jika salah, klik UBAH.</p>
+<p>Cek dulu ya, sudah benar belum? Jika salah, klik UBAH. Langsung kebuka di sini, gak pindah halaman!</p>
 <div id="cekList"></div>
 </div>
 <div class="mini-info"><div class="mi">✅</div><div><b>Checklist Wajib Sebelum Lanjut:</b><span>• Spek udah sesuai kebutuhan?<br>• Durasi udah bener? (1 Hari / 1 Bulan)<br>• Lokasi udah bener?<br>• OS udah bener? (Salah OS = install ulang)</span></div></div>
@@ -271,9 +277,18 @@ let HARGA = {
  'VPS 12GB': [['1 Hari',15000],['3 Hari',35000],['5 Hari',58000],['7 Hari',80000],['14 Hari',125000],['1 Bulan',195000]],
  'VPS 16GB': [['1 Hari',20000],['3 Hari',50000],['5 Hari',80000],['7 Hari',110000],['14 Hari',175000],['1 Bulan',275000]]
 };
+let SPEK_LIST = [
+ ['VPS 1GB',1,1,'20GB NVMe','1 vCPU • 1GB DDR4 • 20GB NVMe Gen4'],
+ ['VPS 2GB',1,2,'30GB NVMe','1 vCPU • 2GB DDR4 • 30GB NVMe Gen4'],
+ ['VPS 4GB',2,4,'60GB NVMe','2 vCPU • 4GB DDR4 • 60GB NVMe Gen4'],
+ ['VPS 8GB',4,8,'100GB NVMe','4 vCPU • 8GB DDR4 • 100GB NVMe Gen4'],
+ ['VPS 12GB',6,12,'160GB NVMe','6 vCPU • 12GB DDR4 • 160GB NVMe Gen4'],
+ ['VPS 16GB',8,16,'200GB NVMe','8 vCPU • 16GB DDR4 • 200GB NVMe Gen4']
+];
 let VERSI_OS = { 'Ubuntu': ['24.04','22.04','20.04','18.04'], 'Debian': ['12','11','10','9'], 'AlmaLinux': ['10','9','8'], 'Rocky Linux': ['10','9','8'] };
 let data={spek:"",cpu:"",ram:"",storage:"",durasi:"",hargaNum:0,harga:"",lokasi:"",os:"",versi:"",username:"",bayar:""};
 let sudahUploadBukti = false;
+let editTerbuka = "";
 function formatRp(n){return 'Rp '+n.toLocaleString('id-ID');}
 function go(n){
  [0,1,2,3,4,5].forEach(i=>document.getElementById('step'+i).classList.add('hidden'));
@@ -283,15 +298,7 @@ function go(n){
  if(n>0) document.getElementById('stepLabel').innerHTML=labels[n];
  for(let i=1;i<=5;i++) document.getElementById('p'+i).style.width = i<=n ? '100%':'0%';
  window.scrollTo(0,0);
- if(n==4){
-  document.getElementById('cekList').innerHTML =
-  '<div class="check-item"><span>📦 Paket</span><span>'+data.spek+' <button onclick="go(1)">UBAH</button></span></div>'+
-  '<div class="check-item"><span>⏳ Durasi</span><span>'+data.durasi+' <button onclick="go(1)">UBAH</button></span></div>'+
-  '<div class="check-item"><span>💻 Spek</span><span>'+data.cpu+' vCPU / '+data.ram+'GB / '+data.storage+'</span></div>'+
-  '<div class="check-item"><span>🌍 Lokasi</span><span>'+data.lokasi+' <button onclick="go(2)">UBAH</button></span></div>'+
-  '<div class="check-item"><span>🖥️ OS</span><span>'+data.os+' '+data.versi+' <button onclick="go(3)">UBAH</button></span></div>';
-  document.getElementById('totalBox4').innerHTML="Total Bayar<br><b>"+data.harga+"</b>";
- }
+ if(n==4){ editTerbuka=""; renderCekList(); }
  if(n==5){
   document.getElementById('ringkasan').innerHTML =
   '<div class="summary-row"><span>Paket</span><span>'+data.spek+'</span></div>'+
@@ -305,6 +312,76 @@ function go(n){
   document.getElementById('tfNominal').innerText=data.harga;
  }
 }
+function renderCekList(){
+  let html = '';
+  // PAKET
+  html += '<div class="check-item"><span>📦 Paket</span><span>'+data.spek+' <button onclick="bukaEdit(\'paket\')">UBAH</button></span></div>';
+  if(editTerbuka=='paket'){
+    html += '<div class="edit-box"><h4>📦 PILIH PAKET LENGKAP</h4>';
+    SPEK_LIST.forEach(s=>{
+      let aktif = s[0]==data.spek ? ' active' : '';
+      let badge = s[0]=='VPS 12GB' ? ' <span class="badge plat">PRO</span>' : (s[0]=='VPS 16GB' ? ' <span class="badge gold">SULTAN 👑</span>' : '');
+      html += '<div class="opt'+aktif+'" onclick="editPaket(\''+s[0]+'\','+s[1]+','+s[2]+',\''+s[3]+'\')"><div><b>'+s[0]+badge+'</b><br><span>'+s[4]+'</span></div><div class="harga">Mulai<br>'+formatRp(HARGA[s[0]][0][1])+'</div></div>';
+    });
+    html += '<small style="text-align:center">Pilih paket baru, durasi ikut ke-reset, pilih durasi di bawah!</small><button class="edit-close" onclick="tutupEdit()">TUTUP ✕</button></div>';
+  }
+  // DURASI
+  html += '<div class="check-item"><span>⏳ Durasi</span><span>'+data.durasi+' <button onclick="bukaEdit(\'durasi\')">UBAH</button></span></div>';
+  if(editTerbuka=='durasi'){
+    html += '<div class="edit-box"><h4>⏳ PILIH DURASI - '+data.spek+'</h4>';
+    HARGA[data.spek].forEach(([dur,harga])=>{
+      let aktif = dur==data.durasi ? ' active' : '';
+      let tag = dur=='1 Bulan' ? '<span class="hemat">⭐ PALING HEMAT</span>' : (dur=='1 Hari' ? '<span>COBA DULU</span>' : '<span>Hemat per-hari</span>');
+      html += '<div class="opt'+aktif+'" onclick="editDurasi(\''+dur+'\','+harga+')"><div><b>'+dur+'</b><br><span>'+tag+'</span></div><div class="harga">'+formatRp(harga)+'</div></div>';
+    });
+    html += '<button class="edit-close" onclick="tutupEdit()">TUTUP ✕</button></div>';
+  }
+  // SPEK - info doang, ikut paket
+  html += '<div class="check-item"><span>💻 Spek</span><span>'+data.cpu+' vCPU / '+data.ram+'GB / '+data.storage+'</span></div>';
+  // LOKASI
+  html += '<div class="check-item"><span>🌍 Lokasi</span><span>'+data.lokasi+' <button onclick="bukaEdit(\'lokasi\')">UBAH</button></span></div>';
+  if(editTerbuka=='lokasi'){
+    let lokasis = [['🇸🇬 Singapore','Singapore'],['🇮🇩 Indonesia','Indonesia'],['🇺🇸 USA','USA'],['🇩🇪 Germany','Germany']];
+    html += '<div class="edit-box"><h4>🌍 PILIH LOKASI LENGKAP</h4>';
+    lokasis.forEach(l=>{
+      let aktif = l[1]==data.lokasi ? ' active' : '';
+      html += '<div class="opt'+aktif+'" style="justify-content:center" onclick="editLokasi(\''+l[1]+'\')"><b>'+l[0]+'</b></div>';
+    });
+    html += '<small style="text-align:center">Target Indonesia? Pilih Singapore / Indonesia paling ngebut!</small><button class="edit-close" onclick="tutupEdit()">TUTUP ✕</button></div>';
+  }
+  // OS
+  html += '<div class="check-item"><span>🖥️ OS</span><span>'+data.os+' '+data.versi+' <button onclick="bukaEdit(\'os\')">UBAH</button></span></div>';
+  if(editTerbuka=='os'){
+    html += '<div class="edit-box"><h4>🖥️ PILIH OS LENGKAP</h4>';
+    let oss = [['🐧','Ubuntu','Paling mudah. Cocok buat pemula.'],['🌀','Debian','Paling stabil. Favorit pro.'],['💼','AlmaLinux','Rasa enterprise. Tetap ringan.'],['🪨','Rocky Linux','Kuat dan bisa diandalkan.']];
+    oss.forEach(o=>{
+      let aktif = o[1]==data.os ? ' active' : '';
+      html += '<div class="os-card'+aktif+'" onclick="editOS(\''+o[1]+'\')"><div class="os-icon">'+o[0]+'</div><div><b>'+o[1].toUpperCase()+'</b><span>'+o[2]+'</span></div></div>';
+    });
+    if(data.os){
+      html += '<h4 style="margin-top:12px">PILIH VERSI - '+data.os+'</h4>';
+      VERSI_OS[data.os].forEach(v=>{
+        let aktif = v==data.versi ? ' active' : '';
+        let tag = v==VERSI_OS[data.os][0] ? '<span class="hemat">⭐ REKOMENDASI - PALING BARU</span>' : '<span>Versi stabil</span>';
+        html += '<div class="opt'+aktif+'" onclick="editVersi(\''+v+'\')"><div><b>'+data.os+' '+v+'</b><br><span>'+tag+'</span></div><div class="harga">Pilih Ini</div></div>';
+      });
+    }
+    html += '<button class="edit-close" onclick="tutupEdit()">TUTUP ✕</button></div>';
+  }
+  document.getElementById('cekList').innerHTML = html;
+  document.getElementById('totalBox4').innerHTML="Total Bayar<br><b>"+data.harga+"</b>";
+}
+function bukaEdit(tipe){ editTerbuka = (editTerbuka==tipe ? "" : tipe); renderCekList(); if(editTerbuka) document.getElementById('cekList').scrollIntoView({behavior:'smooth',block:'start'}); }
+function tutupEdit(){ editTerbuka=""; renderCekList(); }
+function editPaket(spek,cpu,ram,storage){
+  data.spek=spek; data.cpu=cpu; data.ram=ram; data.storage=storage;
+  data.durasi=""; data.harga=""; data.hargaNum=0;
+  editTerbuka='durasi'; renderCekList();
+}
+function editDurasi(dur,harga){ data.durasi=dur; data.hargaNum=harga; data.harga=formatRp(harga); editTerbuka=""; renderCekList(); }
+function editLokasi(lokasi){ data.lokasi=lokasi; editTerbuka=""; renderCekList(); }
+function editOS(os){ data.os=os; data.versi=""; renderCekList(); }
+function editVersi(versi){ data.versi=versi; editTerbuka=""; renderCekList(); }
 function pilihSpek(el,spek,cpu,ram,storage){
  document.querySelectorAll('#step1 .opt').forEach(o=>{ if(o.parentElement.id!=='durasiList') o.classList.remove('active'); });
  el.classList.add('active'); data.spek=spek; data.cpu=cpu; data.ram=ram; data.storage=storage;

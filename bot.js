@@ -8,7 +8,7 @@ const GROUP_TESTI = -1004432426937;
 const GROUP_PAYMENT = -1004257626762;
 
 const users = new Map();
-function rupiah(n){ return 'Rp ' + n.toLocaleString('id-ID'); }
+function rupiah(n){ return 'Rp ' + (Number(n)||0).toLocaleString('id-ID'); }
 // FIX: mono jangan pake MarkdownV2 lagi, kirim polos aja biar garis lu aman
 const mono = (t) => t;
 
@@ -685,7 +685,7 @@ bot.action(/^buy_(1gb|2gb|4gb|unli)_(\d+)$/, async (ctx) => {
 ╭─➤ 📦 PAKET    :--➤ ${data.nama}
 │   ╰─➤ 🖥️ SPEK     :--➤ ${data.spek}
 │   ╰─➤ 📅 DURASI   :--➤ ${durasi} Hari
-╰─➤ 💰 HARGA    :--➤ Rp ${harga.toLocaleString('id-ID')}
+╰─➤ 💰 HARGA    :--➤ Rp ${(harga||0).toLocaleString('id-ID')}
 
 ✦ ───────────────────── ✦
 Silahkan pilih metode pembayaran 👇`,

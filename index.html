@@ -133,6 +133,10 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 .edit-box .opt{padding:11px !important;margin-bottom:8px !important;}
 .edit-box .opt:last-child{margin-bottom:0 !important;}
 .edit-close{background:#222 !important;color:#aaa !important;border:1px solid #444 !important;border-radius:8px !important;padding:7px 12px !important;font-size:11px !important;cursor:pointer !important;margin:10px auto 0 auto !important;display:block !important;}
+#ringkasan .summary-row{display:block !important;text-align:center !important;background:rgba(255,255,255,0.06) !important;border:1px solid rgba(246,216,115,0.4) !important;border-radius:16px !important;padding:14px 10px !important;margin-bottom:10px !important;}
+#ringkasan .summary-row span{display:block !important;text-align:center !important;}
+#ringkasan .summary-row span:first-child{font-size:11px !important;letter-spacing:2px !important;text-transform:uppercase !important;color:#f6d873 !important;font-weight:700 !important;margin-bottom:4px !important;}
+#ringkasan .summary-row span:last-child{font-size:19px !important;font-weight:900 !important;color:#fff !important;}
 </style>
 </head>
 <body>
@@ -231,7 +235,12 @@ button.back{background:#222;color:#e8c93a;border:1px solid #333;border-radius:10
 <div class="step-hero"><div class="sh-icon">💳</div><h2>Tinggal Selangkah Lagi!</h2><p>Isi username, pilih pembayaran, bayar, <b>server langsung diproses 5 menit.</b> Gak pake lama!</p></div>
 <div class="mini-info"><div class="mi">👤</div><div><b>Username Itu Penting Banget!</b><span>Username ini yang jadi nama login VPS kamu. Pakai huruf kecil, tanpa spasi, tanpa simbol aneh. Contoh: <b style="color:#fff">zuanstore, apakau, rizkybot</b></span></div></div>
 <div class="card"><h3>Username VPS</h3><input id="usernameInput" type="text" placeholder="contoh: apakau" autocapitalize="none" autocomplete="off" spellcheck="false"><small>⚠️ Huruf kecil saja • Tanpa spasi • Tidak bisa diganti setelah order</small></div>
-<div class="card"><h3>RINCIAN ORDER KAMU</h3><div id="ringkasan"></div></div>
+<div class="check-box rincian-effect">
+<div class="mahkota">👑</div>
+<h2>🧾 RINCIAN ORDER KAMU</h2>
+<p>Sudah benar semua? Lanjut bayar ya!</p>
+<div id="ringkasan"></div>
+</div>
 <div class="total" id="totalBox">Total Bayar<br><b>-</b></div>
 <div class="card" style="margin-top:13px"><h3>💳 Pilih Metode Pembayaran</h3>
 <div class="pay-opt" id="payQRIS" onclick="pilihBayar('QRIS')"><div class="p-icon">📱</div><div><b>QRIS — Scan & Bayar</b><span>Semua e-wallet & m-banking. Paling cepat, 1 menit beres.</span></div></div>

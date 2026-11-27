@@ -366,25 +366,7 @@ Ada juga 1H / 3H / 5H / 7H / 14H!
 ✦ ───────────────────── ✦
 
 Klik paket nya 👇`;
-const JASA_TXT = `✦ ───────────────────── ✦
-🛠️ JASA INSTALL / SETTING 🛠️
-⚙️ DIBANTU SAMPAI BERES
-✦ ───────────────────── ✦
 
-│ 💎 PILIH JASA KAMU 💎 │
-
-╭─➤ [1] 🤖 INSTALL BOT WA — Rp 15.000
-│   ╰─➤ Sampai Jalan & Online
-╭─➤ [2] 🎮 INSTALL PANEL — Rp 20.000
-│   ╰─➤ Pterodactyl Full Setting
-╭─➤ [3] 🌐 INSTALL WEB / STORE — Rp 25.000
-│   ╰─➤ Domain + SSL + Tampilan
-╰─➤ [4] 🔧 SETTING VPS — Rp 10.000
-    ╰─➤ Optimasi Biar Ngebut
-
-✦ ───────────────────── ✦
-
-Klik jasa nya 👇`;
 const JASA_TXT = `✦ ───────────────────── ✦
 🛠️ JASA INSTALL / SETTING 🛠️
 ⚙️ DIBANTU SAMPAI BERES

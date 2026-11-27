@@ -609,6 +609,13 @@ bot.action('panel_1gb', async (ctx) => {
 ✦ ───────────────────── ✦
 
 1GB RAM | 10GB Disk | 40% CPU
+✦ㅤ━━━━━━━━━━━━━━━ㅤ✦
+1. 1 Hari  - Rp 1.000
+2. 3 Hari  - Rp 2.000
+3. 5 Hari  - Rp 3.000
+4. 7 Hari  - Rp 4.000
+5. 14 Hari - Rp 6.000
+6. 30 Hari - Rp 10.000
 
 Pilih angka 1 - 6 👇`,
     kbDurasi1GB
@@ -622,6 +629,13 @@ bot.action('panel_2gb', async (ctx) => {
 ✦ ───────────────────── ✦
 
 2GB RAM | 20GB Disk | 80% CPU
+✦━━━━━━━━━━━━━━━━━━━━━━━✦
+1. 1 Hari  - Rp 2.000
+2. 3 Hari  - Rp 3.500
+3. 5 Hari  - Rp 5.000
+4. 7 Hari  - Rp 7.000
+5. 14 Hari - Rp 10.000
+6. 30 Hari - Rp 15.000
 
 Pilih angka 1 - 6 👇`,
     kbDurasi2GB
@@ -635,6 +649,13 @@ bot.action('panel_4gb', async (ctx) => {
 ✦ ───────────────────── ✦
 
 4GB RAM | 40GB Disk | 150% CPU
+✦━━━━━━━━━━━━━━━━━━━━━━━✦
+1. 1 Hari  - Rp 3.000
+2. 3 Hari  - Rp 5.000
+3. 5 Hari  - Rp 7.000
+4. 7 Hari  - Rp 10.000
+5. 14 Hari - Rp 15.000
+6. 30 Hari - Rp 25.000
 
 Pilih angka 1 - 6 👇`,
     kbDurasi4GB
@@ -648,6 +669,13 @@ bot.action('panel_unli', async (ctx) => {
 ✦ ───────────────────── ✦
 
 UNLI RAM | UNLI Disk | UNLI CPU
+✦━━━━━━━━━━━━━━━━━━━━━━━━✦
+1. 1 Hari  - Rp 4.000
+2. 3 Hari  - Rp 6.000
+3. 5 Hari  - Rp 9.000
+4. 7 Hari  - Rp 12.000
+5. 14 Hari - Rp 18.000
+6. 30 Hari - Rp 30.000
 
 Pilih angka 1 - 6 👇`,
     kbDurasiUNLI

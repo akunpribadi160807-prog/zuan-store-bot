@@ -777,31 +777,36 @@ bot.on('callback_query', async (ctx) => {
     catch(e){ await ctx.reply(qrisTxt(u) + '\n\n⚠️ Foto QRIS belum ada, taro file qris.jpg di folder bot ya'); }
     return;
   }
-});
+  } // <-- penutup if(data==='qris')
 
- // FIX VALID - DULU CRASH DI SINI
+  // FIX VALID - UDAH BENER, MASUK KE DALAM bot.on
   if(data.startsWith('valid_')){
-    if(id !== ADMIN_ID) return ctx.reply('Cuma owner yang bisa VALID.');
+    if(id !== ADMIN_ID) return ctx.reply('Cuma admin yang bisa validasi!');
     const custId = Number(data.split('_')[1]);
     const cust = users.get(custId);
-    if(!cust) return ctx.reply('Order tidak ketemu, mungkin bot restart.');
+    if(!cust) return ctx.reply('Order tidak ketemu!');
     cust.step = 'tanya_izin_post';
     await bot.telegram.sendMessage(custId, validTxt(cust));
-    await ctx.reply('✅ Udah VALID, cust udah dikirimin notif.');
-    await bot.telegram.sendMessage(custId, 'Boleh izin post testimoni nya di grup kak?', Markup.inlineKeyboard([
-      [Markup.button.callback('✅ BOLEH', 'izin_ya'), Markup.button.callback('❌ JANGAN', 'izin_tidak')]
-    ]));
+    await ctx.reply('✅ Udah VALID, cust udah dikabarin!');
+    await bot.telegram.sendMessage(custId, 'Boleh izin post testi?', {
+      reply_markup: { inline_keyboard: [[
+        Markup.button.callback('✅ BOLEH', 'izin_boleh'),
+        Markup.button.callback('❌ JANGAN', 'izin_jangan')
+      ]]}
+    });
     return;
   }
+
   if(data.startsWith('tolak_')){
-    if(id !== ADMIN_ID) return ctx.reply('Cuma owner yang bisa TOLAK.');
+    if(id !== ADMIN_ID) return ctx.reply('Cuma admin yang bisa tolak!');
     const custId = Number(data.split('_')[1]);
     const cust = users.get(custId);
-    if(!cust) return ctx.reply('Order tidak ketemu.');
+    if(!cust) return ctx.reply('Order tidak ketemu!');
     await bot.telegram.sendMessage(custId, tolakTxt(cust));
-    await ctx.reply('❌ Udah DITOLAK, cust udah dikirimin alasan.');
+    await ctx.reply('❌ Udah DITOLAK, cust udah dikabarin!');
     return;
-     }
+  }
+
   if(data==='izin_ya'){
     await ctx.reply('Makasih banyak kak! Testimoni kakak bakal kami post di grup biar makin rame!');
     await bot.telegram.sendMessage(ADMIN_ID, `Cust ${id} (@${ctx.from.username||'-'}) IZIN POST testimoni.`);

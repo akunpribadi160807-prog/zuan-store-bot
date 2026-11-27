@@ -773,13 +773,11 @@ bot.on('callback_query', async (ctx) => {
 
   if(data==='admin_chat'){ u.step='chat_admin'; await bot.telegram.sendMessage(ADMIN_ID, `🔔 Ada cust minta admin! ID: ${id} (@${ctx.from.username||'-'})`); return ctx.reply('✅ Oke kak, admin sudah dihubungi! Tunggu sebentar ya, admin akan chat kakak langsung 🙏\nKetik /start buat balik.'); }
   if(data==='qris'){
-    try{ await ctx.replyWithPhoto({source:'./qris.jpg'}, {caption: qrisTxt(u)}); }
-    catch(e){ await ctx.reply(qrisTxt(u) + '\n\n⚠️ Foto QRIS belum ada, taro file qris.jpg di folder bot ya'); }
-    return;
-  }
-  } // <-- penutup if(data==='qris')
+  try{ await ctx.replyWithPhoto({source:'./qris.jpg'}); }
+  catch(e){ await ctx.reply(qrisTxt(u)); }
+  return;
+}
 
-  // FIX VALID - UDAH BENER, MASUK KE DALAM bot.on
   if(data.startsWith('valid_')){
     if(id !== ADMIN_ID) return ctx.reply('Cuma admin yang bisa validasi!');
     const custId = Number(data.split('_')[1]);

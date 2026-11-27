@@ -536,16 +536,16 @@ const kbPanel = Markup.inlineKeyboard([
 // KALO PILIH 1GB, MUNCUL ANGKA 1-6
 const kbDurasi1GB = Markup.inlineKeyboard([
   [
-    { text: '✅ [1] 1 Hari - 1K', callback_data: 'buy_1gb_1' },
-    { text: '✅ [2] 3 Hari - 2K', callback_data: 'buy_1gb_3' }
+    { text: '1', callback_data: 'buy_1gb_1' },
+    { text: '2', callback_data: 'buy_1gb_3' }
   ],
   [
-    { text: '✅ [3] 5 Hari - 3K', callback_data: 'buy_1gb_5' },
-    { text: '✅ [4] 7 Hari - 4K', callback_data: 'buy_1gb_7' }
+    { text: '3', callback_data: 'buy_1gb_5' },
+    { text: '4', callback_data: 'buy_1gb_7' }
   ],
   [
-    { text: '✅ [5] 14 Hari - 6K', callback_data: 'buy_1gb_14' },
-    { text: '✅ [6] 30 Hari - 10K', callback_data: 'buy_1gb_30' }
+    { text: '5', callback_data: 'buy_1gb_14' },
+    { text: '6', callback_data: 'buy_1gb_30' }
   ],
   [{ text: '❌ Kembali', callback_data: 'menu_panel' }],
 ]);
@@ -553,16 +553,16 @@ const kbDurasi1GB = Markup.inlineKeyboard([
 // KALO PILIH 2GB
 const kbDurasi2GB = Markup.inlineKeyboard([
   [
-    { text: '✅ [1] 1 Hari - 2K', callback_data: 'buy_2gb_1' },
-    { text: '✅ [2] 3 Hari - 3.5K', callback_data: 'buy_2gb_3' }
+    { text: '1', callback_data: 'buy_2gb_1' },
+    { text: '2', callback_data: 'buy_2gb_3' }
   ],
   [
-    { text: '✅ [3] 5 Hari - 5K', callback_data: 'buy_2gb_5' },
-    { text: '✅ [4] 7 Hari - 7K', callback_data: 'buy_2gb_7' }
+    { text: '3', callback_data: 'buy_2gb_5' },
+    { text: '4', callback_data: 'buy_2gb_7' }
   ],
   [
-    { text: '✅ [5] 14 Hari - 10K', callback_data: 'buy_2gb_14' },
-    { text: '✅ [6] 30 Hari - 15K', callback_data: 'buy_2gb_30' }
+    { text: '5', callback_data: 'buy_2gb_14' },
+    { text: '6', callback_data: 'buy_2gb_30' }
   ],
   [{ text: '❌ Kembali', callback_data: 'menu_panel' }],
 ]);
@@ -570,16 +570,16 @@ const kbDurasi2GB = Markup.inlineKeyboard([
 // KALO PILIH 4GB
 const kbDurasi4GB = Markup.inlineKeyboard([
   [
-    { text: '✅ [1] 1 Hari - 3K', callback_data: 'buy_4gb_1' },
-    { text: '✅ [2] 3 Hari - 5K', callback_data: 'buy_4gb_3' }
+    { text: '1', callback_data: 'buy_4gb_1' },
+    { text: '2', callback_data: 'buy_4gb_3' }
   ],
   [
-    { text: '✅ [3] 5 Hari - 7K', callback_data: 'buy_4gb_5' },
-    { text: '✅ [4] 7 Hari - 10K', callback_data: 'buy_4gb_7' }
+    { text: '3', callback_data: 'buy_4gb_5' },
+    { text: '4', callback_data: 'buy_4gb_7' }
   ],
   [
-    { text: '✅ [5] 14 Hari - 15K', callback_data: 'buy_4gb_14' },
-    { text: '✅ [6] 30 Hari - 25K', callback_data: 'buy_4gb_30' }
+    { text: '5', callback_data: 'buy_4gb_14' },
+    { text: '6', callback_data: 'buy_4gb_30' }
   ],
   [{ text: '❌ Kembali', callback_data: 'menu_panel' }],
 ]);
@@ -587,16 +587,16 @@ const kbDurasi4GB = Markup.inlineKeyboard([
 // KALO PILIH UNLI
 const kbDurasiUNLI = Markup.inlineKeyboard([
   [
-    { text: '✅ [1] 1 Hari - 4K', callback_data: 'buy_unli_1' },
-    { text: '✅ [2] 3 Hari - 6K', callback_data: 'buy_unli_3' }
+    { text: '1', callback_data: 'buy_unli_1' },
+    { text: '2', callback_data: 'buy_unli_3' }
   ],
   [
-    { text: '✅ [3] 5 Hari - 9K', callback_data: 'buy_unli_5' },
-    { text: '✅ [4] 7 Hari - 12K', callback_data: 'buy_unli_7' }
+    { text: '3', callback_data: 'buy_unli_5' },
+    { text: '4', callback_data: 'buy_unli_7' }
   ],
   [
-    { text: '✅ [5] 14 Hari - 18K', callback_data: 'buy_unli_14' },
-    { text: '✅ [6] 30 Hari - 30K', callback_data: 'buy_unli_30' }
+    { text: '5', callback_data: 'buy_unli_14' },
+    { text: '6', callback_data: 'buy_unli_30' }
   ],
   [{ text: '❌ Kembali', callback_data: 'menu_panel' }],
 ]);

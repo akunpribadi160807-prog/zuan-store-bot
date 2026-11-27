@@ -267,23 +267,23 @@ function bayarTxt(u){
    ┃ 💻 𝐃𝐄𝐓𝐀𝐈𝐋 𝐕𝐏𝐒 𝐊𝐀𝐌𝐔 💻  ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-  ╭─► 📦 PAKETㅤ:--➤ ${u.nama}
-  │
-  ├─► 🖥️ CPUㅤㅤ:--➤ ${u.cpu || '-'}
-  │
-  ├─► 🧠 RAMㅤㅤ:--➤ ${u.ram || '-'}
-  │
-  ├─► 💾 STORAGEㅤ:--➤ ${u.storage || '-'}
-  │
-  ├─► 📍 LOKASIㅤ:--➤ ${u.lokasi || '-'}
-  │
-  ├─► 📀 OSㅤㅤㅤ:--➤ ${u.os || '-'}
-  │
-  ├─► 👤 USERNAME:--➤ ${u.username}
-  │
-  ├─► 🔑 PASSWORD:--➤ Dikirim setelah Payment
-  │
-  ╰─► 📅 DURASIㅤ:--➤ 30 Hari Full + Garansi Kalo Mokad
+╭─➤ 📦 PAKET    :--➤ ${u.nama}
+│
+│   ╰─➤ 🖥️ CPU      :--➤ ${u.cpu || '-'}
+│
+│   ╰─➤ 🧠 RAM      :--➤ ${u.ram || '-'}
+│
+│   ╰─➤ 💾 STORAGE  :--➤ ${u.storage || '-'}
+│
+│   ╰─➤ 📍 LOKASI   :--➤ ${u.lokasi || '-'}
+│
+│   ╰─➤ 💿 OS       :--➤ ${u.os || '-'}
+│
+│   ╰─➤ 👤 USERNAME :--➤ ${u.username}
+│
+│   ╰─➤ 🔑 PASSWORD :--➤ Dikirim setelah Payment
+│
+╰─➤ 📅 DURASI   :--➤ 30 Hari Full + Garansi Ka
 
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
 ┃       💰 TOTAL PEMBAYARAN 💰       ┃
@@ -296,15 +296,16 @@ function bayarTxt(u){
 
   ╭─► 🏦 SEABANK
   │     ├─➤ No. Rek : 9012-4214-5662
-  │     ╰─➤ A.Nㅤㅤ: MUHAMAD IKHSANDI AKBAR
+  │     ╰─➤ MUHAMAD IKHSANDI AKBAR
   │
   ├─► 📱 GOPAY
   │     ├─➤ No. HP : 0858-7225-7850
-  │     ╰─➤ A.Nㅤㅤ: MUHAMAD IKHSANDI AKBAR
+  │     ╰─➤ MUHAMAD IKHSANDI AKBAR
   │
   ╰─► ⚠️ DANA — SEDANG ADA KENDALA ⚠️
         ├─➤ Akun owner sedang gangguan
-        ╰─➤ Mohon pakai : QRIS / Seabank / Gopay dulu ya
+        ╰─➤ Mohon pakai : 
+        QRIS / Seabank / Gopay dulu ya
 
 Klik tombol QRIS di bawah 👇`;
 }
@@ -321,7 +322,7 @@ function qrisTxt(u){
   menyelesaikan pembayaran sebesar:
 
   ╭─► 💰 ${rupiah(u.harga)}
-  ╰─► 👤 A.N : MUHAMAD IKHSANDI AKBAR
+  ╰─► 👤 MUHAMAD IKHSANDI AKBAR
 
 QR ini bisa di scan melalui:
 • DANA
@@ -340,75 +341,82 @@ sudah memilih ZUAN STORE 💎
 Kami sangat menghargai kepercayaan kakak.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
-⚡ ZUAN STORE - CEPAT. STABIL. TANPA RIBET. ⚡
+ㅤㅤㅤㅤㅤ⚡ ZUAN STORE ⚡
 ━━━━━━━━━━━━━━━━━━━━━━━━━━`;
 }
-const PANEL_TXT = `╔═════════════════════════════════╗
-        📱 PANEL PTERODACTYL 📱
-          🎮 SERVER GAME & BOT
-╚═════════════════════════════════╝
+const PANEL_TXT = `✦ ───────────────────── ✦
+📱 PANEL PTERODACTYL 📱
+🎮 SERVER GAME & BOT
+✦ ━━━━━━━━━━━━━━━━━━━━━━━━ ✦
 
-╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
-  ┃ 💎 PILIH PAKET PANEL 💎  ┃
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+│ 💎 PILIH PAKET PANEL 💎 │
 
-  ╭─► 01 — PANEL 1GB / Rp 5.000
-  │     ╰─➤ 1GB RAM | 10GB Disk | 40% CPU
-  ├─► 02 — PANEL 2GB / Rp 8.000
-  │     ╰─➤ 2GB RAM | 20GB Disk | 80% CPU
-  ├─► 03 — PANEL 4GB / Rp 15.000
-  │     ╰─➤ 4GB RAM | 40GB Disk | 150% CPU
-  ╰─► 04 — PANEL UNLIMITED / Rp 30.000 
-        ╰─➤ UNLI RAM | UNLI Disk | UNLI CPU
+╭─➤ 01 — PANEL 1GB / Rp 10.000
+│   ╰─➤ 1GB RAM | 10GB Disk | 40% CPU
+╭─➤ 02 — PANEL 2GB / Rp 15.000
+│   ╰─➤ 2GB RAM | 20GB Disk | 80% CPU
+╭─➤ 03 — PANEL 4GB / Rp 25.000
+│   ╰─➤ 4GB RAM | 40GB Disk | 150% CPU
+╰─➤ 04 — PANEL UNLIMITED / Rp 30.000
+    ╰─➤ UNLI RAM | UNLI Disk | UNLI CPU
+
+✦ ───────────────────── ✦
+Harga di atas untuk 30 Hari!
+Ada juga 1H / 3H / 5H / 7H / 14H!
+✦ ───────────────────── ✦
 
 Klik paket nya 👇`;
-const DOMAIN_TXT = `╔═════════════════════════════════╗
-          🌐 DOMAIN MURAH 🌐
-       🔗 NAMA KEREN BUAT WEB LU
-╚═════════════════════════════════╝
+const JASA_TXT = `✦ ───────────────────── ✦
+🛠️ JASA INSTALL / SETTING 🛠️
+⚙️ DIBANTU SAMPAI BERES
+✦ ───────────────────── ✦
 
-╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
-┃       💎 LIST HARGA DOMAIN 💎       ┃
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+│ 💎 PILIH JASA KAMU 💎 │
 
-  ╭─► [1] .my.id  — Rp 12.000 /tahun
-  ├─► [2] .xyz    — Rp 15.000 /tahun
-  ├─► [3] .online — Rp 20.000 /tahun
-  ├─► [4] .store  — Rp 25.000 /tahun
-  ├─► [5] .com    — Rp 95.000 /tahun
-  ╰─► [6] .id     — Rp 180.000 /tahun
+╭─➤ [1] 🤖 INSTALL BOT WA — Rp 15.000
+│   ╰─➤ Sampai Jalan & Online
+╭─➤ [2] 🎮 INSTALL PANEL — Rp 20.000
+│   ╰─➤ Pterodactyl Full Setting
+╭─➤ [3] 🌐 INSTALL WEB / STORE — Rp 25.000
+│   ╰─➤ Domain + SSL + Tampilan
+╰─➤ [4] 🔧 SETTING VPS — Rp 10.000
+    ╰─➤ Optimasi Biar Ngebut
 
-Klik eksistensi nya 👇`;
-const JASA_TXT = `╔═════════════════════════════════╗
-     🛠️ JASA INSTALL / SETTING 🛠️
-        ⚙️ DIBANTU SAMPAI BERES
-╚═════════════════════════════════╝
-
-╭━━━━━━━━━━━━━━━━━━━━━━━━━━╮
- ┃    💎 PILIH JASA KAMU 💎   ┃
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
-
-  ╭─► [1] 🤖 INSTALL BOT WA — Rp 15.000
-  │     ╰─➤ Sampai Jalan & Online
-  ├─► [2] 🎮 INSTALL PANEL — Rp 20.000
-  │     ╰─➤ Pterodactyl Full Setting
-  ├─► [3] 🌐 INSTALL WEB / STORE — Rp 25.000
-  │     ╰─➤ Domain + SSL + Tampilan
-  ╰─► [4] 🔧 SETTING VPS — Rp 10.000
-        ╰─➤ Optimasi Biar Ngebut
+✦ ───────────────────── ✦
 
 Klik jasa nya 👇`;
-const ADMIN_TXT = `╔═════════════════════════════════╗
-          💬 HUBUNGI ADMIN 💬
-╚═════════════════════════════════╝
+const JASA_TXT = `✦ ───────────────────── ✦
+🛠️ JASA INSTALL / SETTING 🛠️
+⚙️ DIBANTU SAMPAI BERES
+✦ ───────────────────── ✦
 
-     Butuh bantuan? Santai, admin kita
-           fast respon kok! 😎👇
+│ 💎 PILIH JASA KAMU 💎 │
 
-  ╭─► 👨‍💻 ADMIN  : ShanXPLD
-  ├─► ⏰ ONLINE : 24 Jam
-  ├─► ⚡ RESPON : 1 - 5 Menit
-  ╰─► 📱 TELE   : Klik tombol di bawah
+╭─➤ [1] 🤖 INSTALL BOT WA — Rp 15.000
+│   ╰─➤ Sampai Jalan & Online
+╭─➤ [2] 🎮 INSTALL PANEL — Rp 20.000
+│   ╰─➤ Pterodactyl Full Setting
+╭─➤ [3] 🌐 INSTALL WEB / STORE — Rp 25.000
+│   ╰─➤ Domain + SSL + Tampilan
+╰─➤ [4] 🔧 SETTING VPS — Rp 10.000
+    ╰─➤ Optimasi Biar Ngebut
+
+✦ ───────────────────── ✦
+
+Klik jasa nya 👇`;
+const ADMIN_TXT = `✦ ───────────────────── ✦
+💬 HUBUNGI ADMIN 💬
+✦ ───────────────────── ✦
+
+Butuh bantuan? Santai, admin kita
+fast respon kok! 😎👇
+
+╭─➤ 👨‍💻 ADMIN : ShanXPLD
+│   ╰─➤ ⏰ ONLINE : 24 Jam
+│   ╰─➤ ⚡ RESPON : 1 - 5 Menit
+╰─➤ 📱 TELE : Klik tombol di bawah
+
+✦ ───────────────────── ✦
 
 Klik tombol ADMIN 👇`;
 function validTxt(u){
@@ -466,32 +474,32 @@ function tolakTxt(u){
 
 const kbMenu = Markup.inlineKeyboard([
   [
-    { text: '💻 VPS MURAH', callback_data: 'menu_1' },
-    { text: '📱 PANEL', callback_data: 'menu_2' }
+    { text: '✅💻 VPS MURAH', callback_data: 'menu_1' },
+    { text: '✅📱 PANEL', callback_data: 'menu_2' }
   ],
   [
-    { text: '🌐 DOMAIN MURAH', callback_data: 'menu_3' },
-    { text: '🛠️ JASA INSTALL', callback_data: 'menu_4' }
+    { text: '✅🌐 DOMAIN MURAH', callback_data: 'menu_3' },
+    { text: '✅🛠️ JASA INSTALL', callback_data: 'menu_4' }
   ],
   [
-    { text: '💬 HUBUNGI ADMIN', callback_data: 'menu_5' }
+    { text: '✅💬 HUBUNGI ADMIN', callback_data: 'menu_5' }
   ],
 ]);
 
 const kbVps = Markup.inlineKeyboard([
   [
-    { text: '1', callback_data: 'vps_1' },
-    { text: '4', callback_data: 'vps_4' }
+    { text: '✅1', callback_data: 'vps_1' },
+    { text: '✅4', callback_data: 'vps_4' }
   ],
   [
-    { text: '2', callback_data: 'vps_2' },
-    { text: '5', callback_data: 'vps_5' }
+    { text: '✅2', callback_data: 'vps_2' },
+    { text: '✅5', callback_data: 'vps_5' }
   ],
   [
-    { text: '3', callback_data: 'vps_3' },
-    { text: '6', callback_data: 'vps_6' }
+    { text: '✅3', callback_data: 'vps_3' },
+    { text: '✅6', callback_data: 'vps_6' }
   ],
-  [{ text: '⏪ BACK', callback_data: 'back_menu' }],
+  [{ text: '❌ BACK', callback_data: 'back_menu' }],
 ]);
 
 const kbLokasi = Markup.inlineKeyboard([
@@ -510,12 +518,12 @@ const kbOsFamily = Markup.inlineKeyboard([
     { text: 'ALMALINUX', callback_data: 'osfam_alma' },
     { text: 'ROCKY LINUX', callback_data: 'osfam_rocky' }
   ],
-  [{ text: '⏪ Kembali', callback_data: 'back_lokasi' }],
+  [{ text: '❌ Kembali', callback_data: 'back_lokasi' }],
 ]);
 
 function kbOsVersion(fam){
   const btns = OS_VERSIONS_LABEL[fam].map((label, i) => [{ text: '✅ ' + label, callback_data: `osver_${fam}_${i}` }]);
-  btns.push([{ text: '⏪ Kembali ke OS', callback_data: 'back_os' }]);
+  btns.push([{ text: '❌ Kembali ke OS', callback_data: 'back_os' }]);
   return Markup.inlineKeyboard(btns);
 }
 
@@ -528,20 +536,180 @@ const kbYaBatal = Markup.inlineKeyboard([
 
 const kbBayar = Markup.inlineKeyboard([
   [{ text: '📷 LIAT QRIS', callback_data: 'qris' }],
-  [{ text: '⏪ MENU UTAMA', callback_data: 'back_menu' }],
+  [{ text: '❌ MENU UTAMA', callback_data: 'back_menu' }],
 ]);
 
 const kbPanel = Markup.inlineKeyboard([
   [
-    { text: 'PANEL 1GB | 3K', callback_data: 'panel_1' },
-    { text: 'PANEL 2GB | 6K', callback_data: 'panel_2' }
+    { text: '✅ PANEL 1GB', callback_data: 'panel_1gb' },
+    { text: '✅ PANEL 2GB', callback_data: 'panel_2gb' }
   ],
   [
-    { text: 'PANEL 4GB | 9K', callback_data: 'panel_3' },
-    { text: 'UNLI | 25K', callback_data: 'panel_4' }
+    { text: '✅ PANEL 4GB', callback_data: 'panel_4gb' },
+    { text: '✅ PANEL UNLI', callback_data: 'panel_unli' }
   ],
-  [{ text: '⏪ Kembali', callback_data: 'back_menu' }],
+  [{ text: '❌ Kembali', callback_data: 'back_menu' }],
 ]);
+
+// KALO PILIH 1GB, MUNCUL ANGKA 1-6
+const kbDurasi1GB = Markup.inlineKeyboard([
+  [
+    { text: '✅ [1] 1 Hari - 1K', callback_data: 'buy_1gb_1' },
+    { text: '✅ [2] 3 Hari - 2K', callback_data: 'buy_1gb_3' }
+  ],
+  [
+    { text: '✅ [3] 5 Hari - 3K', callback_data: 'buy_1gb_5' },
+    { text: '✅ [4] 7 Hari - 4K', callback_data: 'buy_1gb_7' }
+  ],
+  [
+    { text: '✅ [5] 14 Hari - 6K', callback_data: 'buy_1gb_14' },
+    { text: '✅ [6] 30 Hari - 10K', callback_data: 'buy_1gb_30' }
+  ],
+  [{ text: '❌ Kembali', callback_data: 'menu_panel' }],
+]);
+
+// KALO PILIH 2GB
+const kbDurasi2GB = Markup.inlineKeyboard([
+  [
+    { text: '✅ [1] 1 Hari - 2K', callback_data: 'buy_2gb_1' },
+    { text: '✅ [2] 3 Hari - 3.5K', callback_data: 'buy_2gb_3' }
+  ],
+  [
+    { text: '✅ [3] 5 Hari - 5K', callback_data: 'buy_2gb_5' },
+    { text: '✅ [4] 7 Hari - 7K', callback_data: 'buy_2gb_7' }
+  ],
+  [
+    { text: '✅ [5] 14 Hari - 10K', callback_data: 'buy_2gb_14' },
+    { text: '✅ [6] 30 Hari - 15K', callback_data: 'buy_2gb_30' }
+  ],
+  [{ text: '❌ Kembali', callback_data: 'menu_panel' }],
+]);
+
+// KALO PILIH 4GB
+const kbDurasi4GB = Markup.inlineKeyboard([
+  [
+    { text: '✅ [1] 1 Hari - 3K', callback_data: 'buy_4gb_1' },
+    { text: '✅ [2] 3 Hari - 5K', callback_data: 'buy_4gb_3' }
+  ],
+  [
+    { text: '✅ [3] 5 Hari - 7K', callback_data: 'buy_4gb_5' },
+    { text: '✅ [4] 7 Hari - 10K', callback_data: 'buy_4gb_7' }
+  ],
+  [
+    { text: '✅ [5] 14 Hari - 15K', callback_data: 'buy_4gb_14' },
+    { text: '✅ [6] 30 Hari - 25K', callback_data: 'buy_4gb_30' }
+  ],
+  [{ text: '❌ Kembali', callback_data: 'menu_panel' }],
+]);
+
+// KALO PILIH UNLI
+const kbDurasiUNLI = Markup.inlineKeyboard([
+  [
+    { text: '✅ [1] 1 Hari - 4K', callback_data: 'buy_unli_1' },
+    { text: '✅ [2] 3 Hari - 6K', callback_data: 'buy_unli_3' }
+  ],
+  [
+    { text: '✅ [3] 5 Hari - 9K', callback_data: 'buy_unli_5' },
+    { text: '✅ [4] 7 Hari - 12K', callback_data: 'buy_unli_7' }
+  ],
+  [
+    { text: '✅ [5] 14 Hari - 18K', callback_data: 'buy_unli_14' },
+    { text: '✅ [6] 30 Hari - 30K', callback_data: 'buy_unli_30' }
+  ],
+  [{ text: '❌ Kembali', callback_data: 'menu_panel' }],
+]);
+
+// === PENYAMBUNG PANEL -> DURASI ===
+bot.action('panel_1gb', async (ctx) => {
+  await ctx.editMessageText(
+`✦ ───────────────────── ✦
+📱 PANEL 1GB - PILIH DURASI 📱
+✦ ───────────────────── ✦
+
+1GB RAM | 10GB Disk | 40% CPU
+
+Pilih angka 1 - 6 👇`,
+    kbDurasi1GB
+  );
+});
+
+bot.action('panel_2gb', async (ctx) => {
+  await ctx.editMessageText(
+`✦ ───────────────────── ✦
+📱 PANEL 2GB - PILIH DURASI 📱
+✦ ───────────────────── ✦
+
+2GB RAM | 20GB Disk | 80% CPU
+
+Pilih angka 1 - 6 👇`,
+    kbDurasi2GB
+  );
+});
+
+bot.action('panel_4gb', async (ctx) => {
+  await ctx.editMessageText(
+`✦ ───────────────────── ✦
+📱 PANEL 4GB - PILIH DURASI 📱
+✦ ───────────────────── ✦
+
+4GB RAM | 40GB Disk | 150% CPU
+
+Pilih angka 1 - 6 👇`,
+    kbDurasi4GB
+  );
+});
+
+bot.action('panel_unli', async (ctx) => {
+  await ctx.editMessageText(
+`✦ ───────────────────── ✦
+📱 PANEL UNLI - PILIH DURASI 📱
+✦ ───────────────────── ✦
+
+UNLI RAM | UNLI Disk | UNLI CPU
+
+Pilih angka 1 - 6 👇`,
+    kbDurasiUNLI
+  );
+});
+
+// === DATA HARGA PANEL (YANG UDAH KITA CATET) ===
+const PANEL_DATA = {
+  '1gb': { nama: 'PANEL 1GB', spek: '1GB RAM | 10GB Disk | 40% CPU', harga: { 1: 1000, 3: 2000, 5: 3000, 7: 4000, 14: 6000, 30: 10000 } },
+  '2gb': { nama: 'PANEL 2GB', spek: '2GB RAM | 20GB Disk | 80% CPU', harga: { 1: 2000, 3: 3500, 5: 5000, 7: 7000, 14: 10000, 30: 15000 } },
+  '4gb': { nama: 'PANEL 4GB', spek: '4GB RAM | 40GB Disk | 150% CPU', harga: { 1: 3000, 3: 5000, 5: 7000, 7: 10000, 14: 15000, 30: 25000 } },
+  'unli': { nama: 'PANEL UNLIMITED', spek: 'UNLI RAM | UNLI Disk | UNLI CPU', harga: { 1: 4000, 3: 6000, 5: 9000, 7: 12000, 14: 18000, 30: 30000 } },
+};
+
+const kbBayarPanel = Markup.inlineKeyboard([
+  [
+    { text: '✅ BAYAR VIA QRIS', callback_data: 'bayar_qris' },
+    { text: '✅ BAYAR VIA TRANSFER', callback_data: 'bayar_transfer' }
+  ],
+  [{ text: '❌ Kembali', callback_data: 'menu_panel' }],
+]);
+
+// === 1 CODINGAN BUAT SEMUA TOMBOL [1] - [6] ===
+bot.action(/^buy_(1gb|2gb|4gb|unli)_(\d+)$/, async (ctx) => {
+  const paket = ctx.match[1]; // 1gb / 2gb / 4gb / unli
+  const durasi = ctx.match[2]; // 1 / 3 / 5 / 7 / 14 / 30
+  const data = PANEL_DATA[paket];
+  const harga = data.harga[durasi];
+
+  await ctx.editMessageText(
+`✦ ───────────────────── ✦
+🧾 DETAIL PESANAN PANEL 🧾
+✦ ───────────────────── ✦
+
+╭─➤ 📦 PAKET    :--➤ ${data.nama}
+│   ╰─➤ 🖥️ SPEK     :--➤ ${data.spek}
+│   ╰─➤ 📅 DURASI   :--➤ ${durasi} Hari
+╰─➤ 💰 HARGA    :--➤ Rp ${harga.toLocaleString('id-ID')}
+
+✦ ───────────────────── ✦
+Silahkan pilih metode pembayaran 👇`,
+    kbBayarPanel
+  );
+});
 
 const kbDomain = Markup.inlineKeyboard([
   [
@@ -556,24 +724,24 @@ const kbDomain = Markup.inlineKeyboard([
     { text: '.com - Rp 95K', callback_data: 'dom_5' },
     { text: '.id - Rp 180K', callback_data: 'dom_6' }
   ],
-  [{ text: '⏪ Kembali', callback_data: 'back_menu' }],
+  [{ text: '❌ Kembali', callback_data: 'back_menu' }],
 ]);
 
 const kbJasa = Markup.inlineKeyboard([
   [
-    { text: '🤖 BOT WA - 15K', callback_data: 'jasa_1' },
-    { text: '🎮 PANEL - 20K', callback_data: 'jasa_2' }
+    { text: '✅🤖 BOT WA - 15K', callback_data: 'jasa_1' },
+    { text: '✅🎮 PANEL - 20K', callback_data: 'jasa_2' }
   ],
   [
-    { text: '🌐 WEB - 25K', callback_data: 'jasa_3' },
-    { text: '🔧 VPS - 10K', callback_data: 'jasa_4' }
+    { text: '✅🌐 WEB - 25K', callback_data: 'jasa_3' },
+    { text: '✅🔧 VPS - 10K', callback_data: 'jasa_4' }
   ],
-  [{ text: '⏪ Kembali', callback_data: 'back_menu' }],
+  [{ text: '❌ Kembali', callback_data: 'back_menu' }],
 ]);
 
 const kbAdmin = Markup.inlineKeyboard([
-  [{ text: '💬 CHAT ADMIN SEKARANG', callback_data: 'admin_chat' }],
-  [{ text: '⏪ MENU UTAMA', callback_data: 'back_menu' }],
+  [{ text: '✅💬 CHAT ADMIN SEKARANG', callback_data: 'admin_chat' }],
+  [{ text: '❌ MENU UTAMA', callback_data: 'back_menu' }],
 ]);
 
 const sendMenu = (ctx) => ctx.reply(MENU, kbMenu);
